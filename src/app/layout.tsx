@@ -1,7 +1,14 @@
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import '@/style/global.scss'
+import { fontPrimary } from '@/style/fonts'
+
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang='en'>
+    <html lang="en" className={fontPrimary.className}>
       <body>{children}</body>
     </html>
-  );
+  )
 }

@@ -1,0 +1,15 @@
+.section {
+  max-width: 375px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 24px 12px;
+
+    p {
+      // color: var(--gray)
+    }
+  }
+}
