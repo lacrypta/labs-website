@@ -1,4 +1,6 @@
-import styles from './styles.module.scss'
+import { Text } from '@/components/UI'
+
+import { Value } from './style'
 
 interface ComponentProps {
   image?: string
@@ -16,12 +18,12 @@ export default function Component(props: ComponentProps) {
   } = props
 
   return (
-    <div className={styles.section}>
+    <Value>
       <img src={image} />
       <div>
-        <p>{title}</p>
-        <p>{description}</p>
+        <Text isBold>{title}</Text>
+        <Text>{description}</Text>
       </div>
-    </div>
+    </Value>
   )
 }

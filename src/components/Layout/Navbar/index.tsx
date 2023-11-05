@@ -1,26 +1,31 @@
+'use client'
+
 import Container from '../Container'
 
 import Logo from '@/components/Logo'
 
-import styles from './styles.module.scss'
+import { Navbar } from './styles'
 
 export default function Component() {
   return (
-    <nav className={styles.navbar}>
+    <Navbar>
       <Container>
-        <Logo />
+        <Logo size="medium" />
         <ul>
           <li>
-            <a href="#">Quienes somos</a>
+            <a href="#">Inicio</a>
           </li>
           <li>
-            <a href="#">Que hacemos</a>
+            <a href="#">Nosotros</a>
           </li>
           <li>
-            <a href="#">Como lo hacemos</a>
+            <a href="#">Proyectos</a>
+          </li>
+          <li>
+            <a href="#">Valores</a>
           </li>
         </ul>
       </Container>
-    </nav>
+    </Navbar>
   )
 }

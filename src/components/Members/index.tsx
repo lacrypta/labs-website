@@ -1,6 +1,6 @@
 import People from './People'
 
-import styles from './styles.module.scss'
+import { Members, Info, List } from './style'
 
 interface ComponentProps {
   children: any
@@ -10,9 +10,9 @@ export default function Component(props: ComponentProps) {
   const { children } = props
 
   return (
-    <div className={styles.section}>
-      <div className={styles.info}>{children}</div>
-      <div className={styles.list}>
+    <Members>
+      <Info>{children}</Info>
+      <List>
         <div>
           <People data={{ image: '', name: 'gorila' }} />
           <People data={{ image: '', name: 'guadis' }} />
@@ -55,7 +55,7 @@ export default function Component(props: ComponentProps) {
           <People data={{ image: '', name: 'seilermica' }} />
           <People data={{ image: '', name: 'sol' }} />
         </div>
-      </div>
-    </div>
+      </List>
+    </Members>
   )
 }

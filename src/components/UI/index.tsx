@@ -1,0 +1,6 @@
+export { default as Icon } from './Icon'
+export { default as Divider } from './Divider'
+export { default as Heading } from './Heading'
+export { default as Link } from './Link'
+export { default as Text } from './Text'
+export { default as Flex } from './Flex'

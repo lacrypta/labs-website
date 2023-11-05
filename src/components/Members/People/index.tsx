@@ -1,4 +1,4 @@
-import styles from './styles.module.scss'
+import { People } from './style'
 
 interface ComponentProps {
   data: {
@@ -11,9 +11,9 @@ export default function Component(props: ComponentProps) {
   const { data } = props
 
   return (
-    <div className={styles.section}>
+    <People>
       <img src="https://placehold.co/32x32" />
       <p>{data?.name}</p>
-    </div>
+    </People>
   )
 }

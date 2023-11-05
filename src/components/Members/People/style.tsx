@@ -1,4 +1,8 @@
-.section {
+import { styled } from 'styled-components'
+
+import theme from '@/style/theme'
+
+export const People = styled.div`
   display: flex;
   align-items: center;
   gap: 4px;
@@ -6,7 +10,7 @@
   padding: 24px;
   padding-right: 32px;
 
-  background-color: var(--gray);
+  background-color: ${theme.colors.gray};
   border-radius: 99px;
 
   white-space: nowrap;
@@ -17,4 +21,4 @@
 
     border-radius: 50%;
   }
-}
+`

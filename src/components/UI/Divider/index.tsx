@@ -1,12 +1,14 @@
-import styles from './styles.module.scss'
+'use client'
 
-interface ComponentProps {
+import { DividerCustom } from './style'
+
+interface DividerProps {
   x?: number
   y?: number
 }
 
-export default function Component(props: ComponentProps) {
+export default function Divider(props: DividerProps) {
   const { x = 0, y = 0 } = props
 
-  return <div className={styles.divider} style={{ minHeight: `${y}px` }} />
+  return <DividerCustom $y={y} $x={x} />
 }

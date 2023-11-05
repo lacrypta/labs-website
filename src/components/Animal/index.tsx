@@ -1,4 +1,6 @@
-import styles from './styles.module.scss'
+import { Heading, Text, Flex } from '../UI'
+
+import { Animal } from './style'
 
 interface ComponentProps {
   data: {
@@ -11,12 +13,12 @@ export default function Component(props: ComponentProps) {
   const { data } = props
 
   return (
-    <div className={styles.animal}>
+    <Animal>
       <img src="https://placehold.co/240x240" />
       <div>
-        <h4>{data.name}</h4>
-        <p>#{data.animal}</p>
+        <Heading as="h4">{data.name}</Heading>
+        <Text isBold>#{data.animal}</Text>
       </div>
-    </div>
+    </Animal>
   )
 }

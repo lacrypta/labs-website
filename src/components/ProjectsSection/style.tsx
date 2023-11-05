@@ -1,4 +1,8 @@
-.section {
+import { styled } from 'styled-components'
+
+import theme from '@/style/theme'
+
+export const Projects = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -17,7 +21,7 @@
 
     &:first-child {
       > div:first-child {
-        top: 0
+        top: 0;
       }
     }
 
@@ -30,8 +34,8 @@
       }
     }
   }
-}
+`
 
-.header {
+export const Header = styled.div`
   max-width: 375px;
-}
+`

@@ -1,15 +1,19 @@
-.section {
+import { styled } from 'styled-components'
+
+import theme from '@/style/theme'
+
+export const AboutSection = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 80px 0
-}
+  padding: 80px 0;
+`
 
-.header {
+export const Header = styled.div`
   max-width: 500px;
-}
+`
 
-.list {
+export const List = styled.div`
   overflow-x: scroll;
 
   display: flex;
@@ -24,14 +28,14 @@
   img {
     border-radius: 16px;
   }
-}
+`
 
-.number {
+export const Number = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  color: var(--fuchsia);
+  color: ${theme.colors.fuchsia};
 
   span {
     font-weight: bold;
@@ -46,4 +50,4 @@
       line-height: 44px;
     }
   }
-}
+`

@@ -1,4 +1,8 @@
-.section {
+import { styled } from 'styled-components'
+
+import theme from '@/style/theme'
+
+export const ValueProposal = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -12,11 +16,11 @@
     text-align: center;
 
     &:not(:first-child) {
-      gap: 24px
+      gap: 24px;
     }
   }
-}
+`
 
-.header {
+export const Header = styled.div`
   max-width: 375px;
-}
+`

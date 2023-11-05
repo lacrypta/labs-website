@@ -1,21 +1,28 @@
-import Container from '../Layout/Container'
+'use client'
 
-import styles from './styles.module.scss'
+import Container from '../Layout/Container'
+import { Heading } from '../UI'
+
+import { Hero, Assets } from './style'
 
 export default function Component() {
   return (
-    <div className={styles.hero}>
+    <Hero>
       <Container>
-        {/* Hero */}
         <div>
-          <h1>Una revolucion disfrazada de inversion.</h1>
+          <Heading as="h1">Una revolucion disfrazada de inversion.</Heading>
           <p>
             <strong>Somos una ONG dedicada a la educación y difusión</strong>{' '}
             del ecosistema crypto
           </p>
-          <img src="https://placehold.co/900x400" />
         </div>
       </Container>
-    </div>
+      <Assets>
+        <img src="/img/world.png" />
+        <div className="circle-world">
+          <div className="dot"></div>
+        </div>
+      </Assets>
+    </Hero>
   )
 }

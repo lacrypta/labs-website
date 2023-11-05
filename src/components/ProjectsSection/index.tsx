@@ -1,22 +1,25 @@
+'use client'
+
 import Container from '../Layout/Container'
+import { Heading, Text, Link } from '../UI'
 
 import Project from './Project'
 
-import styles from './styles.module.scss'
+import { Projects, Header } from './style'
 
 export default function Component() {
   return (
-    <div className={styles.section}>
+    <Projects>
       {/* Quienes somos */}
       <Container>
-        <div className={styles.header}>
-          <h2>Creemos en el Open-Source.</h2>
-          <p>
+        <Header>
+          <Heading as="h2">Creemos en el Open-Source.</Heading>
+          <Text>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
             omnis! Sequi ex commodi cumque hic.
-          </p>
-          <a href="#">Ver proyectos de la comunidad</a>
-        </div>
+          </Text>
+          <Link href="#">Ver proyectos de la comunidad</Link>
+        </Header>
         <Project
           // image=""
           title="LaWallet"
@@ -41,6 +44,6 @@ export default function Component() {
           url=""
         />
       </Container>
-    </div>
+    </Projects>
   )
 }

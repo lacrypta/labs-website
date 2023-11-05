@@ -1,4 +1,6 @@
-import styles from './styles.module.scss'
+import { Heading, Text, Link } from '@/components/UI'
+
+import { Project } from './style'
 
 interface ComponentProps {
   image?: string
@@ -16,13 +18,13 @@ export default function Component(props: ComponentProps) {
   } = props
 
   return (
-    <div className={styles.section}>
+    <Project>
       <img src={image} />
       <div>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <a href={url}>Visitar proyecto</a>
+        <Heading as="h3">{title}</Heading>
+        <Text>{description}</Text>
+        <Link href={url}>Visitar proyecto</Link>
       </div>
-    </div>
+    </Project>
   )
 }

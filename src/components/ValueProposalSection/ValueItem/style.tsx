@@ -1,4 +1,8 @@
-.section {
+import { styled } from 'styled-components'
+
+import theme from '@/style/theme'
+
+export const Value = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -7,7 +11,7 @@
 
   padding: 16px;
 
-  border: 1px solid var(--gray);
+  border: 1px solid ${theme.colors.gray};
   border-radius: 24px;
 
   img {
@@ -28,4 +32,4 @@
       font-size: 16px;
     }
   }
-}
+`

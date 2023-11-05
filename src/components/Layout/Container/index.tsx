@@ -1,5 +1,4 @@
-import styles from './styles.module.scss'
-
+import { Container } from './style'
 interface ComponentProps {
   children: any
 }
@@ -7,5 +6,5 @@ interface ComponentProps {
 export default function Component(props: ComponentProps) {
   const { children } = props
 
-  return <div className={styles.container}>{children}</div>
+  return <Container>{children}</Container>
 }

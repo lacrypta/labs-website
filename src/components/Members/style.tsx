@@ -1,8 +1,12 @@
-.section {
-  position: relative;
-}
+import { styled } from 'styled-components'
 
-.info {
+import theme from '@/style/theme'
+
+export const Members = styled.div`
+  position: relative;
+`
+
+export const Info = styled.div`
   position: absolute;
   right: 0;
   z-index: 2;
@@ -13,8 +17,9 @@
   width: 100%;
   height: 100%;
 
-  text-shadow: 0px 18px 40px rgba(236, 90, 181, 0.65), 
-              0px 4px 8px rgba(0, 0, 0, 0.15);
+  text-shadow:
+    0px 18px 40px rgba(236, 90, 181, 0.65),
+    0px 4px 8px rgba(0, 0, 0, 0.15);
 
   &:after,
   &:before {
@@ -22,30 +27,36 @@
 
     position: absolute;
     top: 0;
-    
+
     width: 25%;
     height: 100%;
-
   }
 
   &:before {
     left: 0;
-    background: linear-gradient(to right, var(--black), rgba(16,16,16,0));
+    background: linear-gradient(
+      to right,
+      ${theme.colors.black},
+      rgba(16, 16, 16, 0)
+    );
   }
 
   &:after {
     right: 0;
-    background: linear-gradient(to left, var(--black), rgba(16,16,16,0));
+    background: linear-gradient(
+      to left,
+      ${theme.colors.black},
+      rgba(16, 16, 16, 0)
+    );
   }
-}
+`
 
-.list {
-  opacity: .35;
+export const List = styled.div`
+  opacity: 0.35;
 
   display: flex;
   flex-direction: column;
   gap: 24px;
-
 
   > div {
     display: flex;
@@ -59,4 +70,4 @@
       transform: translateX(-200px);
     }
   }
-}
+`
