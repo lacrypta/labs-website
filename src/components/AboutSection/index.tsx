@@ -1,11 +1,12 @@
 'use client'
 
 import Container from '../Layout/Container'
-import { Divider, Heading, Link, Text } from '@/components/UI'
+import { Divider, Heading, Link, Text, Flex } from '@/components/UI'
 
 import Animal from '../Animal'
 import Members from '../Members'
 
+import { fontPrimary } from '@/style/fonts'
 import { AboutSection, Header, List, Number } from './style'
 
 export default function Component() {
@@ -33,15 +34,17 @@ export default function Component() {
       </List>
       <Divider y={64} />
       <Container>
-        <Heading as="h3">
-          Pero mas que una manada, somos una comunidad de...
-        </Heading>
+        <Flex justify="center">
+          <Heading as="h3">
+            Pero mas que una manada, <br /> somos una comunidad de...
+          </Heading>
+        </Flex>
       </Container>
       <Divider y={24} />
       <Members>
         <Number>
-          <span>+1000</span>
-          <span>miembros</span>
+          <span className={fontPrimary.className}>+1000</span>
+          <span className={fontPrimary.className}>miembros</span>
         </Number>
       </Members>
     </AboutSection>
