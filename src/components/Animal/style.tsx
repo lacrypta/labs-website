@@ -3,12 +3,16 @@ import { styled } from 'styled-components'
 import theme from '@/style/theme'
 
 export const Animal = styled.div`
-  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
   div {
     display: flex;
     align-items: center;
     gap: 4px;
+
+    padding: 0 12px;
 
     p {
       color: ${theme.colors.gray};
