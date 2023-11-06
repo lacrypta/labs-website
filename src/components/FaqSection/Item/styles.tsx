@@ -34,17 +34,11 @@ export const Trigger = styled.button`
     font-size: 1rem;
   }
 
-  p {
-    font-size: 16px;
-  }
-
   &:focus {
-    // background-color: red;
     border-radius: 24px;
   }
 
   &:active {
-    // background-color: blue;
   }
 
   &.open {

@@ -1,9 +1,9 @@
 'use client'
 
-import { ReactNode, useState, useEffect } from 'react'
+import { ReactNode, useState } from 'react'
 
 import { Plus } from '@/components/Icons'
-import { Icon } from '@/components/UI'
+import { Icon, Heading } from '@/components/UI'
 
 import { Item, Trigger, Body } from './styles'
 
@@ -25,7 +25,7 @@ export default function Component(props: ComponentProps) {
   return (
     <Item>
       <Trigger className={open ? 'open' : ''} onClick={handleClick}>
-        <h3>{title}</h3>
+        <Heading as="h3">{title}</Heading>
         <Icon>
           <Plus />
         </Icon>
