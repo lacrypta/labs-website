@@ -22,5 +22,5 @@ export const ValueProposal = styled.div`
 `
 
 export const Header = styled.div`
-  max-width: 375px;
+  max-width: 350px;
 `

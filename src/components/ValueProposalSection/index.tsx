@@ -13,59 +13,45 @@ export default function Component() {
       <Container>
         <Header>
           <Heading as="h2">Construimos en base a...</Heading>
-          <Text>
+          {/* <Text>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
             omnis! Sequi ex commodi cumque hic.
-          </Text>
+          </Text> */}
         </Header>
       </Container>
 
       <Container>
         <ValueItem
-          // image=""
           title="Honestidad"
-          description="sinceridad y transparencia en todo momento."
-          url=""
+          description="Sinceridad y transparencia en todo momento."
         />
         <ValueItem
-          // image=""
           title="Sinergia"
-          description="trabajar en equipo y colaborar de manera efectiva para alcanzar metas comunes."
-          url=""
+          description="Colaborar y trabajar de manera efectiva para alcanzar metas comunes."
         />
       </Container>
       <Container>
         <ValueItem
-          // image=""
           title="Libertad"
-          description="tener la capacidad de tomar decisiones y actuar de forma autónoma y responsable."
-          url=""
+          description="Tener la capacidad de tomar decisiones y actuar de forma autónoma y responsable."
         />
         <ValueItem
-          // image=""
           title="Racionalidad"
-          description="tomar decisiones basadas en la lógica."
-          url=""
+          description="Tomar decisiones basadas en la lógica."
         />
         <ValueItem
-          // image=""
           title="Humildad"
-          description="ser consciente de las propias limitaciones y estar dispuesto a aprender y mejorar constantemente."
-          url=""
+          description="Estar dispuesto a aprender y mejorar constantemente."
         />
       </Container>
       <Container>
         <ValueItem
-          // image=""
           title="Merito"
-          description="reconocer y valorar los logros y contribuciones propias y de los demás. Premiar el esfuerzo y la excelencia."
-          url=""
+          description="Reconocer y valorar los logros. Premiar el esfuerzo y la excelencia."
         />
         <ValueItem
-          // image=""
           title="Innovacion"
-          description="ser creativo y estar abierto a nuevas posibilidades, herramientas y caminos, con el fin de encontrar nuevas soluciones y mejorar constantemente."
-          url=""
+          description="Ser creativo, estar abierto a nuevas posibilidades y mejorar constantemente."
         />
       </Container>
     </ValueProposal>
