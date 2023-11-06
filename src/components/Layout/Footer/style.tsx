@@ -37,6 +37,19 @@ export const Footer = styled.div`
       ul {
         display: flex;
         gap: 4px;
+
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+
+            background-color: ${theme.colors.black};
+            border-radius: 50px;
+          }
+        }
       }
     }
   }
