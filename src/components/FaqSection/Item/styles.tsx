@@ -8,7 +8,7 @@ export const Item = styled.div`
   align-items: center;
   width: 100%;
 
-  border: 1px solid var(--gray);
+  /* border: 1px solid ${theme.colors.gray}; */
   border-radius: 24px;
 `
 
@@ -25,7 +25,7 @@ export const Trigger = styled.button`
   border: none;
   box-shadow: none;
 
-  color: var(--white);
+  color: ${theme.colors.white};
   text-align: left;
 
   cursor: pointer;
@@ -47,7 +47,7 @@ export const Trigger = styled.button`
     // background-color: blue;
   }
 
-  &.true {
+  &.open {
     /* border-bottom: 1px solid var(--gray); */
 
     svg {
@@ -65,6 +65,9 @@ export const Trigger = styled.button`
 export const Body = styled.div`
   overflow: hidden;
 
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   height: 0;
   width: 100%;
 
@@ -73,14 +76,41 @@ export const Body = styled.div`
   line-height: 1.1;
   text-align: left;
 
-  &.true {
+  &.open {
     height: 100%;
 
     padding: 16px;
     padding-top: 0;
   }
 
-  p {
+  p,
+  li {
     font-size: 0.8rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding-left: 20px;
+
+    li {
+      position: relative;
+
+      &:before {
+        content: '';
+
+        position: absolute;
+        top: 7px;
+        left: -12px;
+
+        width: 5px;
+        height: 5px;
+
+        background-color: ${theme.colors.fuchsia};
+        border-radius: 50%;
+      }
+    }
   }
 `

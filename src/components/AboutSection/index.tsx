@@ -20,7 +20,6 @@ export default function Component() {
             omnis! Sequi ex commodi cumque hic.
           </Text>
           <Link href="#">Quiero saber mas</Link>
-          {/* <a href="#">Quiero saber mas</a> */}
         </Header>
       </Container>
       <Divider y={24} />

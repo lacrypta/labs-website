@@ -1,3 +1,5 @@
+import data from '@/data/leaderboard.json'
+
 import People from './People'
 
 import { Members, Info, List } from './style'
@@ -14,46 +16,19 @@ export default function Component(props: ComponentProps) {
       <Info>{children}</Info>
       <List>
         <div>
-          <People data={{ image: '', name: 'gorila' }} />
-          <People data={{ image: '', name: 'guadis' }} />
-          <People data={{ image: '', name: 'Jona' }} />
-          <People data={{ image: '', name: 'Juan Jose' }} />
-          <People data={{ image: '', name: 'mrp' }} />
-          <People data={{ image: '', name: 'naranja@hodl.ar' }} />
-          <People data={{ image: '', name: '.Rapax' }} />
-          <People data={{ image: '', name: 'camilugz' }} />
-          <People data={{ image: '', name: 'Cariddi' }} />
-          <People data={{ image: '', name: 'Fer' }} />
-          <People data={{ image: '', name: 'seilermica' }} />
-          <People data={{ image: '', name: 'sol' }} />
+          {data.map(member => (
+            <People data={member} />
+          ))}
         </div>
         <div>
-          <People data={{ image: '', name: 'gorila' }} />
-          <People data={{ image: '', name: 'guadis' }} />
-          <People data={{ image: '', name: 'Jona' }} />
-          <People data={{ image: '', name: 'Juan Jose' }} />
-          <People data={{ image: '', name: 'mrp' }} />
-          <People data={{ image: '', name: 'naranja@hodl.ar' }} />
-          <People data={{ image: '', name: '.Rapax' }} />
-          <People data={{ image: '', name: 'camilugz' }} />
-          <People data={{ image: '', name: 'Cariddi' }} />
-          <People data={{ image: '', name: 'Fer' }} />
-          <People data={{ image: '', name: 'seilermica' }} />
-          <People data={{ image: '', name: 'sol' }} />
+          {data.map(member => (
+            <People data={member} />
+          ))}
         </div>
         <div>
-          <People data={{ image: '', name: 'gorila' }} />
-          <People data={{ image: '', name: 'guadis' }} />
-          <People data={{ image: '', name: 'Jona' }} />
-          <People data={{ image: '', name: 'Juan Jose' }} />
-          <People data={{ image: '', name: 'mrp' }} />
-          <People data={{ image: '', name: 'naranja@hodl.ar' }} />
-          <People data={{ image: '', name: '.Rapax' }} />
-          <People data={{ image: '', name: 'camilugz' }} />
-          <People data={{ image: '', name: 'Cariddi' }} />
-          <People data={{ image: '', name: 'Fer' }} />
-          <People data={{ image: '', name: 'seilermica' }} />
-          <People data={{ image: '', name: 'sol' }} />
+          {data.map(member => (
+            <People data={member} />
+          ))}
         </div>
       </List>
     </Members>

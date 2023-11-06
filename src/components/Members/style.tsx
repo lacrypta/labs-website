@@ -56,18 +56,20 @@ export const List = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 
   > div {
+    position: relative;
+
     display: flex;
-    gap: 24px;
+    gap: 16px;
 
     &:first-child {
-      transform: translateX(-400px);
+      transform: translateX(-500%);
     }
 
     &:last-child {
-      transform: translateX(-200px);
+      transform: translateX(-200%);
     }
   }
 `

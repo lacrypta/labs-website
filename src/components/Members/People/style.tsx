@@ -5,7 +5,7 @@ import theme from '@/style/theme'
 export const People = styled.div`
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 
   padding: 24px;
   padding-right: 32px;

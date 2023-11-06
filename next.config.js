@@ -6,5 +6,13 @@ module.exports = {
   swcMinify: true,
   compiler: {
     styledComponents: true
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.discordapp.com'
+      }
+    ]
   }
 }
