@@ -15,4 +15,10 @@ export const Value = styled.div`
 
   border: 1px solid ${theme.colors.gray};
   border-radius: 24px;
+
+  p {
+    &:first-child {
+      color: ${theme.colors.lilac};
+    }
+  }
 `
