@@ -68,6 +68,14 @@ const GlobalStyles = createGlobalStyle`
       font-size: 2.4rem;
     }
   }
+
+  h3 {
+    font-size: 1.2rem;
+
+    @media screen and (min-width: 700px) {
+      font-size: 2rem;
+    }
+  }
 `
 
 export default GlobalStyles
