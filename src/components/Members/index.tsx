@@ -17,17 +17,17 @@ export default function Component(props: ComponentProps) {
       <List>
         <div>
           {data.map(member => (
-            <People data={member} />
+            <People key={member.id} data={member} />
           ))}
         </div>
         <div>
           {data.map(member => (
-            <People data={member} />
+            <People key={member.id} data={member} />
           ))}
         </div>
         <div>
           {data.map(member => (
-            <People data={member} />
+            <People key={member.id} data={member} />
           ))}
         </div>
       </List>
