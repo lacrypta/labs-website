@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
     background: ${theme.colors.background};
 
     color: ${theme.colors.text};
-    font-size: 1em;
+    font-size: .8rem;
     font-weight: 400;
   }
 
