@@ -21,6 +21,17 @@ export const List = styled.div`
 
   padding: 16px;
 
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
   @media screen and (min-width: 700px) {
     padding: 16px 280px;
   }

@@ -15,3 +15,18 @@ export const Animal = styled.div`
     }
   }
 `
+
+interface ImageProps {
+  $background: string
+}
+
+export const Image = styled.div<ImageProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+
+  background-color: ${props => props.$background};
+  border-radius: 24px;
+`

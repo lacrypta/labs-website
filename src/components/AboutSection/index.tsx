@@ -25,12 +25,15 @@ export default function Component() {
       </Container>
       <Divider y={24} />
       <List>
-        <Animal data={{ name: 'Agus', animal: 'Gorila' }} />
-        <Animal data={{ name: 'Mariano', animal: 'Lechuza' }} />
-        <Animal data={{ name: 'Micaela', animal: 'Abeja' }} />
-        <Animal data={{ name: 'Rapax', animal: 'Pulpo' }} />
-        <Animal data={{ name: 'Fer', animal: 'Cuervo' }} />
-        <Animal data={{ name: 'Jona', animal: 'Ciervo' }} />
+        <Animal data={{ name: 'Agus', animal: 'gorila', color: '#D00003' }} />
+        <Animal
+          data={{ name: 'Mariano', animal: 'lechuza', color: '#FF8D00' }}
+        />
+        <Animal data={{ name: 'Mica', animal: 'abeja', color: '#FFCE00' }} />
+        <Animal data={{ name: 'Cami', animal: 'panda', color: '#F5F4EA' }} />
+        <Animal data={{ name: 'Rapax', animal: 'pulpo', color: '#AD4BDB' }} />
+        <Animal data={{ name: 'Fer', animal: 'cuervo', color: '#' }} />
+        <Animal data={{ name: 'Jona', animal: 'ciervo', color: '#' }} />
       </List>
       <Divider y={64} />
       <Container>
