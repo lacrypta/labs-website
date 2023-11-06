@@ -11,7 +11,7 @@ interface TextProps {
 
 export const Text = styled.p<TextProps>`
   color: ${props => props.$color};
-  font-size: ${props => (props.$isSmall ? '.7rem' : '1rem')};
+  font-size: ${props => (props.$isSmall ? '.7rem' : 'initial')};
   line-height: 1.2;
   text-align: ${props => props.$align};
   font-weight: ${props => (props.$isBold ? 700 : 400)};
