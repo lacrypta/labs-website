@@ -1,2 +1,5 @@
 export { default as Plus } from './Plus'
 export { default as CaretRight } from './CaretRight'
+export { default as Instagram } from './Instagram'
+export { default as Twitter } from './Twitter'
+export { default as Discord } from './Discord'
