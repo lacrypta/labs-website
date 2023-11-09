@@ -14,16 +14,18 @@ export default function Component(props: ComponentProps) {
     image = 'https://placehold.co/375x375',
     title,
     description,
-    url = '#'
+    url = ''
   } = props
 
   return (
     <Project>
-      <img src={image} />
+      <div>
+        <img src={image} />
+      </div>
       <div>
         <Heading as="h3">{title}</Heading>
-        <Text>{description}</Text>
-        <Link href={url}>Visitar proyecto</Link>
+        {description && <Text>{description}</Text>}
+        {url && <Link href={url}>Visitar proyecto</Link>}
       </div>
     </Project>
   )

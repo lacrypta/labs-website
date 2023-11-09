@@ -6,14 +6,22 @@ export const Project = styled.div`
   max-width: 375px;
 
   div {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    &:first-child {
+      overflow: hidden;
 
-    padding: 24px 12px;
+      border-radius: 24px;
 
-    p {
-      // color: var(--gray)
+      img {
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      padding: 24px 12px;
     }
   }
 `
