@@ -75,8 +75,8 @@ export default function Component() {
             <Text>
               Juntos llegamos más lejos. Apreciamos y valoramos muchísimo la
               colaboración de los integrantes de la comunidad en nuestros
-              proyectos. Para ser voluntari@ de La Crypta podés sumarte a
-              nuestro Discord en __(link)___
+              proyectos. Para ser voluntari@ de La Crypta sumate a nuestro
+              Discord!
             </Text>
           </Item>
           <Item
@@ -98,7 +98,7 @@ export default function Component() {
               donde organizamos todas nuestras actividades y donde charlamos a
               diario. Además en esa plataforma tenemos una radio colaborativa,
               un bot para enviar satoshis, zapathons, distintos tipos de
-              méritos, la famosa 💩 y mucho más… Podes unirte en ____(link)_____
+              méritos, la famosa 💩 y mucho más…
             </Text>
           </Item>
         </List>
