@@ -34,7 +34,9 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  max-width: 375px;
+  max-width: 475px;
 
   margin: 0 auto;
+
+  text-align: center;
 `

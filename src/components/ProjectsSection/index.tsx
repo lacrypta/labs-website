@@ -13,7 +13,7 @@ export default function Component() {
       {/* Quienes somos */}
       <Container>
         <Header>
-          <Heading as="h2">Creemos en el Open-Source.</Heading>
+          <Heading as="h2">Algunos de nuestros proyectos son...</Heading>
           {/* <Text>Todos nuestros proyectos son completamente libres para </Text>
           <Link href="#">Ver proyectos de la comunidad</Link> */}
         </Header>
