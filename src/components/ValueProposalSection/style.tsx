@@ -5,7 +5,7 @@ import theme from '@/style/theme'
 export const ValueProposal = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
 
   padding: 80px 0;
 
@@ -16,7 +16,13 @@ export const ValueProposal = styled.div`
     text-align: center;
 
     &:not(:first-child) {
-      gap: 24px;
+      gap: 8px;
+
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
     }
   }
 `
