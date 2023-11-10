@@ -16,11 +16,11 @@ export default function Component() {
       <Container>
         <Header>
           <Heading as="h2">Somos animales de la selva cypherpunk.</Heading>
-          <Text>
+          {/* <Text>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
             omnis! Sequi ex commodi cumque hic.
           </Text>
-          <Link href="#">Quiero saber mas</Link>
+          <Link href="#">Quiero saber mas</Link> */}
         </Header>
       </Container>
       <Divider y={24} />
@@ -32,8 +32,8 @@ export default function Component() {
         <Animal data={{ name: 'Mica', animal: 'abeja', color: '#FFCE00' }} />
         <Animal data={{ name: 'Cami', animal: 'panda', color: '#F5F4EA' }} />
         <Animal data={{ name: 'Rapax', animal: 'pulpo', color: '#AD4BDB' }} />
-        <Animal data={{ name: 'Fer', animal: 'cuervo', color: '#' }} />
-        <Animal data={{ name: 'Jona', animal: 'ciervo', color: '#' }} />
+        {/* <Animal data={{ name: 'Fer', animal: 'cuervo', color: '#' }} /> */}
+        {/* <Animal data={{ name: 'Jona', animal: 'ciervo', color: '#' }} /> */}
       </List>
       <Divider y={64} />
       <Container>
