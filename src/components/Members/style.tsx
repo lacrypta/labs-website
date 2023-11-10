@@ -63,13 +63,5 @@ export const List = styled.div`
 
     display: flex;
     gap: 16px;
-
-    &:first-child {
-      transform: translateX(-500%);
-    }
-
-    &:last-child {
-      transform: translateX(-200%);
-    }
   }
 `

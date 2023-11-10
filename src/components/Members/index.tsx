@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import data from '@/data/leaderboard.json'
 
 import People from './People'
@@ -5,7 +7,6 @@ import People from './People'
 import { Members, Info, List } from './style'
 
 interface ComponentProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any
 }
 
@@ -16,23 +17,36 @@ export default function Component(props: ComponentProps) {
     <Members>
       <Info>{children}</Info>
       <List>
-        <div>
+        <motion.div
+          initial={{ x: '-300%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '0%' }}
+          transition={{ duration: 400, repeat: Infinity, ease: 'linear' }}
+        >
           {data.map(member => (
             <People key={member.id} data={member} />
           ))}
-        </div>
-
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ x: '-700%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '0%' }}
+          transition={{ duration: 500, repeat: Infinity, ease: 'linear' }}
+        >
           {data.map(member => (
             <People key={member.id} data={member} />
           ))}
-        </div>
-
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ x: '-500%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '0%' }}
+          transition={{ duration: 300, repeat: Infinity, ease: 'linear' }}
+        >
           {data.map(member => (
             <People key={member.id} data={member} />
           ))}
-        </div>
+        </motion.div>
       </List>
     </Members>
   )
