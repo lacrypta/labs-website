@@ -5,6 +5,8 @@ import theme from '@/style/theme'
 export const Project = styled.div`
   max-width: 375px;
 
+  margin: 0 auto;
+
   div {
     &:first-child {
       overflow: hidden;
