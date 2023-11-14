@@ -1,0 +1,10 @@
+{
+  "tag": "payRequest",
+  "callback": "https://api.lawallet.ar/lnurlp/230a35c85c794118a02419d7db05a014c13a78cbe904d3c0b20a64a5514dd4d7/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\", \"Payment to test\"], [\"text/identifier\", \"test@lacrypta.ar\"]]",
+  "commentAllowed": 32,
+  "allowsNostr": true,
+  "nostrPubkey": "e17feb5f2cf83546bcf7fd9c8237b05275be958bd521543c2285ffc6c2d654b3"
+}

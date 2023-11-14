@@ -1,0 +1,10 @@
+{
+  "tag": "payRequest",
+  "callback": "https://wallet.lacrypta.ar/lnurlp/api/v1/lnurl/cb/LY8AJP",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\", \"Agustin Ka de La Crypta\"]]",
+  "commentAllowed": 32,
+  "allowsNostr": true,
+  "nostrPubkey": "bf9dc973ca3bedc0fb90ef6861fa87c8c78dee8170d352f13f2ee0ca405ad162"
+}
