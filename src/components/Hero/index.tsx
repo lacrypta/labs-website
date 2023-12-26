@@ -12,8 +12,8 @@ export default function Component() {
         <div>
           <Heading as="h1">Una revolucion disfrazada de inversion.</Heading>
           <p>
-            <strong>Somos una ONG dedicada a la educación y difusión</strong>{' '}
-            del ecosistema crypto
+            Somos una comunidad dedicada a la educación y difusión del
+            ecosistema <strong>Bitcoin en Argentina</strong>
           </p>
         </div>
       </Container>
