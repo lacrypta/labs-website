@@ -20,13 +20,13 @@ export default function RootLayout({
       <head>
         <title>La Crypta | Conoce con nosotros sobre Bitcoin.</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
-        <link rel="icon" type="img/png" href="img/favicon.png" />
+        <link rel="icon" type="img/png" href="img/schema-logo.png" />
 
         {/*  */}
         <meta name="author" content="La Crypta" />
         <meta
           name="description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin."
+          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
         />
         <meta name="robots" content="index,follow" />
 
@@ -34,7 +34,7 @@ export default function RootLayout({
         <meta property="og:title" content="La Crypta" />
         <meta
           property="og:description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin."
+          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
         />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:type" content="website" />
@@ -45,7 +45,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="La Crypta" />
         <meta
           name="twitter:description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin."
+          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/img/social/twitter-600x330.jpg" />
@@ -64,6 +64,40 @@ export default function RootLayout({
           gtag('config', '${GOOGLE_TAG_ID}');
         `}
         </Script>
+
+        {/* Schema */}
+        <Script
+          strategy="beforeInteractive"
+          id="ldjson-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+              {
+                "@context": "https://schema.org",
+                "@type": "EducationalOrganization",
+                "name": "La Crypta",
+                "alternateName": "LaCrypta",
+                "url": "https://lacrypta.ar/",
+                "logo": "",
+                "sameAs": [
+                  "https://twitter.com/LaCryptaOk",
+                  "https://www.instagram.com/lacryptaok/",
+                  "https://www.linkedin.com/company/lacryptaok/",
+                  "https://github.com/lacrypta",
+                  "https://lacrypta.ar/"
+                ],
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Villanueva 1367",
+                  "addressLocality": "Belgrano",
+                  "postalCode": "C1426",
+                  "addressCountry": "AR",
+                  "addressRegion": "CABA, Buenos Aires"
+                }
+              }
+            `
+          }}
+        />
       </head>
       <body>
         <StyledComponentsRegistry>
