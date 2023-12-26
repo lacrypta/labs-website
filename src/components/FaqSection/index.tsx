@@ -21,7 +21,7 @@ export default function Component() {
         <List>
           <Item
             title="¿Qué es La Crypta?"
-            description="Somos una comunidad dedicada a la educación, desarrollo y difusión del ecosistema Bitcoin. Nos enfocamos en proporcionar independencia y autonomía a la comunidad."
+            description="Somos una comunidad dedicada a la educación, desarrollo y difusión del ecosistema Bitcoin en Argentina. Nos enfocamos en proporcionar independencia y autonomía a la comunidad."
           />
           <Item
             title="¿Por qué valores?"
