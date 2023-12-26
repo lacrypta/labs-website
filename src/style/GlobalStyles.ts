@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 
     font-size: 20px;
   }
