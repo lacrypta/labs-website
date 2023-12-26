@@ -9,6 +9,59 @@ import Members from '../Members'
 import { fontPrimary } from '@/style/fonts'
 import { AboutSection, Header, List, Number } from './style'
 
+const animals = [
+  {
+    name: 'Agus',
+    animal: 'Gorila',
+    color: '#D00003'
+  },
+  {
+    name: 'Mariano',
+    animal: 'Lechuza',
+    color: '#FF8D00'
+  },
+  {
+    name: 'Cami',
+    animal: 'Panda',
+    color: '#F5F4EA'
+  },
+  {
+    name: 'Mica',
+    animal: 'Abeja',
+    color: '#FFCE00'
+  },
+  {
+    name: 'Rapax',
+    animal: 'Pulpo',
+    color: '#AD4BDB'
+  },
+  {
+    name: 'Naranja',
+    animal: 'Tigre',
+    color: '#F25F01'
+  },
+  {
+    name: 'Guada',
+    animal: 'Pinguino',
+    color: '#FFCE22'
+  },
+  {
+    name: 'JJ',
+    animal: 'Mucuchies',
+    color: '#B47841'
+  },
+  {
+    name: 'Fer',
+    animal: 'Cuervo',
+    color: '#4D4D4A'
+  },
+  {
+    name: 'Jona',
+    animal: 'Llama',
+    color: '#F40075'
+  }
+]
+
 export default function Component() {
   return (
     <AboutSection>
@@ -25,15 +78,9 @@ export default function Component() {
       </Container>
       <Divider y={24} />
       <List>
-        <Animal data={{ name: 'Agus', animal: 'gorila', color: '#D00003' }} />
-        <Animal
-          data={{ name: 'Mariano', animal: 'lechuza', color: '#FF8D00' }}
-        />
-        <Animal data={{ name: 'Mica', animal: 'abeja', color: '#FFCE00' }} />
-        <Animal data={{ name: 'Cami', animal: 'panda', color: '#F5F4EA' }} />
-        <Animal data={{ name: 'Rapax', animal: 'pulpo', color: '#AD4BDB' }} />
-        {/* <Animal data={{ name: 'Fer', animal: 'cuervo', color: '#' }} /> */}
-        {/* <Animal data={{ name: 'Jona', animal: 'ciervo', color: '#' }} /> */}
+        {animals.map((animal, index) => (
+          <Animal key={index} data={animal} />
+        ))}
       </List>
       <Divider y={64} />
       <Container>
