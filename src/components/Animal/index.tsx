@@ -19,7 +19,7 @@ export default function Component(props: ComponentProps) {
     <Animal>
       <Image $background={data.color}>
         <ImageNext
-          src={`/img/animal/${data.animal}.png`}
+          src={`/img/animal/${data.animal.toLowerCase()}.png`}
           width={120}
           height={120}
           alt={`${data.name}, ${data.animal}`}
