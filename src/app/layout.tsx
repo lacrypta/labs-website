@@ -78,7 +78,7 @@ export default function RootLayout({
                 "name": "La Crypta",
                 "alternateName": "LaCrypta",
                 "url": "https://lacrypta.ar/",
-                "logo": "",
+                "logo": "https://lacrypta.ar/img/schema-logo.png",
                 "sameAs": [
                   "https://twitter.com/LaCryptaOk",
                   "https://www.instagram.com/lacryptaok/",
