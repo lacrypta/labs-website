@@ -13,27 +13,27 @@ const animals = [
   {
     name: 'Agus',
     animal: 'Gorila',
-    color: '#D00003'
+    color: '#BF0E1A'
   },
   {
     name: 'Mariano',
     animal: 'Lechuza',
-    color: '#FF8D00'
+    color: '#F4941E'
   },
   {
     name: 'Cami',
     animal: 'Panda',
-    color: '#F5F4EA'
+    color: '#F5F4EB'
   },
   {
     name: 'Mica',
     animal: 'Abeja',
-    color: '#FFCE00'
+    color: '#FFD000'
   },
   {
     name: 'Rapax',
     animal: 'Pulpo',
-    color: '#AD4BDB'
+    color: '#A252D5'
   },
   {
     name: 'Naranja',
