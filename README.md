@@ -1,3 +1,8 @@
 # lacrypta-web
 
-Nextjs Project
+## La Crypta Web
+
+```bash
+pnpm install
+pnpm dev
+```
