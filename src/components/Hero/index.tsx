@@ -10,7 +10,7 @@ export default function Component() {
     <Hero>
       <Container>
         <div>
-          <Heading as="h1">Una revolucion disfrazada de inversion.</Heading>
+          <Heading as="h1">Una revolución disfrazada de inversión.</Heading>
           <p>
             Somos una comunidad dedicada a la educación y difusión del
             ecosistema <strong>Bitcoin en Argentina</strong>
