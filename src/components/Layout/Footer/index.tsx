@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Container from '../Container'
 import Logo from '@/components/Logo'
 import { Icon } from '@/components/UI'
-import { Twitter, Discord, Instagram } from '@/components/Icons'
+import { Twitter, Discord, Instagram, Github } from '@/components/Icons'
 
 import { Footer } from './style'
 
@@ -34,6 +34,13 @@ export default function Component() {
               >
                 <Icon>
                   <Instagram />
+                </Icon>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/lacrypta" target="_blank">
+                <Icon>
+                  <Github />
                 </Icon>
               </Link>
             </li>
