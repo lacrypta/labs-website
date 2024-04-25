@@ -1,19 +1,20 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import Container from '../Layout/Container'
 import { Heading } from '../UI'
 
 import { Hero, Assets } from './style'
 
 export default function Component() {
+  const t = useTranslations('hero')
   return (
     <Hero>
       <Container>
         <div>
-          <Heading as="h1">Una revolución disfrazada de inversión.</Heading>
+          <Heading as="h1">{t('title')}</Heading>
           <p>
-            Somos una comunidad dedicada a la educación y difusión del
-            ecosistema <strong>Bitcoin en Argentina</strong>
+            {t('subtitle_1')} <strong>{t('subtitle_2')}</strong>
           </p>
         </div>
       </Container>

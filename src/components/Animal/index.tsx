@@ -1,6 +1,6 @@
 import ImageNext from 'next/image'
 
-import { Heading, Text, Flex } from '../UI'
+import { Heading, Text } from '../UI'
 
 import { Animal, Image } from './style'
 

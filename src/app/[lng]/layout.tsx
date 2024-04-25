@@ -1,22 +1,23 @@
-'use client'
-
 import Script from 'next/script'
-import { ThemeProvider } from 'styled-components'
 
-import StyledComponentsRegistry from '@/lib/registry'
-
-import theme from '@/style/theme'
-import GlobalStyles from '@/style/GlobalStyles'
-import { fontSecondary } from '@/style/fonts'
 import { GOOGLE_TAG_ID } from '@/constants/config'
+import AppProvider from '@/context/AppProvider'
+import { fontSecondary } from '@/style/fonts'
+import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { unstable_setRequestLocale } from 'next-intl/server'
 
 export default function RootLayout({
-  children
+  children,
+  params: { lng }
 }: {
   children: React.ReactNode
+  params: { lng: string }
 }) {
+  unstable_setRequestLocale(lng)
+  const messages = useMessages()
+
   return (
-    <html lang="es" className={fontSecondary.className}>
+    <html lang={lng} className={fontSecondary.className}>
       <head>
         <title>La Crypta | Conoce con nosotros sobre Bitcoin.</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
@@ -100,10 +101,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
-        </StyledComponentsRegistry>
+        <NextIntlClientProvider locale={lng} messages={messages}>
+          <AppProvider>{children}</AppProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

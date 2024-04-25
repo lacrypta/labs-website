@@ -8,17 +8,19 @@ import { Icon } from '@/components/UI'
 import { Twitter, Discord, Instagram, Github } from '@/components/Icons'
 
 import { Footer } from './style'
+import { useTranslations } from 'next-intl'
 
 export default function Component() {
+  const t = useTranslations('footer')
   return (
     <Footer>
       <Container>
         <div>
           <Logo size="small" />
-          <p>De Argentina para el mundo.</p>
+          <p>{t('FROM_ARG_TO_WORLD')}</p>
         </div>
         <div>
-          <p>Seguinos en:</p>
+          <p>{t('FOLLOW_IN')}:</p>
           <ul>
             <li>
               <Link href="https://twitter.com/LaCryptaOk" target="_blank">

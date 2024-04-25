@@ -1,6 +1,8 @@
-const path = require('path')
+import createNextIntlPlugin from 'next-intl/plugin'
 
-module.exports = {
+const withNextIntl = createNextIntlPlugin()
+
+const nextConfig = {
   reactStrictMode: false,
   trailingSlash: true,
   swcMinify: true,
@@ -16,3 +18,5 @@ module.exports = {
     ]
   }
 }
+
+export default withNextIntl(nextConfig)

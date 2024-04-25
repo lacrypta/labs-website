@@ -1,12 +1,13 @@
 'use client'
 
+import { Divider, Flex, Heading } from '@/components/UI'
 import Container from '../Layout/Container'
-import { Divider, Heading, Link, Text, Flex } from '@/components/UI'
 
 import Animal from '../Animal'
 import Members from '../Members'
 
 import { fontPrimary } from '@/style/fonts'
+import { useTranslations } from 'next-intl'
 import { AboutSection, Header, List, Number } from './style'
 
 const animals = [
@@ -63,12 +64,13 @@ const animals = [
 ]
 
 export default function Component() {
+  const t = useTranslations()
   return (
     <AboutSection>
       <Divider y={128} />
       <Container>
         <Header>
-          <Heading as="h2">Somos animales de la selva cypherpunk.</Heading>
+          <Heading as="h2">{t('about.title')}</Heading>
           {/* <Text>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
             omnis! Sequi ex commodi cumque hic.
@@ -86,7 +88,7 @@ export default function Component() {
       <Container>
         <Flex justify="center">
           <Heading as="h3">
-            Pero mas que una manada, <br /> somos una comunidad de...
+            {t('about.subtitle_1')}, <br /> {t('about.subtitle_2')}...
           </Heading>
         </Flex>
       </Container>
@@ -94,7 +96,9 @@ export default function Component() {
       <Members>
         <Number>
           <span className={fontPrimary.className}>+1000</span>
-          <span className={fontPrimary.className}>miembros</span>
+          <span className={fontPrimary.className}>
+            {t('MEMBERS').toLowerCase()}
+          </span>
         </Number>
       </Members>
     </AboutSection>

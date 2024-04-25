@@ -1,18 +1,20 @@
 'use client'
 
+import { Heading, Text } from '@/components/UI'
 import Container from '../Layout/Container'
-import { Text, Heading } from '@/components/UI'
 
 import Item from './Item'
 
+import { useTranslations } from 'next-intl'
 import { Faq, List } from './style'
 
 export default function Component() {
+  const t = useTranslations()
   return (
     <Faq>
       <Container>
         <div>
-          <Heading as="h2">Preguntas frecuentes</Heading>
+          <Heading as="h2">{t('faq.title')}</Heading>
           {/* <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
             omnis! Sequi ex commodi cumque hic.
@@ -20,86 +22,44 @@ export default function Component() {
         </div>
         <List>
           <Item
-            title="¿Qué es La Crypta?"
-            description="Somos una comunidad dedicada a la educación, desarrollo y difusión del ecosistema Bitcoin en Argentina. Nos enfocamos en proporcionar independencia y autonomía a la comunidad."
+            title={t('faq.question_1.title')}
+            description={t('faq.question_1.desc')}
           />
           <Item
-            title="¿Por qué valores?"
-            description="Valoramos mucho estos conceptos porque creemos que son aspectos claves para que nuestra comunidad sea lo que aspiramos y continue creciendo."
+            title={t('faq.question_2.title')}
+            description={t('faq.question_2.desc')}
           />
-          <Item title="¿Qué eventos y actividades organizan?" description="">
-            <Text>
-              Nos encanta mantener una comunicación constante y cercana con
-              nuestra comunidad. Es por eso que organizamos estas actividades
-              regularmente:
-            </Text>
+          <Item title={t('faq.question_3.title')} description="">
+            <Text>{t('faq.question_3.desc_1')}</Text>
             <ul>
               <li>
-                <strong>Community Calls: </strong>Todos los martes a las 18hs en
-                Discord y Twitch, donde nos reunimos para charlar y compartir.
-                Un momento a la semana donde hablamos de nuestros proyectos,
-                eventos, conocemos a los nuevos integrantes, debatimos ideas y
-                demás yerbas.
+                <strong>{t('COMMUNITY_CALLS')}: </strong>{' '}
+                {t('faq.question_3.desc_2')}
               </li>
               <li>
-                <strong>Space y Workshops educativos: </strong>Cada miércoles a
-                las 17hs aprendemos algo nuevo, lo transmitimos en vivo por
-                Twitch y Nostr.
+                <strong>{t('SPACE_AND_WORKSHOPS')}: </strong>
+                {t('faq.question_3.desc_3')}
               </li>
-              <li>
-                Además, una vez al mes, organizamos un
-                <strong> evento presencial</strong>, donde finalmente
-                compartimos en persona.
-              </li>
+              <li>{t('faq.question_3.desc_4')}</li>
             </ul>
-            <Text>
-              Te invitamos a unirte a nosotros en estas actividades y ser parte
-              de nuestra comunidad.
-            </Text>
+            <Text>{t('faq.question_3.desc_5')}</Text>
           </Item>
-          <Item
-            title="¿Qué beneficios tiene ser parte de la comunidad de La Crypta"
-            description=""
-          >
+          <Item title={t('faq.question_4.title')} description="">
             <ul>
-              <li>Aprender sobre Bitcoin, Lightning y Nostr.</li>
-              <li>
-                Networking con otros Bitcoiners, desarrolladores y personas del
-                mundo crypto web3.
-              </li>
-              <li>Desarrollar productos colaborativos con la comunidad.</li>
-              <li>Estar al día sobre los últimas novedades sobre Bitcoin.</li>
+              <li>{t('faq.question_4.desc_1')}</li>
+              <li>{t('faq.question_4.desc_2')}</li>
+              <li>{t('faq.question_4.desc_3')}</li>
+              <li>{t('faq.question_4.desc_4')}</li>
             </ul>
           </Item>
-          <Item title="¿Cómo puedo colaborar?" description="">
-            <Text>
-              Juntos llegamos más lejos. Apreciamos y valoramos muchísimo la
-              colaboración de los integrantes de la comunidad en nuestros
-              proyectos. Para ser voluntari@ de La Crypta sumate a nuestro
-              Discord!
-            </Text>
+          <Item title={t('faq.question_5.title')} description="">
+            <Text>{t('faq.question_5.desc')}</Text>
           </Item>
-          <Item
-            title="¿Cómo puedo donar a la comunidad de la Crypta?"
-            description=""
-          >
-            <Text>
-              Podes hacerlo enviando satoshis a{' '}
-              <strong>pozo@lacrypta.ar</strong> a traves de tu billetera de
-              Bitcoin Lightning.
-            </Text>
+          <Item title={t('faq.question_6.title')} description="">
+            <Text>{t('faq.question_6.desc')}</Text>
           </Item>
-          <Item
-            title="¿Por qué debería unirme al canal de Discord?"
-            description=""
-          >
-            <Text>
-              La comunidad de La Crypta vive prácticamente en el Discord. Es ahí
-              donde organizamos todas nuestras actividades y donde charlamos a
-              diario. Además en esa plataforma tenemos una radio colaborativa,
-              un bot para enviar satoshis, zapathons, distintos tipos de
-              méritos, la famosa 💩 y mucho más…
-            </Text>
+          <Item title={t('faq.question_7.title')} description="">
+            <Text>{t('faq.question_7.desc')}</Text>
           </Item>
         </List>
       </Container>

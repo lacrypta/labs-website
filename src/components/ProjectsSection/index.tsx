@@ -1,19 +1,21 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import Container from '../Layout/Container'
-import { Heading, Text, Link } from '../UI'
+import { Heading } from '../UI'
 
 import Project from './Project'
 
-import { Projects, Header } from './style'
+import { Header, Projects } from './style'
 
 export default function Component() {
+  const t = useTranslations('projects')
   return (
     <Projects>
       {/* Quienes somos */}
       <Container>
         <Header>
-          <Heading as="h2">Algunos de nuestros proyectos son...</Heading>
+          <Heading as="h2">{t('title')}...</Heading>
           {/* <Text>Todos nuestros proyectos son completamente libres para </Text>
           <Link href="#">Ver proyectos de la comunidad</Link> */}
         </Header>

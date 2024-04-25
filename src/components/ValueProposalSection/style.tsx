@@ -1,7 +1,5 @@
 import { styled } from 'styled-components'
 
-import theme from '@/style/theme'
-
 export const ValueProposal = styled.div`
   display: flex;
   flex-direction: column;
