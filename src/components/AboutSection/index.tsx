@@ -22,34 +22,14 @@ const animals = [
     color: '#F4941E'
   },
   {
-    name: 'Cami',
-    animal: 'Panda',
-    color: '#F5F4EB'
-  },
-  {
-    name: 'Mica',
-    animal: 'Abeja',
-    color: '#FFD000'
+    name: 'Jota',
+    animal: 'Mucuchies',
+    color: '#B47841'
   },
   {
     name: 'Rapax',
     animal: 'Pulpo',
     color: '#A252D5'
-  },
-  {
-    name: 'Naranja',
-    animal: 'Tigre',
-    color: '#F25F01'
-  },
-  {
-    name: 'Guada',
-    animal: 'Pinguino',
-    color: '#FFCE22'
-  },
-  {
-    name: 'JJ',
-    animal: 'Mucuchies',
-    color: '#B47841'
   },
   {
     name: 'Fer',
@@ -60,6 +40,26 @@ const animals = [
     name: 'Jona',
     animal: 'Llama',
     color: '#F40075'
+  },
+  {
+    name: 'Guada',
+    animal: 'Pinguino',
+    color: '#FFCE22'
+  },
+  {
+    name: 'Naranja',
+    animal: 'Tigre',
+    color: '#F25F01'
+  },
+  {
+    name: 'Cami',
+    animal: 'Panda',
+    color: '#F5F4EB'
+  },
+  {
+    name: 'Mica',
+    animal: 'Abeja',
+    color: '#FFD000'
   }
 ]
 
