@@ -6,6 +6,12 @@
     "MEMBERS": "Members",
     "COMMUNITY_CALLS": "Community Calls",
     "SPACE_AND_WORKSHOPS": "Space and Educational Workshops",
+    "navbar":{
+        "bitcoin_price": "Bitcoin price: ",
+        "last_block": "Last Block: ",
+        "transaction_fees": "Transaction fees: ",
+        "loading": "Loading..."
+    },
     "hero": {
         "title": "A revolution masked as investment",
         "subtitle_1": "We are a community dedicated to the education and dissemination of the ecosystem",
