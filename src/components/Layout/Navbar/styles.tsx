@@ -1,7 +1,5 @@
 import { styled } from 'styled-components'
 
-import theme from '@/style/theme'
-
 export const Navbar = styled.nav`
   position: fixed;
   top: 0;
@@ -13,7 +11,7 @@ export const Navbar = styled.nav`
   width: 100%;
   height: 60px;
 
-  background-color: ${theme.colors.black};
+  backdrop-filter: blur(10px);
 
   > div {
     display: flex;
