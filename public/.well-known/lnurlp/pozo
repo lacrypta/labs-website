@@ -1,10 +1,24 @@
 {
+  "status": "OK",
   "tag": "payRequest",
-  "callback": "https://wallet.lacrypta.ar/lnurlp/api/v1/lnurl/cb/KBkFYJ",
+  "commentAllowed": 255,
+  "callback": "https://api.lawallet.ar/lnurlp/110557d061c3e9f239bd53aa0a90888ac11c378df33f865a0a33d68b799120f2/callback",
+  "metadata": "[[\"text/plain\", \"lawallet\"]]",
   "minSendable": 1000,
-  "maxSendable": 100000000000,
-  "metadata": "[[\"text/plain\", \"Pozo\"]]",
-  "commentAllowed": 32,
+  "maxSendable": 10000000000,
+  "payerData": {
+    "name": {
+      "mandatory": false
+    },
+    "email": {
+      "mandatory": false
+    },
+    "pubkey": {
+      "mandatory": false
+    }
+  },
+  "nostrPubkey": "e17feb5f2cf83546bcf7fd9c8237b05275be958bd521543c2285ffc6c2d654b3",
   "allowsNostr": true,
-  "nostrPubkey": "2a1ca5fbdfafa01efc025ca030f8a98aa4578584165e7b3c5c190100028a4744"
+  "federationId": "lawallet.ar",
+  "accountPubKey": "110557d061c3e9f239bd53aa0a90888ac11c378df33f865a0a33d68b799120f2"
 }
