@@ -1,5 +1,6 @@
 {
   "title": "La Crypta",
   "description": "La Crypta is the biggest Bitcoin community in Argentina",
-  "logo": "https://pbs.twimg.com/profile_images/1755606302951411712/5HjGkdHm_400x400.jpg"
+  "logo": "https://pbs.twimg.com/profile_images/1755606302951411712/5HjGkdHm_400x400.jpg",
+  "adminPubkey": "2ad91f1dca2dcd5fc89e7208d1e5059f0bac0870d63fc3bac21c7a9388fa18fd"
 }
