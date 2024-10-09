@@ -6,7 +6,7 @@
     "MEMBERS": "Miembros",
     "COMMUNITY_CALLS": "Community Calls",
     "SPACE_AND_WORKSHOPS": "Space y Workshops educativos",
-    "navbar":{
+    "navbar": {
         "bitcoin_price": "Precio de Bitcoin: ",
         "last_block": "Último bloque: ",
         "transaction_fees": "Costes de transaccón: ",
@@ -14,16 +14,16 @@
     },
     "hero": {
         "title": "Una revolución disfrazada de inversión",
-        "subtitle_1": "Somos una comunidad dedicada a la educación y difusión del ecosistema",
-        "subtitle_2": "Bitcoin en Argentina"
+        "subtitle_1": "La Crypta es una organización Argentina dedicada a la",
+        "subtitle_2": "educación, difusión y desarrollo del ecosistema Bitcoin."
     },
     "about": {
-        "title": "Somos animales de la selva cypherpunk",
-        "subtitle_1": "Pero mas que una manada",
-        "subtitle_2": "somos una comunidad de"
+        "title": "Nuestro team"
     },
     "projects": {
-        "title": "Algunos de nuestros proyectos son"
+        "title": "Nuestros proyectos",
+        "description_1": "Nos dedicamos a crear productos y experiencias que facilitan su uso,",
+        "description_2": "haciéndolo accesible para todos."
     },
     "values": {
         "title": "Construimos en base a",
@@ -46,7 +46,7 @@
         "title": "Preguntas frecuentes",
         "question_1": {
             "title": "¿Qué es La Crypta?",
-            "desc": "Somos una comunidad dedicada a la educación, desarrollo y difusión del ecosistema Bitcoin en Argentina. Nos enfocamos en proporcionar independencia y autonomía a la comunidad"
+            "desc": "Somos una comunidad dedicada a la educación, desarrollo y difusión del ecosistema Bitcoin en Argentina. Nos enfocamos en proporcionar independencia y autonomía a la comunidad."
         },
         "question_2": {
             "title": "¿Por qué valores?",

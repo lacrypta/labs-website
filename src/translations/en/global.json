@@ -6,7 +6,7 @@
     "MEMBERS": "Members",
     "COMMUNITY_CALLS": "Community Calls",
     "SPACE_AND_WORKSHOPS": "Space and Educational Workshops",
-    "navbar":{
+    "navbar": {
         "bitcoin_price": "Bitcoin price: ",
         "last_block": "Last Block: ",
         "transaction_fees": "Transaction fees: ",
@@ -14,8 +14,7 @@
     },
     "hero": {
         "title": "A revolution masked as investment",
-        "subtitle_1": "We are a community dedicated to the education and dissemination of the ecosystem",
-        "subtitle_2": "Bitcoin in Argentina"
+        "subtitle_1": "La Crypta is an Argentine organization dedicated to the education, dissemination and development of the Bitcoin ecosystem."
     },
     "about": {
         "title": "We are cypherpunk jungle animals",
@@ -23,7 +22,8 @@
         "subtitle_2": "we are a community of"
     },
     "projects": {
-        "title": "Some of our projects are"
+        "title": "Our projects",
+        "description": "We are dedicated to creating products and experiences that make them easy to use, making them accessible to everyone."
     },
     "values": {
         "title": "We build based on",
