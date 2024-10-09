@@ -1,13 +1,11 @@
 'use client'
 
-import Container from '../Container'
+import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
+
+import { getBlocks, getBtcPrice } from '@/lib/utils/bitcoin'
 
 import Logo from '@/components/Logo'
-
-import { useTranslations } from 'next-intl'
-import { Navbar } from './styles'
-import { getBlocks, getBtcPrice } from '@/lib/utils/bitcoin'
-import { useEffect, useState } from 'react'
 
 export default function Component() {
   const t = useTranslations('navbar')
@@ -28,13 +26,13 @@ export default function Component() {
   }, [])
 
   return (
-    <Navbar>
-      <Container>
+    <div className="fixed z-20 top-0 lef-0 flex align-center w-full h-[60px] bg-red-300">
+      <div className="relative flex items-center w-full max-w-[900px] mx-auto px-4">
         {/* <Flex> */}
         <Logo size="medium" />
         {/* <LocaleSwitcher /> */}
         {/* </Flex> */}
-        <ul>
+        <ul className="hidden gap-2">
           <li>
             <a href="#">{t('HOME')}</a>
           </li>
@@ -48,7 +46,7 @@ export default function Component() {
             <a href="#">{t('VALUES')}</a>
           </li>
         </ul>
-        <div>
+        <div className="hidden">
           <p>
             <strong>{t('bitcoin_price')}</strong>
             <span style={{ textAlign: 'left', display: 'inline-block' }}>
@@ -62,7 +60,7 @@ export default function Component() {
             </span>
           </p>
         </div>
-      </Container>
-    </Navbar>
+      </div>
+    </div>
   )
 }

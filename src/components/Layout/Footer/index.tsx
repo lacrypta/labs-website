@@ -1,61 +1,105 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
-import Container from '../Container'
 import Logo from '@/components/Logo'
-import { Icon } from '@/components/UI'
 import { Twitter, Discord, Instagram, Github } from '@/components/Icons'
 
-import { Footer } from './style'
 import { useTranslations } from 'next-intl'
+import { Button } from '@/components/ui/button'
 
 export default function Component() {
   const t = useTranslations('footer')
   return (
-    <Footer>
-      <Container>
-        <div>
-          <Logo size="small" />
-          <p>{t('FROM_ARG_TO_WORLD')}</p>
+    <div className="w-full py-32 bg-black">
+      <div className="flex flex-col gap-8 w-full max-w-[900px] mx-auto px-4">
+        <div className="flex-1 flex flex-col lg:flex-row justify-between gap-8">
+          <div className="flex-1 flex flex-col items-center lg:items-start gap-8">
+            <Logo size="small" />
+            <div className="flex items-center">
+              <div className="relative w-4 h-4 mr-2">
+                <Image src="/img/mate.png" alt="Mate icon" fill />
+              </div>
+              <p className="text-lg text-white/70">
+                {'Minado bloque'} <span>#666.666</span>
+              </p>
+            </div>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <Button variant="link" size="lg" asChild>
+                  <Link href="#">Comunidad</Link>
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" size="lg" asChild>
+                  <Link href="#">Proyectos</Link>
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" size="lg" asChild>
+                  <Link href="#">Qué hacemos</Link>
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" size="lg" asChild>
+                  <Link href="#">Team</Link>
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" size="lg" asChild>
+                  <Link href="#">Tienda</Link>
+                </Button>
+              </li>
+              <li>
+                <Button variant="link" size="lg" asChild>
+                  <Link href="#">Blog</Link>
+                </Button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <p>{t('FOLLOW_IN')}:</p>
-          <ul>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+          <div>
+            <p className="text-sm">Belgrano, 3894</p>
+          </div>
+          <ul className="flex gap-2">
             <li>
-              <Link href="https://twitter.com/LaCryptaOk" target="_blank">
-                <Icon>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="https://twitter.com/LaCryptaOk" target="_blank">
                   <Twitter />
-                </Icon>
-              </Link>
+                </Link>
+              </Button>
             </li>
             <li>
-              <Link
-                href="https://www.instagram.com/lacryptaok/"
-                target="_blank"
-              >
-                <Icon>
+              <Button variant="ghost" size="icon" asChild>
+                <Link
+                  href="https://www.instagram.com/lacryptaok/"
+                  target="_blank"
+                >
                   <Instagram />
-                </Icon>
-              </Link>
+                </Link>
+              </Button>
             </li>
             <li>
-              <Link href="https://github.com/lacrypta" target="_blank">
-                <Icon>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="https://github.com/lacrypta" target="_blank">
                   <Github />
-                </Icon>
-              </Link>
+                </Link>
+              </Button>
             </li>
             <li>
-              <Link href="https://discord.gg/QESv76truh" target="_blank">
-                <Icon>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href="https://discord.gg/QESv76truh" target="_blank">
                   <Discord />
-                </Icon>
-              </Link>
+                </Link>
+              </Button>
             </li>
           </ul>
         </div>
-      </Container>
-    </Footer>
+      </div>
+    </div>
   )
 }
