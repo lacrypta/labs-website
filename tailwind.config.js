@@ -22,6 +22,15 @@ module.exports = {
       '9xl': ['8rem', { lineHeight: '1' }]
     },
     extend: {
+      animation: {
+        grid: 'grid 240s linear infinite'
+      },
+      keyframes: {
+        grid: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-100%)' }
+        }
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
