@@ -30,6 +30,9 @@ import {
 } from '@/components/ui/card'
 import { shuffle } from '@/lib/utils'
 import TrustUsSection from '@/components/TrustUsSection'
+import { AnimatedGrid } from '@/components/animated-grid'
+import { useScreenDetector } from '@/hooks/use-screen-detector'
+import { DotPattern } from '@/components/dot-pattern'
 
 const colors = [
   '#BF0E1A',
@@ -133,6 +136,8 @@ export default function Page() {
   //   })
   // }
 
+  const { isMobile } = useScreenDetector()
+
   const randomColor = () => {
     const number = Math.floor(Math.random() * colors.length)
 
@@ -146,29 +151,32 @@ export default function Page() {
 
   return (
     <div className="pt-[60px]">
-      <Navbar />
+      <div className="relative overflow-hidden">
+        <Navbar />
 
-      <aside className="bg-black text-white py-8">
-        <Container>
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 w-full">
-            <div>
-              <p className="text-sm">12 de Septiembre, 21hs</p>
-              <h4 className="text-xl font-bold">Cumpleanos de La Crypta</h4>
-              {/* <p className="text-sm">
+        <aside className="relative z-10 bg-black text-white py-8">
+          <Container>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 w-full">
+              <div>
+                <p className="text-sm">12 de Septiembre, 21hs</p>
+                <h4 className="text-xl font-bold">Cumpleanos de La Crypta</h4>
+                {/* <p className="text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
                 cupiditate?
               </p> */}
+              </div>
+              <Button className="hidden lg:flex" size="lg" variant="ghost">
+                Ver evento
+              </Button>
             </div>
-            <Button className="hidden lg:flex" size="lg" variant="ghost">
-              Ver evento
-            </Button>
-          </div>
-        </Container>
-      </aside>
+          </Container>
+        </aside>
 
-      <Hero />
+        <Hero />
 
-      <TrustUsSection />
+        <TrustUsSection />
+        <AnimatedGrid angle={isMobile ? 60 : 40} className="z-0" />
+      </div>
 
       {/* <button
           onClick={() => {
@@ -301,18 +309,19 @@ export default function Page() {
                         if (!data) return null
                         if (data?.title)
                           return (
-                            <Card
-                              className="bg-border"
-                              // style={{
-                              //   backgroundColor: randomColor()
-                              // }}
-                            >
+                            <Card>
                               <CardContent className="px-4 py-8">
                                 <h3 className="text-6xl font-bold">
                                   {data?.title}
                                 </h3>
                                 <p className="text-2xl">{data?.description}</p>
                               </CardContent>
+                              <DotPattern
+                                dotColor="#ffffff"
+                                dotSize={2}
+                                gap={32}
+                                className="absolute inset-0 z-0 opacity-20"
+                              />
                             </Card>
                           )
 
@@ -321,7 +330,7 @@ export default function Page() {
                             <CardContent className="p-0">
                               <img
                                 src={data?.image}
-                                className="w-full h-96 object-cover bg-red-500"
+                                className="w-full h-96 object-cover bg-border"
                               />
                             </CardContent>
                           </Card>
@@ -335,18 +344,19 @@ export default function Page() {
                         if (!data) return null
                         if (data?.title)
                           return (
-                            <Card
-                              className="bg-border"
-                              // style={{
-                              //   backgroundColor: randomColor()
-                              // }}
-                            >
+                            <Card>
                               <CardContent className="px-4 py-8">
                                 <h3 className="text-6xl font-bold">
                                   {data?.title}
                                 </h3>
                                 <p className="text-2xl">{data?.description}</p>
                               </CardContent>
+                              <DotPattern
+                                dotColor="#ffffff"
+                                dotSize={2}
+                                gap={32}
+                                className="absolute inset-0 z-0 opacity-20"
+                              />
                             </Card>
                           )
 
@@ -355,7 +365,7 @@ export default function Page() {
                             <CardContent className="p-0">
                               <img
                                 src="/placeholder.svg"
-                                className="w-full h-96 object-cover bg-red-500"
+                                className="w-full h-96 object-cover bg-border"
                               />
                             </CardContent>
                           </Card>
