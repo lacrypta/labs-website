@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
+import { cn } from '@/lib/utils'
+
 import { Button } from '../ui/button'
 
 const logos = [
@@ -12,7 +14,7 @@ const logos = [
   { url: '/img/logos/rootstock.png', width: 257, height: 46 }
 ]
 
-export default function Component() {
+export default function Component({ className }: any) {
   const t = useTranslations('hero')
 
   const [duplicatedLogos, setDuplicatedLogos] = useState(logos)
@@ -41,7 +43,12 @@ export default function Component() {
   }, [logos])
 
   return (
-    <div className="flex flex-col justify-center min-h-screen text-center">
+    <div
+      className={cn(
+        'relative z-10 flex flex-col justify-center min-h-screen text-center',
+        className
+      )}
+    >
       <div className="relative w-full max-w-[900px] h-full mx-auto px-4 py-16">
         <div className="flex flex-col gap-8 lg:gap-12">
           <h1 className="text-6xl lg:text-9xl font-bold">{t('title')}</h1>
@@ -51,7 +58,7 @@ export default function Component() {
             <span className="ml-1">{t('subtitle_2')}</span>
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg">Contactate con nosotros</Button>
+            <Button size="lg">Charlemos</Button>
             {/* <Button size="lg" variant="secondary">
               Conocenos
             </Button> */}
