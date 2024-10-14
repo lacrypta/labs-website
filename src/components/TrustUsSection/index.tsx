@@ -35,7 +35,7 @@ const logos = [
 
 export default function TrustUsSection() {
   return (
-    <section className="overflow-x-hidden w-full py-32">
+    <section className="relative overflow-x-hidden z-10 w-full py-32">
       <div className="mx-auto max-w-[900px] px-3">
         <Carousel
           className="overflow-x-hidden"
