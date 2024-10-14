@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { DotPattern } from '../dot-pattern'
 
 const values = [
   'honesty',
@@ -27,7 +28,7 @@ export default function Component() {
   }, [])
 
   return (
-    <div className="py-32">
+    <div className="relative py-32">
       <div className="flex flex-col gap-8 w-full max-w-[568px] mx-auto px-4">
         <div className="flex items-center justify-center">
           <div className="relative overflow-hidden flex gap-3 h-10 text-2xl lg:text-4xl">
@@ -60,6 +61,12 @@ export default function Component() {
           </p>
         </div>
       </div>
+      <DotPattern
+        dotColor="#ffffff"
+        dotSize={2}
+        gap={32}
+        className="absolute inset-0 z-0 opacity-20"
+      />
     </div>
   )
 }
