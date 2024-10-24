@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useEffect, useState, useTransition } from 'react'
+import React from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { shuffle } from '@/lib/utils'
 import { useScreenDetector } from '@/hooks/use-screen-detector'
@@ -13,9 +14,7 @@ import Hero from '@/components/Hero'
 import ProjectsSection from '@/components/ProjectsSection'
 import ValueProposalSection from '@/components/ValueProposalSection'
 
-import { Button } from '@/components/ui/button'
 import { Container } from '@/components/container'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import LibsOpenSource from '@/components/libs-open-source'
 import CommunicateIcon from '@/components/Icons/Communicate'
 import EducateIcon from '@/components/Icons/Educate'
@@ -24,10 +23,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import TrustUsSection from '@/components/TrustUsSection'
 import { AnimatedGrid } from '@/components/animated-grid'
 import { DotPattern } from '@/components/dot-pattern'
-import ArrowTopRight from '@/components/Icons/ArrowTopRight'
 import { ScrollAnimatedImage } from '@/components/scroll-animated-image'
-import { useTranslations } from 'next-intl'
-import { getBlocks, getBtcPrice } from '@/lib/utils/bitcoin'
 
 const colors = [
   '#BF0E1A',
@@ -272,9 +268,12 @@ export default function Page() {
               {t('shares.title')}
             </h2>
           </div>
-          {items?.map((item: any) => {
+          {items?.map((item, index) => {
             return (
-              <div className="grid grid-cols-1 md:grid-cols-[240px,1fr]">
+              <div
+                className="grid grid-cols-1 md:grid-cols-[240px,1fr]"
+                key={index}
+              >
                 <div className="p-4">
                   <div className="sticky top-20">
                     <h3 className="font-bold text-2xl lg:text-4xl">
@@ -287,11 +286,11 @@ export default function Page() {
                   <div className="flex-1 flex flex-col gap-4">
                     {shuffleEvents(item.elements)
                       .filter((data: any) => data?.id % 2 !== 0)
-                      .map((data: any) => {
+                      .map((data: any, key) => {
                         if (!data) return null
                         if (data?.title)
                           return (
-                            <Card className="rounded-none">
+                            <Card className="rounded-none" key={key}>
                               <CardContent className="px-4 py-8">
                                 <h3 className="text-6xl font-bold">
                                   {data?.title}
@@ -308,7 +307,7 @@ export default function Page() {
                           )
 
                         return (
-                          <Card>
+                          <Card key={key}>
                             <CardContent className="p-0">
                               <img
                                 src={data?.image}
@@ -322,7 +321,7 @@ export default function Page() {
                   <div className="flex-1 flex flex-col gap-4">
                     {shuffleEvents(item.elements)
                       .filter((data: any) => data?.id % 2 === 0)
-                      .map((data: any) => {
+                      .map((data: any, key) => {
                         if (!data) return null
                         if (data?.title)
                           return (
@@ -343,7 +342,7 @@ export default function Page() {
                           )
 
                         return (
-                          <Card>
+                          <Card key={key}>
                             <CardContent className="p-0">
                               <img
                                 src="/placeholder.svg"

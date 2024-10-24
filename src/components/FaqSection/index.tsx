@@ -1,6 +1,6 @@
 'use client'
 
-import { Heading, Text } from '@/components/UI'
+// import { Heading, Text } from '@/components/UI'
 import Container from '../Layout/Container'
 
 import Item from './Item'
@@ -14,7 +14,7 @@ export default function Component() {
     <Faq>
       <Container>
         <div>
-          <Heading as="h2">{t('faq.title')}</Heading>
+          {/* <Heading as="h2">{t('faq.title')}</Heading> */}
           {/* <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
             omnis! Sequi ex commodi cumque hic.
@@ -30,7 +30,7 @@ export default function Component() {
             description={t('faq.question_2.desc')}
           />
           <Item title={t('faq.question_3.title')} description="">
-            <Text>{t('faq.question_3.desc_1')}</Text>
+            {/* <Text>{t('faq.question_3.desc_1')}</Text> */}
             <ul>
               <li>
                 <strong>{t('COMMUNITY_CALLS')}: </strong>{' '}
@@ -42,7 +42,7 @@ export default function Component() {
               </li>
               <li>{t('faq.question_3.desc_4')}</li>
             </ul>
-            <Text>{t('faq.question_3.desc_5')}</Text>
+            {/* <Text>{t('faq.question_3.desc_5')}</Text> */}
           </Item>
           <Item title={t('faq.question_4.title')} description="">
             <ul>
@@ -53,13 +53,13 @@ export default function Component() {
             </ul>
           </Item>
           <Item title={t('faq.question_5.title')} description="">
-            <Text>{t('faq.question_5.desc')}</Text>
+            {/* <Text>{t('faq.question_5.desc')}</Text> */}
           </Item>
           <Item title={t('faq.question_6.title')} description="">
-            <Text>{t('faq.question_6.desc')}</Text>
+            {/* <Text>{t('faq.question_6.desc')}</Text> */}
           </Item>
           <Item title={t('faq.question_7.title')} description="">
-            <Text>{t('faq.question_7.desc')}</Text>
+            {/* <Text>{t('faq.question_7.desc')}</Text> */}
           </Item>
         </List>
       </Container>
