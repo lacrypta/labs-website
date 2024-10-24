@@ -15,11 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
   params: { lng: string }
 }) {
-  unstable_setRequestLocale(lng)
+  unstable_setRequestLocale('en')
   const messages = useMessages()
 
   return (
-    <html lang={lng} className={fontSecondary.className}>
+    <html lang={'en'} className={fontSecondary.className}>
       <head>
         <title>La Crypta | Conoce con nosotros sobre Bitcoin.</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
@@ -103,7 +103,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <NextIntlClientProvider locale={lng} messages={messages}>
+        <NextIntlClientProvider locale={'en'} messages={messages}>
           <AppProvider>{children}</AppProvider>
         </NextIntlClientProvider>
       </body>
