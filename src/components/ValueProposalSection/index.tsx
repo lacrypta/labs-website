@@ -49,16 +49,12 @@ export default function Component() {
                 )
               })}
             </div>
-            <span className="leading-none">en cada proyecto.</span>
+            <span className="leading-none">{t('subtitle')}</span>
           </div>
         </div>
 
         <div className="max-w-[568px] mx-auto text-center">
-          <p className="text-lg text-white/70">
-            En La Crypta, cada valor impulsa nuestro enfoque en crear soluciones
-            eficientes, seguras y abiertas, fundamentadas en principios que
-            guían todo nuestro trabajo.
-          </p>
+          <p className="text-lg text-white/70">{t('description')}</p>
         </div>
       </div>
       <DotPattern

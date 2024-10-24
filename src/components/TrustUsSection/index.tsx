@@ -10,6 +10,7 @@ import {
   CarouselContent,
   CarouselItem
 } from '@/components/ui/carousel'
+import { useTranslations } from 'next-intl'
 
 const logos = [
   { title: 'Bitfinex', url: '/img/logos/bitfinex.png', width: 380, height: 46 },
@@ -34,6 +35,8 @@ const logos = [
 ]
 
 export default function TrustUsSection() {
+  const t = useTranslations('trust')
+
   return (
     <section className="relative overflow-x-hidden z-10 w-full py-32">
       <div className="mx-auto max-w-[900px] px-3">
@@ -52,7 +55,7 @@ export default function TrustUsSection() {
         >
           <div className="flex items-center w-full gap-4 mb-8">
             <div className="w-full text-center">
-              <h2 className="text-xl font-bold">Confiaron en nosotros</h2>
+              <h2 className="text-xl font-bold">{t('title')}</h2>
             </div>
           </div>
           <CarouselContent>

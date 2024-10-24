@@ -15,75 +15,87 @@ import Animal from '../Animal'
 const animals = [
   {
     name: 'Agus',
-    animal: 'Gorila',
+    animal: 'Gorilla',
     color: '#BF0E1A',
-    rol: 'CEO'
+    rol: 'CEO',
+    image: 'agus'
   },
   {
     name: 'Mariano',
-    animal: 'Lechuza',
+    animal: 'Own',
     color: '#F4941E',
-    rol: 'CTO'
+    rol: 'CTO',
+    image: 'mariano'
   },
   {
     name: 'Jota',
     animal: 'Mucuchies',
     color: '#B47841',
-    rol: 'Staff Software Engineer'
+    rol: 'Staff Software Engineer',
+    image: 'jota'
   },
   {
     name: 'Rapax',
-    animal: 'Pulpo',
+    animal: 'Octopus',
     color: '#A252D5',
-    rol: 'Community Lead'
+    rol: 'Community Lead',
+    image: 'rapax'
   },
-  {
-    name: 'Fer',
-    animal: 'Cuervo',
-    color: '#4D4D4A',
-    rol: 'Software Engineer'
-  },
+  // {
+  //   name: 'Fer',
+  //   animal: 'Cuervo',
+  //   color: '#4D4D4A',
+  //   rol: 'Software Engineer',
+  //   image: ''
+  // },
   {
     name: 'Jona',
     animal: 'Llama',
     color: '#F40075',
-    rol: 'Product Engineer'
+    rol: 'Product Engineer',
+    image: 'jona'
   },
   {
     name: 'Guada',
-    animal: 'Pinguino',
+    animal: 'Penguin',
     color: '#FFCE22',
-    rol: 'Designer'
+    rol: 'Designer',
+    image: 'guada'
   },
   {
     name: 'Naranja',
-    animal: 'Tigre',
+    animal: 'Tiger',
     color: '#F25F01',
-    rol: 'Video editor'
+    rol: 'Video editor',
+    image: 'naranja'
   },
   {
     name: 'Andrea',
-    animal: 'Gato',
+    animal: 'Cat',
     color: '#1D3775',
-    rol: 'DevRel'
+    rol: 'DevRel',
+    image: 'andrea'
   },
   {
     name: 'Fierillo',
-    animal: 'Oso',
+    animal: 'Bear',
     color: '#5A4D46',
-    rol: 'Community manager'
+    rol: 'Community manager',
+    image: 'fierillo'
   },
   {
     name: 'Fede',
-    animal: 'Tiburon',
+    animal: 'Shark',
     color: '#456B90',
-    rol: 'Operations'
+    rol: 'Operations',
+    image: 'fede'
   },
   {
     name: 'Yayi',
-    animal: 'Serpiente',
+    animal: 'Snake',
     color: '#1BA710',
-    rol: 'Head of Communications'
+    rol: 'Head of Communications',
+    image: 'yayi'
   }
 ]
 
