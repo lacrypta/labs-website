@@ -1,38 +1,33 @@
 'use client'
+
+import React, { useEffect, useState, useTransition } from 'react'
+import Image from 'next/image'
+
+import { shuffle } from '@/lib/utils'
+import { useScreenDetector } from '@/hooks/use-screen-detector'
+
 import Footer from '@/components/Layout/Footer'
 import Navbar from '@/components/Layout/Navbar'
-
 import AboutSection from '@/components/AboutSection'
-import FaqSection from '@/components/FaqSection'
 import Hero from '@/components/Hero'
 import ProjectsSection from '@/components/ProjectsSection'
 import ValueProposalSection from '@/components/ValueProposalSection'
-import Logo from '@/components/Logo'
-import Link from 'next/link'
+
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/container'
-import Image from 'next/image'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import React from 'react'
 import LibsOpenSource from '@/components/libs-open-source'
-
 import CommunicateIcon from '@/components/Icons/Communicate'
 import EducateIcon from '@/components/Icons/Educate'
 import IdeaIcon from '@/components/Icons/Idea'
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from '@/components/ui/card'
-import { shuffle } from '@/lib/utils'
+import { Card, CardContent } from '@/components/ui/card'
 import TrustUsSection from '@/components/TrustUsSection'
 import { AnimatedGrid } from '@/components/animated-grid'
-import { useScreenDetector } from '@/hooks/use-screen-detector'
 import { DotPattern } from '@/components/dot-pattern'
+import ArrowTopRight from '@/components/Icons/ArrowTopRight'
+import { ScrollAnimatedImage } from '@/components/scroll-animated-image'
+import { useTranslations } from 'next-intl'
+import { getBlocks, getBtcPrice } from '@/lib/utils/bitcoin'
 
 const colors = [
   '#BF0E1A',
@@ -125,8 +120,8 @@ const items = [
 ]
 
 export default function Page() {
+  const t = useTranslations()
   // const locale = useLocale()
-  // const t = useTranslations()
   // const [isPending, startTransition] = useTransition()
   // function changeLanguage(nextLocale: string) {
   //   startTransition(() => {
@@ -138,105 +133,84 @@ export default function Page() {
 
   const { isMobile } = useScreenDetector()
 
-  const randomColor = () => {
-    const number = Math.floor(Math.random() * colors.length)
-
-    return colors[number]
-  }
-
   const shuffleEvents = (data: any) => {
     const value = shuffle(data)
     return value
   }
 
   return (
-    <div className="pt-[60px]">
-      <div className="relative overflow-hidden">
-        <Navbar />
-
-        <aside className="relative z-10 bg-black text-white py-8">
+    <div className="pt-[60px] overflow-x-hidden">
+      <Navbar />
+      <div className="relative z-0">
+        {/* <aside className="relative z-10 py-8 bg-black border-b border-input text-white">
           <Container>
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 w-full">
               <div>
                 <p className="text-sm">12 de Septiembre, 21hs</p>
                 <h4 className="text-xl font-bold">Cumpleanos de La Crypta</h4>
-                {/* <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                cupiditate?
-              </p> */}
               </div>
-              <Button className="hidden lg:flex" size="lg" variant="ghost">
+              <Button className="hidden lg:flex" variant="outline">
                 Ver evento
+                <ArrowTopRight />
               </Button>
             </div>
           </Container>
-        </aside>
+        </aside> */}
 
         <Hero />
 
         <TrustUsSection />
-        <AnimatedGrid angle={isMobile ? 60 : 40} className="z-0" />
+
+        {/* <AnimatedGrid
+          angle={isMobile ? 60 : 40}
+          className="z-0 rotate-180 top-0"
+        /> */}
+        <AnimatedGrid angle={isMobile ? 60 : 40} className="z-0 bottom-0" />
       </div>
 
-      {/* <button
-          onClick={() => {
-            if (locale !== 'en') changeLanguage('en')
-          }}
-        >
-          ingles
-        </button>
-
-        <button
-          onClick={() => {
-            if (locale !== 'es') changeLanguage('es')
-          }}
-        >
-          español
-        </button> */}
-
       {/*  */}
-      <div className="relative overflow-hidden rounded-t-3xl lg:rounded-t-[120px] py-32">
-        <div className="absolute top-0 z-0 w-full">
-          <div className="max-w-[900px] h-[200px] mx-auto bg-[#B3F950] rounded-full blur-[400px]" />
-        </div>
-        <Container>
+      <div className="relative z-20 overflow-hidden flex flex-col rounded-t-3xl lg:rounded-t-[120px] pt-64 shadow-[0 -35px -60px -15px red] bg-gradient-to-t from-transparent to-[#B3F950]/15">
+        <Container className="flex flex-col gap-4 pb-32">
           <div className="flex justify-center items-center gap-2">
             <div className="flex">
-              <Avatar className="border-4 border-border">
-                <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <Avatar className="ml-[-16px] border-4 border-border">
-                <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <Avatar className="ml-[-16px] border-4 border-border">
-                <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
+              <div className="relative z-30 w-10 h-10 bg-[#4D4D4A] rounded-full border-4 border-border">
+                <Image src={`/img/animal/crow.png`} alt={`Crow, Fer`} fill />
+              </div>
+              <div className="relative z-20 w-10 h-10 -ml-4 bg-[#D0A54D] rounded-full border-4 border-border">
+                <Image
+                  src={`/img/animal/scorpion.png`}
+                  alt={`Scorpion, Cyber`}
+                  fill
+                />
+              </div>
+              <div className="relative z-10 w-10 h-10 -ml-4 bg-[#540885] rounded-full border-4 border-border">
+                <Image
+                  src={`/img/animal/ostrich.png`}
+                  alt={`Ostrich, Negr0`}
+                  fill
+                />
+              </div>
+              <div className="relative z-00 w-10 h-10 -ml-4 bg-[#A86541] rounded-full border-4 border-border">
+                <Image
+                  src={`/img/animal/capybara.png`}
+                  alt={`Capybara, Carpincho`}
+                  fill
+                />
+              </div>
             </div>
-            <p className="text-md">+15 miembros</p>
+            <p className="text-md text-muted-foreground">
+              +2.400 {t('MEMBERS')}
+            </p>
           </div>
 
-          <div className="flex flex-col gap-4 text-center">
+          <div className="flex flex-col gap-4 md:max-w-[500px] mx-auto text-center">
             <h2 className="text-4xl lg:text-6xl font-bold">
-              Imaginamos un mundo
-              <br className="hidden lg:flex" /> donde Bitcoin es la norma
+              {t('community.title')}
             </h2>
-            <p className="text-lg">
-              Permitiendo a cada individuo tener control total sobre su riqueza
-              y privacidad,
-              <br className="hidden lg:flex" /> sin depender de gobiernos ni
-              corporaciones.
-            </p>
-            <Image
-              src="/img/community.png"
-              alt="Community"
-              width={1127}
-              height={662}
-            />
+            <p className="text-lg">{t('community.description')}</p>
           </div>
         </Container>
+        <ScrollAnimatedImage src="/img/community.jpg" alt="Community" />
       </div>
 
       {/* Projects */}
@@ -248,31 +222,37 @@ export default function Page() {
         <div className="w-full max-w-[900px] mx-auto px-4">
           <div className="flex flex-col gap-8 max-w-[568px] mx-auto mb-16 text-center">
             <h3 className="text-3xl lg:text-5xl font-bold">
-              ¿Qué es lo que hacemos?
+              {t('pillars.title')}
             </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p>{t('pillars.description')}</p>
           </div>
           <div className="flex flex-col md:flex-row justify-center text-xl font-bold">
-            <div className="relative -bottom-[40px] md:bottom-0 md:-right-[40px] flex flex-col items-start gap-4 w-full md:max-w-[33%] min-h-[250px] p-4 lg:p-8 bg-border rounded-3xl -rotate-6 shadow-2xl">
-              <div className="inline-flex w-auto p-2 rounded-full bg-background">
+            <div
+              className="rotate-6 md:-rotate-6 relative md:-right-[40px] flex w-full md:max-w-[33%] min-h-[250px] shadow-2xl bg-cover bg-center  rounded-3xl duration-300 lg:hover:scale-125 lg:hover:z-10"
+              style={{ backgroundImage: 'url(/img/construimos.webp)' }}
+            >
+              <div className="flex flex-col items-start justify-end gap-1 w-full h-auto p-4 lg:p-8 bg-gradient-to-b from-transparent to-background/80 to-30">
                 <IdeaIcon />
+                <span>{t('pillars.item_1')}</span>
               </div>
-              <span>Construimos</span>
             </div>
-            <div className="relative flex flex-col items-start gap-4 w-full md:max-w-[33%] min-h-[250px] p-4 lg:p-8 bg-border rounded-3xl shadow-2xl">
-              <div className="inline-flex w-auto p-2 rounded-full bg-background">
+            <div
+              className="relative flex w-full md:max-w-[33%] min-h-[250px] rounded-3xl shadow-2xl bg-cover bg-center duration-300 lg:hover:scale-125 lg:hover:z-10"
+              style={{ backgroundImage: 'url(/img/educamos.webp)' }}
+            >
+              <div className="flex flex-col items-start justify-end gap-1 w-full h-auto p-4 lg:p-8 bg-gradient-to-b from-transparent to-background/80 to-30">
                 <EducateIcon />
+                <span>{t('pillars.item_2')}</span>
               </div>
-              <span>Educamos</span>
             </div>
-            <div className="relative -top-[40px] md:top-0 md:-left-[40px] flex flex-col items-start gap-4 w-full md:max-w-[33%] min-h-[250px] p-4 lg:p-8 bg-border rounded-3xl rotate-6 shadow-2xl">
-              <div className="inline-flex w-auto p-2 rounded-full bg-background">
+            <div
+              className="-rotate-6 md:rotate-6 relative md:-left-[40px] flex w-full md:max-w-[33%] min-h-[250px] rounded-3xl  shadow-2xl bg-cover bg-center duration-300 lg:hover:scale-125 lg:hover:z-10"
+              style={{ backgroundImage: 'url(/img/convocamos.webp)' }}
+            >
+              <div className="flex flex-col items-start justify-end gap-1 w-full h-auto p-4 lg:p-8 bg-gradient-to-b from-transparent to-background/80 to-30">
                 <CommunicateIcon />
+                <span>{t('pillars.item_3')}</span>
               </div>
-              <span>Convocamos</span>
             </div>
           </div>
         </div>
@@ -288,7 +268,9 @@ export default function Page() {
       <div className="w-full py-32">
         <div className="flex flex-col gap-12 w-full max-w-[900px] mx-auto px-4">
           <div className="text-center">
-            <h2 className="font-bold text-3xl lg:text-7xl">Participaciones</h2>
+            <h2 className="font-bold text-3xl lg:text-7xl">
+              {t('shares.title')}
+            </h2>
           </div>
           {items?.map((item: any) => {
             return (
@@ -309,7 +291,7 @@ export default function Page() {
                         if (!data) return null
                         if (data?.title)
                           return (
-                            <Card>
+                            <Card className="rounded-none">
                               <CardContent className="px-4 py-8">
                                 <h3 className="text-6xl font-bold">
                                   {data?.title}
@@ -344,7 +326,7 @@ export default function Page() {
                         if (!data) return null
                         if (data?.title)
                           return (
-                            <Card>
+                            <Card className="rounded-none">
                               <CardContent className="px-4 py-8">
                                 <h3 className="text-6xl font-bold">
                                   {data?.title}
