@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang={'en'} className={fontSecondary.className}>
       <head>
-        <title>La Crypta | Conoce con nosotros sobre Bitcoin.</title>
+        <title>La Crypta | Learn with us about Bitcoin.</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="icon" type="img/png" href="img/schema-logo.png" />
 
@@ -29,7 +29,7 @@ export default function RootLayout({
         <meta name="author" content="La Crypta" />
         <meta
           name="description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
+          content="We are a community dedicated to the education and dissemination of the Bitcoin ecosystem in Argentina."
         />
         <meta name="robots" content="index,follow" />
 
@@ -37,7 +37,7 @@ export default function RootLayout({
         <meta property="og:title" content="La Crypta" />
         <meta
           property="og:description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
+          content="We are a community dedicated to the education and dissemination of the Bitcoin ecosystem in Argentina."
         />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:type" content="website" />
@@ -48,7 +48,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="La Crypta" />
         <meta
           name="twitter:description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
+          content="We are a community dedicated to the education and dissemination of the Bitcoin ecosystem in Argentina."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/img/social/twitter-600x330.jpg" />

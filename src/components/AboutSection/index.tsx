@@ -38,7 +38,7 @@ const animals = [
     name: 'Rapax',
     animal: 'Octopus',
     color: '#A252D5',
-    rol: 'Community Lead',
+    rol: 'Full-stack Developer',
     image: 'rapax'
   },
   // {
