@@ -12,7 +12,7 @@ export function AnimatedGrid({ angle = 0, className }: AnimatedGridProps = {}) {
   return (
     <div
       className={cn(
-        'overflow-hidden absolute bottom-0 selection:pointer-events-none w-full h-full opacity-30 [perspective:200px] scale-150 rotate-180',
+        'overflow-hidden absolute right-0 selection:pointer-events-none w-full h-full opacity-100 [perspective:600px]',
         className
       )}
       style={
@@ -28,12 +28,12 @@ export function AnimatedGrid({ angle = 0, className }: AnimatedGridProps = {}) {
         <div
           className={cn(
             'relative animate-grid',
-            '[background-repeat:repeat] [background-size:20dvw_10dvw] h-full [inset:0%_0px] [transform-origin:100%_0_0]',
+            '[background-repeat:repeat] [background-size:8dvw_4dvw] [width:200vw] [height:300vh] [inset:0%_0px] [margin-left:-51%] mx-auto',
             '[background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)]'
           )}
         />
       </div>
-      <div className="absolute z-20 top-0 inset-0 h-full bg-gradient-to-t from-background to-transparent to-90% rotate-180" />
+      <div className="absolute z-20 bottom-0 inset-0 h-full bg-gradient-to-t from-background/50 to-background to-60%" />
     </div>
   )
 }
