@@ -1,36 +1,28 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-
-import { getBlocks, getBtcPrice } from '@/lib/utils/bitcoin'
+import { StoreIcon } from 'lucide-react'
 
 import Logo from '@/components/Logo'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Component() {
   const t = useTranslations('navbar')
 
-  const [btcPrice, setBtcPrice] = useState<number | null>(null)
-  const [lastBlock, setLastBlock] = useState<number | null>(null)
-
-  useEffect(() => {
-    async function fetchData() {
-      const price = await getBtcPrice()
-      setBtcPrice(price)
-
-      const block = await getBlocks()
-      setLastBlock(block)
-    }
-
-    fetchData()
-  }, [])
-
   return (
-    <div className="fixed z-20 top-0 lef-0 flex align-center w-full h-[60px] bg-red-300">
-      <div className="relative flex items-center w-full max-w-[900px] mx-auto px-4">
+    <div className="fixed z-30 top-0 lef-0 flex align-center w-full h-[60px] bg-background border border-input">
+      <div className="relative flex items-center justify-between gap-4 w-full max-w-[900px] mx-auto px-4">
         {/* <Flex> */}
         <Logo size="medium" />
-        {/* <LocaleSwitcher /> */}
+
+        <div className="flex gap-2">
+          <Button>{t('cta')}</Button>
+          <Button variant="outline" asChild>
+            <Link href="#" target="_blank">
+              <StoreIcon className="w-4 h-4" />
+              <span className="hidden md:flex">Shop</span>
+            </Link>
+          </Button>
+        </div>
         {/* </Flex> */}
         <ul className="hidden gap-2">
           <li>
@@ -46,20 +38,6 @@ export default function Component() {
             <a href="#">{t('VALUES')}</a>
           </li>
         </ul>
-        <div className="hidden">
-          <p>
-            <strong>{t('bitcoin_price')}</strong>
-            <span style={{ textAlign: 'left', display: 'inline-block' }}>
-              {btcPrice !== null ? btcPrice : t('loading')}
-            </span>
-          </p>
-          <p>
-            <strong>{t('last_block')}</strong>
-            <span style={{ textAlign: 'left', display: 'inline-block' }}>
-              {lastBlock !== null ? lastBlock : t('loading')}
-            </span>
-          </p>
-        </div>
       </div>
     </div>
   )
