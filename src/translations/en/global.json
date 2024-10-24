@@ -3,10 +3,12 @@
     "ABOUT_US": "About Us",
     "PROJECTS": "Projects",
     "VALUES": "Values",
-    "MEMBERS": "Members",
+    "MEMBERS": "members",
+    "SOON": "Soon",
     "COMMUNITY_CALLS": "Community Calls",
     "SPACE_AND_WORKSHOPS": "Space and Educational Workshops",
     "navbar": {
+        "cta": "Contact us",
         "bitcoin_price": "Bitcoin price: ",
         "last_block": "Last Block: ",
         "transaction_fees": "Transaction fees: ",
@@ -14,19 +16,39 @@
     },
     "hero": {
         "title": "A revolution masked as investment",
-        "subtitle_1": "La Crypta is an Argentine organization dedicated to the education, dissemination and development of the Bitcoin ecosystem."
+        "subtitle": "La Crypta is an Argentine organization dedicated to the education, dissemination and development of the Bitcoin ecosystem.",
+        "cta": "Contact us"
+    },
+    "trust": {
+        "title": "They trusted us"
+    },
+    "community": {
+        "title": "We imagine a world where Bitcoin is the norm",
+        "description": "Allowing every individual to have complete control over their wealth and privacy, without depending on governments or corporations."
     },
     "about": {
         "title": "We are cypherpunk jungle animals",
-        "subtitle_1": "But more than a herd",
-        "subtitle_2": "we are a community of"
+        "subtitle": "But more than a herd"
     },
     "projects": {
         "title": "Our projects",
-        "description": "We are dedicated to creating products and experiences that make them easy to use, making them accessible to everyone."
+        "description": "We are dedicated to creating products and experiences that make them easy to use, making them accessible to everyone.",
+        "cta": "Learn more"
+    },
+    "libraries": {
+        "title": "Open-Source Libraries"
+    },
+    "pillars": {
+        "title": "What do we do?",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "item_1": "We build",
+        "item_2": "We educate",
+        "item_3": "We summon"
     },
     "values": {
         "title": "We build based on",
+        "subtitle": "in every project.",
+        "description": "At La Crypta, each value drives our focus on creating efficient, secure, and open solutions, grounded in principles that guide all our work.",
         "honesty": "Honesty",
         "honesty_desc": "Sincerity and transparency at all times",
         "synergy": "Synergy",
@@ -41,6 +63,10 @@
         "merit_desc": "Recognizing and valuing achievements. Rewarding effort and excellence",
         "innovation": "Innovation",
         "innovation_desc": "Being creative, open to new possibilities, and constantly improving"
+    },
+    "shares": {
+        "title": "Shares",
+        "description": ""
     },
     "faq": {
         "title": "Frequently Asked Questions",
