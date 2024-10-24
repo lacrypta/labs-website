@@ -23,12 +23,17 @@ module.exports = {
     },
     extend: {
       animation: {
-        grid: 'grid 240s linear infinite'
+        grid: 'grid 960s linear infinite',
+        drop: 'drop 7s 0s infinite cubic-bezier(0.4, 0.26, 0, 0.97)'
       },
       keyframes: {
         grid: {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-100%)' }
+        },
+        drop: {
+          '0%': { top: '-50%' },
+          '100%': { top: '110%' }
         }
       },
       borderRadius: {
