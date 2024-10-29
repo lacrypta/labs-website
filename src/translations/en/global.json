@@ -15,8 +15,8 @@
         "loading": "Loading..."
     },
     "hero": {
-        "title": "A revolution masked as investment",
-        "subtitle": "La Crypta is an Argentine organization dedicated to the education, dissemination and development of the Bitcoin ecosystem.",
+        "title": "A revolution disguised as an investment",
+        "subtitle": "La Crypta is an Argentine organization dedicated to the education, dissemination, and development of the Bitcoin and Nostr ecosystems.",
         "cta": "Contact us"
     },
     "trust": {
@@ -43,7 +43,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "item_1": "We build",
         "item_2": "We educate",
-        "item_3": "We summon"
+        "item_3": "We unite"
     },
     "values": {
         "title": "We build based on",
