@@ -37,7 +37,7 @@ export default function RootLayout({
         <meta property="og:title" content="La Crypta" />
         <meta
           property="og:description"
-          content="We are a community dedicated to the education and dissemination of the Bitcoin ecosystem in Argentina."
+          content="La Crypta is an Argentine organization dedicated to the development, education, and sharing of knowledge within the Bitcoin and Nostr ecosystems."
         />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:type" content="website" />
@@ -48,7 +48,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="La Crypta" />
         <meta
           name="twitter:description"
-          content="We are a community dedicated to the education and dissemination of the Bitcoin ecosystem in Argentina."
+          content="La Crypta is an Argentine organization dedicated to the development, education, and sharing of knowledge within the Bitcoin and Nostr ecosystems."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/img/social/twitter-600x330.jpg" />
