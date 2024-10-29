@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import formbricks from '@formbricks/js'
 
 import { shuffle } from '@/lib/utils'
 import { useScreenDetector } from '@/hooks/use-screen-detector'
@@ -43,6 +44,7 @@ const colors = [
 const items = [
   {
     title: 'Bitcoin++',
+    tag: 'btcplusplus2024',
     description: 'Arg, 2024',
     elements: [
       // {
@@ -73,47 +75,50 @@ const items = [
   },
   {
     title: 'LaBitconf',
+    tag: 'labitconf2023',
     description: 'Arg, 2023',
     elements: [
-      {
-        id: 1,
-        title: '+5k',
-        description: 'Tarjetas entregadas.',
-        image: ''
-      },
-      {
-        id: 2,
-        title: '+40',
-        description: 'Tatuajes vendidos.',
-        image: ''
-      },
-      {
-        id: 3,
-        title: '+3K',
-        description: 'Transacciones realizadas.',
-        image: ''
-      },
-      {
-        id: 4,
-        title: '+5K',
-        description: 'Tarjetas entregadas.',
-        image: ''
-      },
+      // {
+      //   id: 1,
+      //   title: '+5k',
+      //   description: 'Tarjetas entregadas.',
+      //   image: ''
+      // },
+      // {
+      //   id: 2,
+      //   title: '+40',
+      //   description: 'Tatuajes vendidos.',
+      //   image: ''
+      // },
+      // {
+      //   id: 3,
+      //   title: '+3K',
+      //   description: 'Transacciones realizadas.',
+      //   image: ''
+      // },
+      // {
+      //   id: 4,
+      //   title: '+5K',
+      //   description: 'Tarjetas entregadas.',
+      //   image: ''
+      // },
       {
         id: 5,
         title: '',
         description: '.',
-        image: '/placeholder.svg'
+        image: 'labitconf2023_boga.webp'
       },
       {
         id: 6,
         title: '',
         description: '.',
-        image: '/placeholder.svg'
+        image: 'labitconf2023_jona.webp'
       }
     ]
   }
 ]
+
+const FORMBRICKS_ID = process.env.FORMBRICKS_ID || ''
 
 export default function Page() {
   const t = useTranslations()
@@ -126,6 +131,13 @@ export default function Page() {
   //     window.location.reload()
   //   })
   // }
+
+  if (typeof window !== 'undefined') {
+    formbricks.init({
+      environmentId: FORMBRICKS_ID!,
+      apiHost: 'https://app.formbricks.com'
+    })
+  }
 
   const { isMobile } = useScreenDetector()
 
@@ -265,7 +277,7 @@ export default function Page() {
         <div className="flex flex-col gap-12 w-full max-w-[900px] mx-auto px-4">
           <div className="text-center">
             <h2 className="font-bold text-3xl lg:text-7xl">
-              {t('shares.title')}
+              {t('events.title')}
             </h2>
           </div>
           {items?.map((item, index) => {
@@ -308,10 +320,10 @@ export default function Page() {
 
                         return (
                           <Card key={key}>
-                            <CardContent className="p-0">
+                            <CardContent className="relative p-0">
                               <img
-                                src={data?.image}
-                                className="w-full h-96 object-cover bg-border"
+                                src={`/img/events/${item.tag}/${data?.image}`}
+                                className="w-full max-h-96 bg-border object-cover object-center"
                               />
                             </CardContent>
                           </Card>
@@ -343,10 +355,10 @@ export default function Page() {
 
                         return (
                           <Card key={key}>
-                            <CardContent className="p-0">
+                            <CardContent className="relative p-0">
                               <img
-                                src="/placeholder.svg"
-                                className="w-full h-96 object-cover bg-border"
+                                src={`/img/events/${item.tag}/${data?.image}`}
+                                className="w-full max-h-96 bg-border object-cover object-center"
                               />
                             </CardContent>
                           </Card>
