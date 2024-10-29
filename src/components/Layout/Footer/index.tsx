@@ -23,7 +23,7 @@ export default function Component() {
                 <Image src="/img/mate.png" alt="Mate icon" fill />
               </div>
               <p className="text-sm text-white/70">
-                {'Minado bloque'} <span>#666.666</span>
+                {'Minado bloque'} <span>#755.100</span>
               </p>
             </div>
           </div>
