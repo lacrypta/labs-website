@@ -41,11 +41,11 @@ export default function Component({ className }: any) {
           </p>
           <p className="flex items-center gap-1 pr-4">
             <span className="opacity-45 text-sm">#</span>
-            <span className="text-md">
+            <strong className="text-md">
               {lastBlock !== null
                 ? lastBlock.toLocaleString('de-DE')
                 : '000.000'}
-            </span>
+            </strong>
           </p>
         </div>
         <div className="flex flex-col gap-8 lg:gap-12">

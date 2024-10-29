@@ -45,18 +45,18 @@ const items = [
     title: 'Bitcoin++',
     description: 'Arg, 2024',
     elements: [
-      {
-        id: 1,
-        title: '+5k',
-        description: 'Tarjetas entregadas.',
-        image: ''
-      },
-      {
-        id: 2,
-        title: '+40',
-        description: 'Tatuajes vendidos.',
-        image: ''
-      },
+      // {
+      //   id: 1,
+      //   title: '+5k',
+      //   description: 'Tarjetas entregadas.',
+      //   image: ''
+      // },
+      // {
+      //   id: 2,
+      //   title: '+40',
+      //   description: 'Tatuajes vendidos.',
+      //   image: ''
+      // },
       {
         id: 5,
         title: '',
@@ -254,14 +254,14 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Valores */}
-      <ValueProposalSection />
-
       {/* Miembros */}
       <AboutSection />
 
+      {/* Valores */}
+      <ValueProposalSection />
+
       {/* Participaciones */}
-      <div className="w-full py-32">
+      {/* <div className="w-full py-32">
         <div className="flex flex-col gap-12 w-full max-w-[900px] mx-auto px-4">
           <div className="text-center">
             <h2 className="font-bold text-3xl lg:text-7xl">
@@ -358,7 +358,7 @@ export default function Page() {
             )
           })}
         </div>
-      </div>
+      </div> */}
 
       {/* Footer */}
       <Footer />

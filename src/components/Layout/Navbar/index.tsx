@@ -15,16 +15,16 @@ export default function Component() {
         <Logo size="medium" />
 
         <div className="flex gap-2">
-          <Button>{t('cta')}</Button>
-          <Button variant="outline" asChild>
-            <Link href="#" target="_blank">
+          {/* <Button>{t('cta')}</Button> */}
+          <Button variant="secondary" asChild>
+            <Link href="https://shop.lacrypta.ar/" target="_blank">
               <StoreIcon className="w-4 h-4" />
               <span className="hidden md:flex">Shop</span>
             </Link>
           </Button>
         </div>
         {/* </Flex> */}
-        <ul className="hidden gap-2">
+        {/* <ul className="hidden gap-2">
           <li>
             <a href="#">{t('HOME')}</a>
           </li>
@@ -37,7 +37,7 @@ export default function Component() {
           <li>
             <a href="#">{t('VALUES')}</a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   )

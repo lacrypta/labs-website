@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang={'en'} className={fontSecondary.className}>
       <head>
-        <title>La Crypta | Learn with us about Bitcoin.</title>
+        <title>La Crypta | Learn with us about Bitcoin and Nostr.</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="icon" type="img/png" href="img/schema-logo.png" />
 
