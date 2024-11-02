@@ -1,39 +1,97 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+
 import Container from '../Layout/Container'
-import { Heading } from '../UI'
-
 import Project from './Project'
+import { cn } from '@/lib/utils'
 
-import { Header, Projects } from './style'
+const MOCK_PROJECTS = [
+  {
+    image: '/img/projects/lawallet.png',
+    title: 'LaWallet',
+    description:
+      'We create infrastructure based on Lightning Network and Nostr to speed up your integration.',
+    url: 'https://lawallet.io',
+    features: [
+      {
+        icon: '',
+        title: 'Infraestructure',
+        description:
+          'Integrating Bitcoin should not be utopian. Build on a solid and flexible infrastructure, ensuring security and scalability.'
+      },
+      {
+        icon: '',
+        title: 'Feature o característica',
+        description: 'Breve descripción de esa feature o característica.'
+      }
+    ]
+  },
+  {
+    image: '/img/projects/halving_massacre.png',
+    title: 'Halving Massacre',
+    description:
+      'Zap sats to boost your bolt power, survive random elimination rounds, and claim the prize pool by being the last player standing!',
+    url: 'https://massacre.lawallet.io/',
+    features: [
+      {
+        icon: '',
+        title: 'Feature o característica',
+        description: 'Breve descripción de esa feature o característica.'
+      },
+      {
+        icon: '',
+        title: 'Feature o característica',
+        description: 'Breve descripción de esa feature o característica.'
+      }
+    ]
+  },
+  {
+    image: '/img/projects/eventro.png',
+    title: 'Eventro',
+    description:
+      'Create unforgettable events, we&apos;ll take care of the rest. Managing events and tickets has never been easier.',
+    url: '',
+    features: [
+      {
+        icon: '',
+        title: 'Feature o característica',
+        description: 'Breve descripción de esa feature o característica.'
+      },
+      {
+        icon: '',
+        title: 'Feature o característica',
+        description: 'Breve descripción de esa feature o característica.'
+      }
+    ]
+  }
+]
 
 export default function Component() {
   const t = useTranslations('projects')
   return (
-    <Projects>
+    <div className="flex flex-col gap-16 w-full pt-64 pb-16">
       {/* Quienes somos */}
       <Container>
-        <Header>
-          <Heading as="h2">{t('title')}...</Heading>
-          {/* <Text>Todos nuestros proyectos son completamente libres para </Text>
-          <Link href="#">Ver proyectos de la comunidad</Link> */}
-        </Header>
+        <div className="flex flex-col gap-4 md:max-w-[500px] mx-auto text-center">
+          <h2 className="text-4xl lg:text-7xl font-bold">{t('title')}</h2>
+          <p className="text-lg text-white/70">{t('description')}</p>
+        </div>
       </Container>
       <Container>
-        <Project
-          image="/img/projects/wallet.png"
-          title="LaWallet"
-          description=""
-          url=""
-        />
-        <Project
-          image="/img/projects/pos.png"
-          title="POS"
-          description=""
-          url=""
-        />
+        <div className="flex flex-col gap-16">
+          {MOCK_PROJECTS.map((project, index) => (
+            <Project
+              className={cn(
+                'flex flex-col gap-8 w-full p-6 rounded-3xl bg-border',
+                index % 2 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+              )}
+              key={index}
+              data={project}
+            />
+          ))}
+        </div>
       </Container>
-    </Projects>
+    </div>
   )
 }

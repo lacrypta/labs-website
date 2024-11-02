@@ -3,7 +3,7 @@
 import { ReactNode, useState } from 'react'
 
 import { Plus } from '@/components/Icons'
-import { Icon, Heading } from '@/components/UI'
+// import { Icon, Heading } from '@/components/UI'
 
 import { Item, Trigger, Body } from './styles'
 
@@ -25,10 +25,10 @@ export default function Component(props: ComponentProps) {
   return (
     <Item>
       <Trigger className={open ? 'open' : ''} onClick={handleClick}>
-        <Heading as="h3">{title}</Heading>
+        {/* <Heading as="h3">{title}</Heading>
         <Icon>
           <Plus />
-        </Icon>
+        </Icon> */}
       </Trigger>
       <Body className={open ? 'open' : ''}>{description || children}</Body>
     </Item>

@@ -6,6 +6,8 @@ import { fontSecondary } from '@/style/fonts'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 
+import '../../globals.css'
+
 export default function RootLayout({
   children,
   params: { lng }
@@ -13,13 +15,13 @@ export default function RootLayout({
   children: React.ReactNode
   params: { lng: string }
 }) {
-  unstable_setRequestLocale(lng)
+  unstable_setRequestLocale('en')
   const messages = useMessages()
 
   return (
-    <html lang={lng} className={fontSecondary.className}>
+    <html lang={'en'} className={fontSecondary.className}>
       <head>
-        <title>La Crypta | Conoce con nosotros sobre Bitcoin.</title>
+        <title>La Crypta | Learn with us about Bitcoin and Nostr.</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="icon" type="img/png" href="img/schema-logo.png" />
 
@@ -27,7 +29,7 @@ export default function RootLayout({
         <meta name="author" content="La Crypta" />
         <meta
           name="description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
+          content="We are a community dedicated to the education and dissemination of the Bitcoin ecosystem in Argentina."
         />
         <meta name="robots" content="index,follow" />
 
@@ -35,7 +37,7 @@ export default function RootLayout({
         <meta property="og:title" content="La Crypta" />
         <meta
           property="og:description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
+          content="La Crypta is an Argentine organization dedicated to the development, education, and sharing of knowledge within the Bitcoin and Nostr ecosystems."
         />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:type" content="website" />
@@ -46,7 +48,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="La Crypta" />
         <meta
           name="twitter:description"
-          content="Somos una comunidad dedicada a la educación y difusión del ecosistema Bitcoin en Argentina."
+          content="La Crypta is an Argentine organization dedicated to the development, education, and sharing of knowledge within the Bitcoin and Nostr ecosystems."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/img/social/twitter-600x330.jpg" />
@@ -101,7 +103,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <NextIntlClientProvider locale={lng} messages={messages}>
+        <NextIntlClientProvider locale={'en'} messages={messages}>
           <AppProvider>{children}</AppProvider>
         </NextIntlClientProvider>
       </body>

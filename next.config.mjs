@@ -9,6 +9,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
+  env: {
+    FORMBRICKS_ID: process.env.FORMBRICKS_ENVIRONMENT_ID
+  },
   images: {
     remotePatterns: [
       {

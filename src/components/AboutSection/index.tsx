@@ -1,106 +1,136 @@
 'use client'
 
-import { Divider, Flex, Heading } from '@/components/UI'
-import Container from '../Layout/Container'
+import { useTranslations } from 'next-intl'
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel'
 
 import Animal from '../Animal'
-import Members from '../Members'
-
-import { fontPrimary } from '@/style/fonts'
-import { useTranslations } from 'next-intl'
-import { AboutSection, Header, List, Number } from './style'
 
 const animals = [
   {
     name: 'Agus',
-    animal: 'Gorila',
-    color: '#BF0E1A'
+    animal: 'Gorilla',
+    color: '#BF0E1A',
+    rol: 'CEO',
+    image: 'agus'
   },
   {
     name: 'Mariano',
-    animal: 'Lechuza',
-    color: '#F4941E'
+    animal: 'Own',
+    color: '#F4941E',
+    rol: 'CTO',
+    image: 'mariano'
   },
   {
     name: 'Jota',
     animal: 'Mucuchies',
-    color: '#B47841'
+    color: '#B47841',
+    rol: 'Staff Software Engineer',
+    image: 'jota'
   },
   {
     name: 'Rapax',
-    animal: 'Pulpo',
-    color: '#A252D5'
+    animal: 'Octopus',
+    color: '#A252D5',
+    rol: 'Full-stack Developer',
+    image: 'rapax'
   },
-  {
-    name: 'Fer',
-    animal: 'Cuervo',
-    color: '#4D4D4A'
-  },
+  // {
+  //   name: 'Fer',
+  //   animal: 'Cuervo',
+  //   color: '#4D4D4A',
+  //   rol: 'Software Engineer',
+  //   image: ''
+  // },
   {
     name: 'Jona',
     animal: 'Llama',
-    color: '#F40075'
+    color: '#F40075',
+    rol: 'Product Engineer',
+    image: 'jona'
   },
   {
     name: 'Guada',
-    animal: 'Pinguino',
-    color: '#FFCE22'
+    animal: 'Penguin',
+    color: '#FFCE22',
+    rol: 'Designer',
+    image: 'guada'
   },
   {
     name: 'Naranja',
-    animal: 'Tigre',
-    color: '#F25F01'
+    animal: 'Tiger',
+    color: '#F25F01',
+    rol: 'Video editor',
+    image: 'naranja'
   },
   {
-    name: 'Cami',
-    animal: 'Panda',
-    color: '#F5F4EB'
+    name: 'Andrea',
+    animal: 'Cat',
+    color: '#1D3775',
+    rol: 'DevRel',
+    image: 'andrea'
   },
   {
-    name: 'Mica',
-    animal: 'Abeja',
-    color: '#FFD000'
+    name: 'Fierillo',
+    animal: 'Bear',
+    color: '#5A4D46',
+    rol: 'Community manager',
+    image: 'fierillo'
+  },
+  {
+    name: 'Fede',
+    animal: 'Shark',
+    color: '#456B90',
+    rol: 'Operations',
+    image: 'fede'
+  },
+  {
+    name: 'Yayi',
+    animal: 'Snake',
+    color: '#1BA710',
+    rol: 'Head of Communications',
+    image: 'yayi'
   }
 ]
 
 export default function Component() {
   const t = useTranslations()
+
   return (
-    <AboutSection>
-      <Divider y={128} />
-      <Container>
-        <Header>
-          <Heading as="h2">{t('about.title')}</Heading>
-          {/* <Text>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
-            omnis! Sequi ex commodi cumque hic.
-          </Text>
-          <Link href="#">Quiero saber mas</Link> */}
-        </Header>
-      </Container>
-      <Divider y={24} />
-      <List>
-        {animals.map((animal, index) => (
-          <Animal key={index} data={animal} />
-        ))}
-      </List>
-      <Divider y={64} />
-      <Container>
-        <Flex justify="center">
-          <Heading as="h3">
-            {t('about.subtitle_1')}, <br /> {t('about.subtitle_2')}...
-          </Heading>
-        </Flex>
-      </Container>
-      <Divider y={24} />
-      <Members>
-        <Number>
-          <span className={fontPrimary.className}>+1000</span>
-          <span className={fontPrimary.className}>
-            {t('MEMBERS').toLowerCase()}
-          </span>
-        </Number>
-      </Members>
-    </AboutSection>
+    <div className="relative overflow-hidden w-full py-32">
+      <div className="mx-auto max-w-[900px] px-3">
+        <Carousel
+          opts={{
+            loop: false,
+            align: 'start'
+          }}
+        >
+          <div className="flex items-center w-full gap-4 mb-12">
+            <div className="w-full">
+              <h3 className="text-3xl lg:text-7xl font-bold">
+                {t('about.title')}
+              </h3>
+            </div>
+            <div className="z-10 flex justify-end gap-4">
+              <CarouselPrevious className="relative transform-none top-0 left-0 right-0 w-14 h-14" />
+              <CarouselNext className="relative transform-none top-0 left-0 right-0 w-14 h-14" />
+            </div>
+          </div>
+          <CarouselContent id="test">
+            {animals.map((animal: any, index: number) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <Animal data={animal} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
+    </div>
   )
 }
