@@ -27,6 +27,12 @@ const logos = [
     height: 46
   },
   {
+    title: 'Alby',
+    url: '/img/logos/alby.png',
+    width: 256,
+    height: 111
+  },
+  {
     title: 'Rootstock',
     url: '/img/logos/rootstock.png',
     width: 257,

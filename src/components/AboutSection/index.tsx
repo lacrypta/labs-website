@@ -18,28 +18,51 @@ const animals = [
     animal: 'Gorilla',
     color: '#BF0E1A',
     rol: 'CEO',
-    image: 'agus'
+    image: 'agus',
+    links: [
+      {
+        type: 'twitter',
+        url: 'https://x.com/agustin_kassis'
+      },
+      {
+        type: 'instagram',
+        url: 'https://instagram.com/agustinkassis'
+      }
+    ]
   },
   {
     name: 'Mariano',
     animal: 'Own',
     color: '#F4941E',
     rol: 'CTO',
-    image: 'mariano'
+    image: 'mariano',
+    links: []
   },
   {
     name: 'Jota',
     animal: 'Mucuchies',
     color: '#B47841',
     rol: 'Staff Software Engineer',
-    image: 'jota'
+    image: 'jota',
+    links: [
+      {
+        type: 'website',
+        url: 'https://juan.hodl.ar/'
+      }
+    ]
   },
   {
     name: 'Rapax',
     animal: 'Octopus',
     color: '#A252D5',
     rol: 'Full-stack Developer',
-    image: 'rapax'
+    image: 'rapax',
+    links: [
+      {
+        type: 'website',
+        url: 'https://rapax.dev/'
+      }
+    ]
   },
   // {
   //   name: 'Fer',
@@ -53,49 +76,103 @@ const animals = [
     animal: 'Llama',
     color: '#F40075',
     rol: 'Product Engineer',
-    image: 'jona'
+    image: 'jona',
+    links: [
+      {
+        type: 'twitter',
+        url: 'https://x.com/unllamas'
+      },
+      {
+        type: 'website',
+        url: 'https://jonallamas.com/'
+      }
+    ]
   },
   {
     name: 'Guada',
     animal: 'Penguin',
     color: '#FFCE22',
     rol: 'Designer',
-    image: 'guada'
+    image: 'guada',
+    links: [
+      {
+        type: 'website',
+        url: 'https://guadita.com/'
+      }
+    ]
   },
   {
     name: 'Naranja',
     animal: 'Tiger',
     color: '#F25F01',
     rol: 'Video editor',
-    image: 'naranja'
+    image: 'naranja',
+    links: [
+      {
+        type: 'twitter',
+        url: 'https://x.com/dimenaranja'
+      }
+    ]
   },
   {
     name: 'Andrea',
     animal: 'Cat',
     color: '#1D3775',
     rol: 'DevRel',
-    image: 'andrea'
+    image: 'andrea',
+    links: [
+      {
+        type: 'twitter',
+        url: 'https://x.com/andreadcorreia'
+      },
+      {
+        type: 'instagram',
+        url: 'https://instagram.com/andreadiazcorreia'
+      }
+    ]
   },
   {
     name: 'Fierillo',
     animal: 'Bear',
     color: '#5A4D46',
     rol: 'Community manager',
-    image: 'fierillo'
+    image: 'fierillo',
+    links: [
+      {
+        type: 'twitter',
+        url: 'https://x.com/fierillo'
+      }
+    ]
   },
   {
     name: 'Fede',
     animal: 'Shark',
     color: '#456B90',
     rol: 'Operations',
-    image: 'fede'
+    image: 'fede',
+    links: [
+      {
+        type: 'instagram',
+        url: 'https://instagram.com/federey22'
+      }
+    ]
   },
   {
     name: 'Yayi',
     animal: 'Snake',
     color: '#1BA710',
     rol: 'Head of Communications',
-    image: 'yayi'
+    image: 'yayi',
+    links: [
+      {
+        type: 'twitter',
+        url: 'https://x.com/yayi_morales_'
+      },
+      {
+        type: 'instagram',
+        url: 'https://instagram.com/yayi_morales_'
+      }
+    ]
   }
 ]
 

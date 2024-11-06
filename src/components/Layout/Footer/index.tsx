@@ -23,7 +23,7 @@ export default function Component() {
                 <Image src="/img/mate.png" alt="Mate icon" fill />
               </div>
               <p className="text-sm text-white/70">
-                {'Minado bloque'} <span>#755.100</span>
+                {'Mined block'} <span>#755.100</span>
               </p>
             </div>
           </div>
@@ -70,7 +70,11 @@ export default function Component() {
           <ul className="flex gap-2">
             <li>
               <Button variant="outline" size="icon" asChild>
-                <Link href="" title="Nostr" target="_blank">
+                <Link
+                  href="https://njump.me/npub1rujdpkd8mwezrvpqd2rx2zphfaztqrtsfg6w3vdnljdghs2q8qrqtt9u68"
+                  title="Nostr"
+                  target="_blank"
+                >
                   <Image
                     src="/img/icon_nostr.png"
                     alt="Nostr icon"
