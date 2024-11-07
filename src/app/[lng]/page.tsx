@@ -232,7 +232,7 @@ export default function Page() {
             <h3 className="text-3xl lg:text-5xl font-bold">
               {t('pillars.title')}
             </h3>
-            <p>{t('pillars.description')}</p>
+            {/* <p>{t('pillars.description')}</p> */}
           </div>
           <div className="flex flex-col md:flex-row justify-center text-xl font-bold">
             <div
