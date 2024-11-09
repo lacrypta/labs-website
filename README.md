@@ -1,5 +1,7 @@
 # lacrypta-web
 
+La Crypta Frontend
+
 ## La Crypta Web
 
 ```bash
