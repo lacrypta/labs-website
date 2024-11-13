@@ -132,12 +132,12 @@ export default function Page() {
   //   })
   // }
 
-  if (typeof window !== 'undefined') {
-    formbricks.init({
-      environmentId: FORMBRICKS_ID!,
-      apiHost: 'https://app.formbricks.com'
-    })
-  }
+  // if (typeof window !== 'undefined') {
+  //   formbricks.init({
+  //     environmentId: FORMBRICKS_ID!,
+  //     apiHost: 'https://app.formbricks.com'
+  //   })
+  // }
 
   const { isMobile } = useScreenDetector()
 

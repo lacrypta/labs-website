@@ -13,6 +13,11 @@ export default function Component() {
 
   const handleClick = () => {
     formbricks.track('clicked_contact_navbar')
+    formbricks.init({
+      environmentId: FORMBRICKS_ID!,
+      apiHost: 'https://app.formbricks.com'
+    })
+    formbricks.reset()
   }
 
   return (
