@@ -1,6 +1,6 @@
 # lacrypta-web
 
-La Crypta Frontend
+La Crypta Frontend website
 
 ## La Crypta Web
 
