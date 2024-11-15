@@ -54,6 +54,8 @@ export default function RootLayout({
         <meta name="twitter:image" content="/img/social/twitter-600x330.jpg" />
         <meta name="twitter:url" content="https://lacrypta.ar/" />
 
+        <script async src="https://tally.so/widgets/embed.js"></script>
+
         {/* Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}

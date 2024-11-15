@@ -118,8 +118,6 @@ const items = [
   }
 ]
 
-const FORMBRICKS_ID = process.env.FORMBRICKS_ID || ''
-
 export default function Page() {
   const t = useTranslations()
   // const locale = useLocale()
@@ -129,13 +127,6 @@ export default function Page() {
   //     const expire = new Date(Date.now() + 86400 * 365 * 1000).toUTCString()
   //     document.cookie = `NEXT_LOCALE=${nextLocale}; expires=${expire}; path=/`
   //     window.location.reload()
-  //   })
-  // }
-
-  // if (typeof window !== 'undefined') {
-  //   formbricks.init({
-  //     environmentId: FORMBRICKS_ID!,
-  //     apiHost: 'https://app.formbricks.com'
   //   })
   // }
 

@@ -10,7 +10,7 @@ const nextConfig = {
     styledComponents: true
   },
   env: {
-    FORMBRICKS_ID: process.env.FORMBRICKS_ENVIRONMENT_ID
+    TALLY: process.env.TALLY_ID
   },
   images: {
     remotePatterns: [

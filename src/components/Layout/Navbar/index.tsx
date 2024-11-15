@@ -6,19 +6,10 @@ import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-const FORMBRICKS_ID = process.env.FORMBRICKS_ID || ''
+const TALLY_ID = process.env.TALLY || ''
 
 export default function Component() {
   const t = useTranslations('navbar')
-
-  const handleClick = () => {
-    formbricks.track('clicked_contact_navbar')
-    formbricks.init({
-      environmentId: FORMBRICKS_ID!,
-      apiHost: 'https://app.formbricks.com'
-    })
-    formbricks.reset()
-  }
 
   return (
     <div className="fixed z-30 top-0 lef-0 flex align-center w-full h-[60px] bg-background border border-input">
@@ -27,9 +18,17 @@ export default function Component() {
         <Logo size="medium" />
 
         <div className="flex gap-2">
-          <Button id="btn-contact-us" onClick={handleClick}>
-            {t('cta')}
-          </Button>
+          {!!TALLY_ID && (
+            <Button
+              data-tally-open={TALLY_ID}
+              data-tally-overlay="1"
+              data-tally-width="380"
+              data-tally-align-left="1"
+              data-tally-auto-close="4000"
+            >
+              {t('cta')}
+            </Button>
+          )}
           <Button variant="secondary" asChild>
             <Link href="https://shop.lacrypta.ar/" target="_blank">
               <StoreIcon className="w-4 h-4" />
