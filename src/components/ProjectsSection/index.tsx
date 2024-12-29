@@ -28,6 +28,25 @@ const MOCK_PROJECTS = [
     ]
   },
   {
+    image: '/img/projects/walias.png',
+    title: 'Walias',
+    description:
+      'Merges the power of Lightning and Nostr Makes to make Bitcoin as simple as sending an email.',
+    url: 'https://walias.io/',
+    features: [
+      {
+        icon: '',
+        title: 'Feature o característica',
+        description: 'Breve descripción de esa feature o característica.'
+      },
+      {
+        icon: '',
+        title: 'Feature o característica',
+        description: 'Breve descripción de esa feature o característica.'
+      }
+    ]
+  },
+  {
     image: '/img/projects/halving_massacre.png',
     title: 'Halving Massacre',
     description:
