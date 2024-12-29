@@ -31,7 +31,7 @@ const MOCK_PROJECTS = [
     image: '/img/projects/walias.png',
     title: 'Walias',
     description:
-      'Merges the power of Lightning and Nostr Makes to make Bitcoin as simple as sending an email.',
+      'Merge the power of Lightning and Nostr to make Bitcoin as simple as sending an email.',
     url: 'https://walias.io/',
     features: [
       {
