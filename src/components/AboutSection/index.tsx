@@ -156,23 +156,6 @@ const animals = [
         url: 'https://instagram.com/federey22'
       }
     ]
-  },
-  {
-    name: 'Yayi',
-    animal: 'Snake',
-    color: '#1BA710',
-    rol: 'Head of Communications',
-    image: 'yayi',
-    links: [
-      {
-        type: 'twitter',
-        url: 'https://x.com/yayi_morales_'
-      },
-      {
-        type: 'instagram',
-        url: 'https://instagram.com/yayi_morales_'
-      }
-    ]
   }
 ]
 
