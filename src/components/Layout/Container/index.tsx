@@ -1,4 +1,8 @@
-export default function Component(props: { children: any }) {
+import { PropsWithChildren } from 'react'
+
+export default function Component(
+  props: PropsWithChildren<{ className?: string }>
+) {
   const { children } = props
 
   return (

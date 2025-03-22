@@ -1,6 +1,11 @@
-export default function Component({ color = 'currentColor' }) {
+import { SVGProps } from 'react'
+
+export default function Component(
+  props: SVGProps<SVGSVGElement> = { color: 'currentColor' }
+) {
   return (
     <svg
+      {...props}
       width="18"
       height="18"
       viewBox="0 0 18 18"

@@ -3,9 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import formbricks from '@formbricks/js'
 
-import { shuffle } from '@/lib/utils'
 import { useScreenDetector } from '@/hooks/use-screen-detector'
 
 import Footer from '@/components/Layout/Footer'
@@ -20,103 +18,9 @@ import LibsOpenSource from '@/components/libs-open-source'
 import CommunicateIcon from '@/components/Icons/Communicate'
 import EducateIcon from '@/components/Icons/Educate'
 import IdeaIcon from '@/components/Icons/Idea'
-import { Card, CardContent } from '@/components/ui/card'
 import TrustUsSection from '@/components/TrustUsSection'
 import { AnimatedGrid } from '@/components/animated-grid'
-import { DotPattern } from '@/components/dot-pattern'
 import { ScrollAnimatedImage } from '@/components/scroll-animated-image'
-
-const colors = [
-  '#BF0E1A',
-  '#F4941E',
-  '#B47841',
-  '#A252D5',
-  '#4D4D4A',
-  '#F40075',
-  '#FFCE22',
-  '#F25F01',
-  '#1D3775',
-  '#5A4D46',
-  '#456B90',
-  '#1ba710'
-]
-
-const items = [
-  {
-    title: 'Bitcoin++',
-    tag: 'btcplusplus2024',
-    description: 'Arg, 2024',
-    elements: [
-      // {
-      //   id: 1,
-      //   title: '+5k',
-      //   description: 'Tarjetas entregadas.',
-      //   image: ''
-      // },
-      // {
-      //   id: 2,
-      //   title: '+40',
-      //   description: 'Tatuajes vendidos.',
-      //   image: ''
-      // },
-      {
-        id: 5,
-        title: '',
-        description: '.',
-        image: '/placeholder.svg'
-      },
-      {
-        id: 6,
-        title: '',
-        description: '.',
-        image: '/placeholder.svg'
-      }
-    ]
-  },
-  {
-    title: 'LaBitconf',
-    tag: 'labitconf2023',
-    description: 'Arg, 2023',
-    elements: [
-      // {
-      //   id: 1,
-      //   title: '+5k',
-      //   description: 'Tarjetas entregadas.',
-      //   image: ''
-      // },
-      // {
-      //   id: 2,
-      //   title: '+40',
-      //   description: 'Tatuajes vendidos.',
-      //   image: ''
-      // },
-      // {
-      //   id: 3,
-      //   title: '+3K',
-      //   description: 'Transacciones realizadas.',
-      //   image: ''
-      // },
-      // {
-      //   id: 4,
-      //   title: '+5K',
-      //   description: 'Tarjetas entregadas.',
-      //   image: ''
-      // },
-      {
-        id: 5,
-        title: '',
-        description: '.',
-        image: 'labitconf2023_boga.webp'
-      },
-      {
-        id: 6,
-        title: '',
-        description: '.',
-        image: 'labitconf2023_jona.webp'
-      }
-    ]
-  }
-]
 
 export default function Page() {
   const t = useTranslations()
@@ -131,11 +35,6 @@ export default function Page() {
   // }
 
   const { isMobile } = useScreenDetector()
-
-  const shuffleEvents = (data: any) => {
-    const value = shuffle(data)
-    return value
-  }
 
   return (
     <div className="pt-[60px] overflow-x-hidden">

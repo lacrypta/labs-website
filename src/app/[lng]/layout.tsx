@@ -9,11 +9,11 @@ import { unstable_setRequestLocale } from 'next-intl/server'
 import '../../globals.css'
 
 export default function RootLayout({
-  children,
-  params: { lng }
+  children
+  // params: { lng }
 }: {
   children: React.ReactNode
-  params: { lng: string }
+  // params: { lng: string }
 }) {
   unstable_setRequestLocale('en')
   const messages = useMessages()
@@ -69,40 +69,6 @@ export default function RootLayout({
           gtag('config', '${GOOGLE_TAG_ID}');
         `}
         </Script>
-
-        {/* Schema */}
-        <Script
-          strategy="beforeInteractive"
-          id="ldjson-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `
-              {
-                "@context": "https://schema.org",
-                "@type": "EducationalOrganization",
-                "name": "La Crypta",
-                "alternateName": "LaCrypta",
-                "url": "https://lacrypta.ar/",
-                "logo": "https://lacrypta.ar/img/schema-logo.png",
-                "sameAs": [
-                  "https://twitter.com/LaCryptaOk",
-                  "https://www.instagram.com/lacryptaok/",
-                  "https://www.linkedin.com/company/lacryptaok/",
-                  "https://github.com/lacrypta",
-                  "https://lacrypta.ar/"
-                ],
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "Villanueva 1367",
-                  "addressLocality": "Belgrano",
-                  "postalCode": "C1426",
-                  "addressCountry": "AR",
-                  "addressRegion": "CABA, Buenos Aires"
-                }
-              }
-            `
-          }}
-        />
       </head>
       <body>
         <NextIntlClientProvider locale={'en'} messages={messages}>

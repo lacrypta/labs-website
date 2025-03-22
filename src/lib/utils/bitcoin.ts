@@ -30,7 +30,7 @@ async function getBlocks(
   startHeight?: number,
   retries: number = 3,
   delay: number = 1000
-): Promise<any> {
+): Promise<number | null> {
   const url = startHeight
     ? `https://mempool.space/api/v1/blocks/${startHeight}`
     : 'https://mempool.space/api/v1/blocks'

@@ -183,6 +183,7 @@ export default function Component() {
             </div>
           </div>
           <CarouselContent id="test">
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
             {animals.map((animal: any, index: number) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <Animal data={animal} />

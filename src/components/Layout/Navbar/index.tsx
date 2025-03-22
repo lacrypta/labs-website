@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl'
 import { StoreIcon } from 'lucide-react'
-import formbricks from '@formbricks/js'
 
 import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'

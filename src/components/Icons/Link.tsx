@@ -1,4 +1,6 @@
-export default function Link(props: any) {
+import { SVGProps } from 'react'
+
+export default function Component(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

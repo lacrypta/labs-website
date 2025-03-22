@@ -7,7 +7,8 @@ import { Badge } from '@/components/ui/badge'
 import ArrowTopRight from '@/components/Icons/ArrowTopRight'
 import { useTranslations } from 'next-intl'
 
-export default function Component(props: { data: any; className: any }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Component(props: { data: any; className: string }) {
   const { data, className } = props
 
   const t = useTranslations('projects')

@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { cn } from '@/lib/utils'
 import { getBlocks, getBtcPrice } from '@/lib/utils/bitcoin'
 
-export default function Component({ className }: any) {
+export default function Component({ className }: { className: string }) {
   const t = useTranslations('hero')
 
   const [btcPrice, setBtcPrice] = useState<number | null>(null)

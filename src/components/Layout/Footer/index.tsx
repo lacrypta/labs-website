@@ -6,12 +6,10 @@ import Image from 'next/image'
 import Logo from '@/components/Logo'
 import { Twitter, Discord, Instagram, Github } from '@/components/Icons'
 
-import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { MapPinHouse } from 'lucide-react'
 
 export default function Component() {
-  const t = useTranslations('footer')
   return (
     <div className="w-full py-32 bg-black">
       <div className="flex flex-col gap-8 w-full max-w-[900px] mx-auto px-4">

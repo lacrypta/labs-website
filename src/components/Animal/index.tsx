@@ -13,6 +13,7 @@ interface ComponentProps {
     color: string
     rol: string
     image: string
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     links: any[]
   }
 }

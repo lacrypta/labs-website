@@ -4,8 +4,6 @@ import React, { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
-import { useScreenDetector } from '@/hooks/use-screen-detector'
-
 interface ScrollAnimatedImageProps {
   src: string
   alt: string
@@ -13,9 +11,9 @@ interface ScrollAnimatedImageProps {
 
 export function ScrollAnimatedImage({ src, alt }: ScrollAnimatedImageProps) {
   const containerRef = useRef<HTMLDivElement>(null)
-  const [containerHeight, setContainerHeight] = useState(0)
+  const [, setContainerHeight] = useState(0)
 
-  const { isMobile } = useScreenDetector()
+  // const { isMobile } = useScreenDetector()
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start']

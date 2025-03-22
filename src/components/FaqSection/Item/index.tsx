@@ -2,7 +2,6 @@
 
 import { ReactNode, useState } from 'react'
 
-import { Plus } from '@/components/Icons'
 // import { Icon, Heading } from '@/components/UI'
 
 import { Item, Trigger, Body } from './styles'
@@ -14,7 +13,7 @@ interface ComponentProps {
 }
 
 export default function Component(props: ComponentProps) {
-  const { title, description, children } = props
+  const { description, children } = props
 
   const [open, setOpen] = useState(false)
 

@@ -1,6 +1,11 @@
-export default function Component({ color = 'currentColor' }) {
+import { SVGProps } from 'react'
+
+export default function Component(
+  props: SVGProps<SVGSVGElement> = { color: 'currentColor' }
+) {
   return (
     <svg
+      {...props}
       width="9"
       height="16"
       viewBox="0 0 9 16"
@@ -9,7 +14,7 @@ export default function Component({ color = 'currentColor' }) {
     >
       <path
         d="M0.928955 0.857849L7.29292 7.22181C7.68344 7.61233 7.68344 8.2455 7.29292 8.63602L0.928957 15"
-        stroke={color}
+        stroke={props.color}
         strokeWidth="1.5"
         strokeLinecap="round"
       />
