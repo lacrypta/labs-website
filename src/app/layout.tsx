@@ -6,7 +6,7 @@ import { fontSecondary } from '@/style/fonts'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 
-import '../../globals.css'
+import '../globals.css'
 
 export default function RootLayout({
   children
