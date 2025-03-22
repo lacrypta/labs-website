@@ -1,3 +1,4 @@
+import React from 'react'
 import ImageNext from 'next/image'
 import LinkNext from 'next/link'
 
@@ -41,8 +42,8 @@ export default function Component(props: ComponentProps) {
           />
           {data?.links.length > 0 && (
             <div className="flex gap-1">
-              {data?.links?.map(link => (
-                <>
+              {data?.links?.map((link, index) => (
+                <React.Fragment key={index}>
                   {link.type === 'twitter' && (
                     <Button variant="outline" size="icon" asChild>
                       <LinkNext href={link.url} target="_blank">
@@ -64,7 +65,7 @@ export default function Component(props: ComponentProps) {
                       </LinkNext>
                     </Button>
                   )}
-                </>
+                </React.Fragment>
               ))}
             </div>
           )}
