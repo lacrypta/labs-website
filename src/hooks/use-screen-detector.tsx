@@ -1,13 +1,18 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 
 export const useScreenDetector = () => {
-  const [width, setWidth] = useState(window.innerWidth)
-
-  const handleWindowSizeChange = () => {
-    setWidth(window.innerWidth)
-  }
+  const [width, setWidth] = useState<number | undefined>(undefined)
 
   useEffect(() => {
+    // Set initial width after component mounts
+    setWidth(window.innerWidth)
+
+    const handleWindowSizeChange = () => {
+      setWidth(window.innerWidth)
+    }
+
     window.addEventListener('resize', handleWindowSizeChange)
 
     return () => {
@@ -15,9 +20,9 @@ export const useScreenDetector = () => {
     }
   }, [])
 
-  const isMobile = width <= 768
-  const isTablet = width <= 1024
-  const isDesktop = width > 1024
+  const isMobile = width ? width <= 768 : false
+  const isTablet = width ? width <= 1024 : false
+  const isDesktop = width ? width > 1024 : false
 
   return { isMobile, isTablet, isDesktop }
 }
