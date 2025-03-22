@@ -1,113 +1,113 @@
 {
-    "HOME": "Home",
-    "ABOUT_US": "About Us",
-    "PROJECTS": "Projects",
-    "VALUES": "Values",
-    "MEMBERS": "members",
-    "SOON": "Soon",
-    "COMMUNITY_CALLS": "Community Calls",
-    "SPACE_AND_WORKSHOPS": "Space and Educational Workshops",
-    "navbar": {
-        "cta": "Contact us",
-        "bitcoin_price": "Bitcoin price: ",
-        "last_block": "Last Block: ",
-        "transaction_fees": "Transaction fees: ",
-        "loading": "Loading..."
+  "HOME": "Home",
+  "ABOUT_US": "About Us",
+  "PROJECTS": "Projects",
+  "VALUES": "Values",
+  "MEMBERS": "members",
+  "SOON": "Soon",
+  "COMMUNITY_CALLS": "Community Calls",
+  "SPACE_AND_WORKSHOPS": "Space and Educational Workshops",
+  "navbar": {
+    "cta": "Contact us",
+    "bitcoin_price": "Bitcoin price: ",
+    "last_block": "Last Block: ",
+    "transaction_fees": "Transaction fees: ",
+    "loading": "Loading..."
+  },
+  "hero": {
+    "title": "A revolution disguised as an investment",
+    "subtitle": "La Crypta is an Argentine organization dedicated to the development, education, and sharing of knowledge within the Bitcoin and Nostr ecosystems.",
+    "cta": "Contact us"
+  },
+  "trust": {
+    "title": "They trusted us"
+  },
+  "community": {
+    "title": "We imagine a world where Bitcoin is the norm",
+    "description": "Allowing every individual to have complete control over their wealth and privacy, without depending on governments or corporations."
+  },
+  "about": {
+    "title": "We are cypherpunk jungle animals",
+    "subtitle": "But more than a herd"
+  },
+  "projects": {
+    "title": "Our projects",
+    "description": "We are dedicated to creating products and experiences that make them easy to use, making them accessible to everyone.",
+    "cta": "Learn more"
+  },
+  "libraries": {
+    "title": "Open-Source Libraries"
+  },
+  "pillars": {
+    "title": "What do we do?",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "item_1": "We build",
+    "item_2": "We educate",
+    "item_3": "We unite"
+  },
+  "values": {
+    "title": "We build based on",
+    "subtitle": "in every project.",
+    "description": "At La Crypta, each value drives our focus on creating efficient, secure, and open solutions, grounded in principles that guide all our work.",
+    "honesty": "Honesty",
+    "honesty_desc": "Sincerity and transparency at all times",
+    "synergy": "Synergy",
+    "synergy_desc": "Collaborating and working effectively to achieve common goals",
+    "liberty": "Freedom",
+    "liberty_desc": "Having the ability to make decisions and act autonomously and responsibly",
+    "rationality": "Rationality",
+    "rationality_desc": "Making decisions based on logic",
+    "modesty": "Modesty",
+    "modesty_desc": "Being willing to learn and constantly improve",
+    "merit": "Merit",
+    "merit_desc": "Recognizing and valuing achievements. Rewarding effort and excellence",
+    "innovation": "Innovation",
+    "innovation_desc": "Being creative, open to new possibilities, and constantly improving"
+  },
+  "shares": {
+    "title": "Shares",
+    "description": ""
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "question_1": {
+      "title": "What is La Crypta?",
+      "desc": "We are a community dedicated to the education, development, and dissemination of the Bitcoin ecosystem in Argentina. We focus on providing independence and autonomy to the community"
     },
-    "hero": {
-        "title": "A revolution disguised as an investment",
-        "subtitle": "La Crypta is an Argentine organization dedicated to the development, education, and sharing of knowledge within the Bitcoin and Nostr ecosystems.",
-        "cta": "Contact us"
+    "question_2": {
+      "title": "Why values?",
+      "desc": "We value these concepts highly because we believe they are key aspects for our community to be what we aspire to and continue growing"
     },
-    "trust": {
-        "title": "They trusted us"
+    "question_3": {
+      "title": "What events and activities do you organize?",
+      "desc_1": "We love to maintain constant and close communication with our community. That's why we organize these activities regularly:",
+      "desc_2": "Every Tuesday at 6 pm on Discord and Twitch, where we gather to chat and share. A weekly moment where we talk about our projects, events, meet new members, discuss ideas, and more.",
+      "desc_3": "Every Wednesday at 5 pm we learn something new, broadcasting it live on Twitch and Nostr.",
+      "desc_4": "Additionally, once a month, we organize an in-person event, where we finally share in person.",
+      "desc_5": "We invite you to join us in these activities and be part of our community."
     },
-    "community": {
-        "title": "We imagine a world where Bitcoin is the norm",
-        "description": "Allowing every individual to have complete control over their wealth and privacy, without depending on governments or corporations."
+    "question_4": {
+      "title": "What benefits are there to being part of the La Crypta community?",
+      "desc_1": "Learning about Bitcoin, Lightning, and Nostr.",
+      "desc_2": "Networking with other Bitcoiners, developers, and people from the crypto web3 world.",
+      "desc_3": "Developing collaborative products with the community.",
+      "desc_4": "Staying up-to-date on the latest news about Bitcoin."
     },
-    "about": {
-        "title": "We are cypherpunk jungle animals",
-        "subtitle": "But more than a herd"
+    "question_5": {
+      "title": "How can I collaborate?",
+      "desc": "Together we go further. We greatly appreciate and value the collaboration of community members in our projects. To volunteer for La Crypta, join our Discord!"
     },
-    "projects": {
-        "title": "Our projects",
-        "description": "We are dedicated to creating products and experiences that make them easy to use, making them accessible to everyone.",
-        "cta": "Learn more"
+    "question_6": {
+      "title": "How can I donate to the La Crypta community?",
+      "desc": "You can do so by sending satoshis to pozo@lacrypta.ar through your Bitcoin Lightning wallet."
     },
-    "libraries": {
-        "title": "Open-Source Libraries"
-    },
-    "pillars": {
-        "title": "What do we do?",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "item_1": "We build",
-        "item_2": "We educate",
-        "item_3": "We unite"
-    },
-    "values": {
-        "title": "We build based on",
-        "subtitle": "in every project.",
-        "description": "At La Crypta, each value drives our focus on creating efficient, secure, and open solutions, grounded in principles that guide all our work.",
-        "honesty": "Honesty",
-        "honesty_desc": "Sincerity and transparency at all times",
-        "synergy": "Synergy",
-        "synergy_desc": "Collaborating and working effectively to achieve common goals",
-        "liberty": "Freedom",
-        "liberty_desc": "Having the ability to make decisions and act autonomously and responsibly",
-        "rationality": "Rationality",
-        "rationality_desc": "Making decisions based on logic",
-        "modesty": "Modesty",
-        "modesty_desc": "Being willing to learn and constantly improve",
-        "merit": "Merit",
-        "merit_desc": "Recognizing and valuing achievements. Rewarding effort and excellence",
-        "innovation": "Innovation",
-        "innovation_desc": "Being creative, open to new possibilities, and constantly improving"
-    },
-    "shares": {
-        "title": "Shares",
-        "description": ""
-    },
-    "faq": {
-        "title": "Frequently Asked Questions",
-        "question_1": {
-            "title": "What is La Crypta?",
-            "desc": "We are a community dedicated to the education, development, and dissemination of the Bitcoin ecosystem in Argentina. We focus on providing independence and autonomy to the community"
-        },
-        "question_2": {
-            "title": "Why values?",
-            "desc": "We value these concepts highly because we believe they are key aspects for our community to be what we aspire to and continue growing"
-        },
-        "question_3": {
-            "title": "What events and activities do you organize?",
-            "desc_1": "We love to maintain constant and close communication with our community. That's why we organize these activities regularly:",
-            "desc_2": "Every Tuesday at 6 pm on Discord and Twitch, where we gather to chat and share. A weekly moment where we talk about our projects, events, meet new members, discuss ideas, and more.",
-            "desc_3": "Every Wednesday at 5 pm we learn something new, broadcasting it live on Twitch and Nostr.",
-            "desc_4": "Additionally, once a month, we organize an in-person event, where we finally share in person.",
-            "desc_5": "We invite you to join us in these activities and be part of our community."
-        },
-        "question_4": {
-            "title": "What benefits are there to being part of the La Crypta community?",
-            "desc_1": "Learning about Bitcoin, Lightning, and Nostr.",
-            "desc_2": "Networking with other Bitcoiners, developers, and people from the crypto web3 world.",
-            "desc_3": "Developing collaborative products with the community.",
-            "desc_4": "Staying up-to-date on the latest news about Bitcoin."
-        },
-        "question_5": {
-            "title": "How can I collaborate?",
-            "desc": "Together we go further. We greatly appreciate and value the collaboration of community members in our projects. To volunteer for La Crypta, join our Discord!"
-        },
-        "question_6": {
-            "title": "How can I donate to the La Crypta community?",
-            "desc": "You can do so by sending satoshis to pozo@lacrypta.ar through your Bitcoin Lightning wallet."
-        },
-        "question_7": {
-            "title": "Why should I join the Discord channel?",
-            "desc": "The La Crypta community practically lives on Discord. That's where we organize all our activities and chat daily. Additionally, on that platform, we have a collaborative radio, a bot to send satoshis, zapathons, different types of merits, the famous 💩, and much more…"
-        }
-    },
-    "footer": {
-        "FROM_ARG_TO_WORLD": "From Argentina to the world",
-        "FOLLOW_IN": "Follow us on"
+    "question_7": {
+      "title": "Why should I join the Discord channel?",
+      "desc": "The La Crypta community practically lives on Discord. That's where we organize all our activities and chat daily. Additionally, on that platform, we have a collaborative radio, a bot to send satoshis, zapathons, different types of merits, the famous 💩, and much more…"
     }
+  },
+  "footer": {
+    "FROM_ARG_TO_WORLD": "From Argentina to the world",
+    "FOLLOW_IN": "Follow us on"
+  }
 }

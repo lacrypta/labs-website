@@ -1,13 +1,13 @@
 :root {
-  --orange: #FF5238;
-  --fuchsia: #EC5AB5;
-  --violet: #3D06A7;
-  --lilac: #EED0F8;
-  --green: #C2F76C;
+  --orange: #ff5238;
+  --fuchsia: #ec5ab5;
+  --violet: #3d06a7;
+  --lilac: #eed0f8;
+  --green: #c2f76c;
 
-  --white: #FFFFFF;
+  --white: #ffffff;
   --black: #101010;
-  --gray: #2F2F2F;
+  --gray: #2f2f2f;
 }
 
 * {
@@ -34,7 +34,7 @@ body {
 
   background-color: var(--black);
 
-  color: var(--white)
+  color: var(--white);
 }
 
 ul {
@@ -50,17 +50,17 @@ h4,
 h5,
 h6,
 p {
-  margin: 0
+  margin: 0;
 }
 
 h1 {
   font-size: 4rem;
-  line-height: .8;
+  line-height: 0.8;
 }
 
 h2 {
   font-size: 2.4rem;
-  line-height: .9;
+  line-height: 0.9;
 }
 
 h3 {
@@ -78,5 +78,5 @@ img {
 }
 
 a {
-  color: var(--green)
+  color: var(--green);
 }

@@ -15,7 +15,7 @@ export function ScrollAnimatedImage({ src, alt }: ScrollAnimatedImageProps) {
 
   // const { isMobile } = useScreenDetector()
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: containerRef as React.RefObject<HTMLElement>,
     offset: ['start end', 'end start']
   })
 
@@ -42,7 +42,11 @@ export function ScrollAnimatedImage({ src, alt }: ScrollAnimatedImageProps) {
     >
       <motion.div
         className="sticky overflow-hidden top-0 -md:top-32 aspect-video flex items-center justify-center"
-        style={{ scale, opacity, translateY: y }}
+        style={{
+          scale,
+          opacity,
+          y
+        }}
       >
         <motion.div className="relative overflow-hidden w-full h-full rounded-xl">
           <Image

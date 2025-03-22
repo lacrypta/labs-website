@@ -8,4 +8,3 @@ La Crypta Frontend website
 pnpm install
 pnpm dev
 ```
-
