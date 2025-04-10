@@ -64,25 +64,6 @@ const MOCK_PROJECTS = [
         description: 'Breve descripción de esa feature o característica.'
       }
     ]
-  },
-  {
-    image: '/img/projects/eventro.png',
-    title: 'Eventro',
-    description:
-      'Create unforgettable events, we&apos;ll take care of the rest. Managing events and tickets has never been easier.',
-    url: '',
-    features: [
-      {
-        icon: '',
-        title: 'Feature o característica',
-        description: 'Breve descripción de esa feature o característica.'
-      },
-      {
-        icon: '',
-        title: 'Feature o característica',
-        description: 'Breve descripción de esa feature o característica.'
-      }
-    ]
   }
 ]
 
