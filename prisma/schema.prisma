@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  pubkey    String   @id @map("_id")
+  name      String   @unique
+  nonce     Nonce    @relation(fields: [nonceId], references: [id])
+  nonceId   String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Nonce {
+  id       String    @id @default(cuid()) @map("_id")
+  nonce    String    @unique
+  burned   Boolean   @default(false)
+  username User?
+}
