@@ -6,10 +6,7 @@ import { PrismaClient } from '@prisma/client'
 // Initialize a new PrismaClient instance
 const prisma = new PrismaClient()
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { username: string } }
-) {
+export async function GET(req: NextRequest) {
   // get name from searchParams
   const username = req.nextUrl.searchParams.get('name')
 
