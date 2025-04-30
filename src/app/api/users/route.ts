@@ -26,7 +26,7 @@ async function createUser(request: Request) {
   try {
     // Get variables from Event tags
     let name = event.tags.find(t => t[0] === 'name')![1]!
-    let nonce = event.tags.find(t => t[0] === 'nonce')![1]!
+    const nonce = event.tags.find(t => t[0] === 'nonce')![1]!
 
     name = name.toLowerCase().trim()
 
