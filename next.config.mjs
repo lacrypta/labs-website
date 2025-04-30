@@ -18,7 +18,17 @@ const nextConfig = {
         hostname: 'cdn.discordapp.com'
       }
     ]
-  }
+  },
+  rewrites: async () => [
+    {
+      source: '/.well-known/nostr.json',
+      destination: '/api/nip05'
+    },
+    {
+      source: '/.well-known/lnurlp/:name',
+      destination: '/api/lud16/:name'
+    }
+  ]
 }
 
 export default withNextIntl(nextConfig)
