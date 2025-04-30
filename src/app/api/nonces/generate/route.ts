@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server'
 import { randomBytes } from 'crypto'
 
-export async function GET(req: NextRequest) {
+export async function GET(_req: NextRequest) {
   try {
     // Generate 100 random nonces
     const nonces = Array.from({ length: 100 }, () =>
