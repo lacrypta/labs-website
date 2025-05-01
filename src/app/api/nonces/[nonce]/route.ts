@@ -1,5 +1,3 @@
-// create a route to get a nonce
-
 import { prisma } from '@/services/prisma'
 import { NextRequest, NextResponse } from 'next/server'
 
