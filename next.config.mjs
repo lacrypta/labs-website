@@ -31,6 +31,10 @@ const nextConfig = {
     {
       source: '/api/nonce/:nonce',
       destination: '/api/nonces/:nonce'
+    },
+    {
+      source: '/api/identity',
+      destination: '/api/users'
     }
   ],
   headers: async () => {

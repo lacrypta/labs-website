@@ -10,7 +10,7 @@ const ADMIN_PRIVATE_KEY = process.env.ADMIN_PRIVATE_KEY!
 
 const prisma = new PrismaClient()
 
-async function createUser(request: Request) {
+async function createUser(request: NextRequest) {
   const event: Event = (await request.json()) as unknown as Event
 
   try {
@@ -140,7 +140,7 @@ async function getUser(request: NextRequest) {
   )
 }
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   return createUser(request)
 }
 
