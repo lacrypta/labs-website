@@ -4,7 +4,7 @@ const withNextIntl = createNextIntlPlugin()
 
 const nextConfig = {
   reactStrictMode: false,
-  trailingSlash: true,
+  trailingSlash: false,
   compiler: {
     styledComponents: true
   },
