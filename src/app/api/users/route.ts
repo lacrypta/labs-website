@@ -50,7 +50,7 @@ async function createUser(request: Request) {
       // Find nonce record
       const nonceRecord = await tx.nonce.findUnique({
         where: {
-          nonce
+          id: nonce
         }
       })
 
@@ -79,7 +79,7 @@ async function createUser(request: Request) {
           burned: true
         },
         where: {
-          nonce
+          id: nonce
         }
       })
 
