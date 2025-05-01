@@ -1,5 +1,4 @@
 import createNextIntlPlugin from 'next-intl/plugin'
-import { headers } from 'next/headers'
 
 const withNextIntl = createNextIntlPlugin()
 
