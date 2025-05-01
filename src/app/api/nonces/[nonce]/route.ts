@@ -1,6 +1,12 @@
 import { prisma } from '@/services/prisma'
 import { NextRequest, NextResponse } from 'next/server'
 
+const headers = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type'
+}
+
 export async function GET(
   _request: NextRequest,
   context: { params: Promise<{ nonce: string }> }
@@ -15,7 +21,7 @@ export async function GET(
   if (!nonceRecord) {
     return NextResponse.json(
       { error: 'Nonce not found', status: false },
-      { status: 404 }
+      { status: 404, headers }
     )
   }
 
@@ -23,7 +29,7 @@ export async function GET(
   if (nonceRecord.burned) {
     return NextResponse.json(
       { status: false, error: 'Nonce has been burned' },
-      { status: 410 }
+      { status: 410, headers }
     )
   } else {
     return NextResponse.json({ status: true }, { status: 200 })
@@ -34,10 +40,6 @@ export async function GET(
 export function OPTIONS() {
   return new NextResponse(null, {
     status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    }
+    headers
   })
 }
