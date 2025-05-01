@@ -1,6 +1,6 @@
 {
   "name": "lacrypta-web",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "La Crypta Web",
   "scripts": {
     "dev": "next dev",
