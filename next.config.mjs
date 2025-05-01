@@ -27,6 +27,10 @@ const nextConfig = {
     {
       source: '/.well-known/lnurlp/:name',
       destination: '/api/lud16/:name'
+    },
+    {
+      source: '/api/nonce/:nonce',
+      destination: '/api/nonces/:nonce'
     }
   ]
 }
