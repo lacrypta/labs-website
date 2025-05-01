@@ -75,10 +75,10 @@ export class SendyClient implements SendyClientInterface {
       }
 
       return responseF
-    } catch (error: any) {
+    } catch (error: unknown) {
       const responseF: SendyResponse = {
         success: false,
-        message: error.message
+        message: (error as Error).message
       }
 
       return responseF
@@ -114,10 +114,10 @@ export class SendyClient implements SendyClientInterface {
       }
 
       return responseF
-    } catch (error: any) {
+    } catch (error: unknown) {
       const responseF: SendyResponse = {
         success: false,
-        message: error.message
+        message: (error as Error).message
       }
 
       return responseF
@@ -157,10 +157,10 @@ export class SendyClient implements SendyClientInterface {
       }
 
       return responseF
-    } catch (error: any) {
+    } catch (error: unknown) {
       const responseF: SendyResponse = {
         success: false,
-        message: error.message
+        message: (error as Error).message
       }
 
       return responseF
