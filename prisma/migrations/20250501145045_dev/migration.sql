@@ -11,7 +11,6 @@ CREATE TABLE "User" (
 -- CreateTable
 CREATE TABLE "Nonce" (
     "_id" TEXT NOT NULL,
-    "nonce" TEXT NOT NULL,
     "burned" BOOLEAN NOT NULL DEFAULT false,
 
     CONSTRAINT "Nonce_pkey" PRIMARY KEY ("_id")
@@ -22,9 +21,6 @@ CREATE UNIQUE INDEX "User_name_key" ON "User"("name");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_nonceId_key" ON "User"("nonceId");
-
--- CreateIndex
-CREATE UNIQUE INDEX "Nonce_nonce_key" ON "Nonce"("nonce");
 
 -- AddForeignKey
 ALTER TABLE "User" ADD CONSTRAINT "User_nonceId_fkey" FOREIGN KEY ("nonceId") REFERENCES "Nonce"("_id") ON DELETE RESTRICT ON UPDATE CASCADE;
