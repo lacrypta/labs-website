@@ -1,20 +1,7 @@
 import createNextIntlPlugin from 'next-intl/plugin'
+import { headers } from 'next/headers'
 
 const withNextIntl = createNextIntlPlugin()
-
-const corsHeaders = [
-  { key: 'Access-Control-Allow-Credentials', value: 'true' },
-  { key: 'Access-Control-Allow-Origin', value: '*' },
-  {
-    key: 'Access-Control-Allow-Methods',
-    value: 'GET, DELETE, PATCH, POST, PUT, OPTIONS'
-  },
-  {
-    key: 'Access-Control-Allow-Headers',
-    value:
-      'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-  }
-]
 
 const nextConfig = {
   reactStrictMode: false,
@@ -36,18 +23,16 @@ const nextConfig = {
   rewrites: async () => [
     {
       source: '/.well-known/nostr.json',
-      destination: '/api/nip05',
-      headers: corsHeaders
+      destination: '/api/nip05'
     },
     {
       source: '/.well-known/lnurlp/:name',
-      destination: '/api/lud16/:name',
-      headers: corsHeaders
+      destination: '/api/lud16/:name'
     },
     {
       source: '/api/nonce/:nonce',
       destination: '/api/nonces/:nonce',
-      headers: corsHeaders
+      headers
     }
   ],
   headers: async () => {
@@ -55,7 +40,19 @@ const nextConfig = {
       {
         // matching all API routes
         source: '/(.*)',
-        headers: corsHeaders
+        headers: [
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, DELETE, PATCH, POST, PUT, OPTIONS'
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value:
+              'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+          }
+        ]
       }
     ]
   }
