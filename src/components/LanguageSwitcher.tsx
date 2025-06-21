@@ -42,12 +42,20 @@ export default function LocaleSwitcher() {
           <Globe className="h-[1.2rem] w-[1.2rem]" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="center">
-        <DropdownMenuItem onClick={() => onSelectChange('en')}>
-          English
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem
+          className="flex justify-between"
+          onClick={() => onSelectChange('en')}
+        >
+          <span>English</span>
+          <span>🇺🇸</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => onSelectChange('es')}>
-          Español
+        <DropdownMenuItem
+          className="flex justify-between"
+          onClick={() => onSelectChange('es')}
+        >
+          <span>Español</span>
+          <span>🇦🇷</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
