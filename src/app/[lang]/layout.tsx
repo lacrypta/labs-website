@@ -1,39 +1,42 @@
-import Script from 'next/script'
+// src/app/[lang]/layout.tsx
 
-import { GOOGLE_TAG_ID } from '@/constants/config'
-import AppProvider from '@/context/AppProvider'
-import { fontSecondary } from '@/style/fonts'
-import { NextIntlClientProvider, useMessages } from 'next-intl'
-import { unstable_setRequestLocale } from 'next-intl/server'
+import Script from 'next/script';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 
-import '../globals.css'
+import { GOOGLE_TAG_ID } from '@/constants/config';
+import AppProvider from '@/context/AppProvider';
+import { fontSecondary } from '@/style/fonts';
 
-export default function RootLayout({
-  children
-  // params: { lng }
-}: {
-  children: React.ReactNode
-  // params: { lng: string }
-}) {
-  unstable_setRequestLocale('en')
-  const messages = useMessages()
+import '../globals.css';
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: {
+    lang: string;
+  };
+}
+
+export default async function RootLayout({
+  children,
+  params: { lang },
+}: RootLayoutProps) {
+  unstable_setRequestLocale(lang);
+
+  const messages = await getMessages();
 
   return (
-    <html lang={'en'} className={fontSecondary.className}>
+    <html lang={lang} className={fontSecondary.className}>
       <head>
         <title>La Crypta | Learn with us about Bitcoin and Nostr.</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
-        <link rel="icon" type="img/png" href="img/schema-logo.png" />
-
-        {/*  */}
+        <link rel="icon" type="image/png" href="/img/schema-logo.png" />
         <meta name="author" content="La Crypta" />
         <meta
           name="description"
           content="We are a community dedicated to the education and dissemination of the Bitcoin ecosystem in Argentina."
         />
         <meta name="robots" content="index,follow" />
-
-        {/* Facebook */}
         <meta property="og:title" content="La Crypta" />
         <meta
           property="og:description"
@@ -43,8 +46,6 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/img/social/facebook-1200x630.jpg" />
         <meta property="og:url" content="https://lacrypta.ar/" />
-
-        {/* Twitter */}
         <meta name="twitter:title" content="La Crypta" />
         <meta
           name="twitter:description"
@@ -53,28 +54,24 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/img/social/twitter-600x330.jpg" />
         <meta name="twitter:url" content="https://lacrypta.ar/" />
-
         <script async src="https://tally.so/widgets/embed.js"></script>
-
-        {/* Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
         />
         <Script id="google-analytics">
           {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', '${GOOGLE_TAG_ID}');
-        `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_TAG_ID}');
+          `}
         </Script>
       </head>
       <body>
-        <NextIntlClientProvider locale={'en'} messages={messages}>
+        <NextIntlClientProvider locale={lang} messages={messages}>
           <AppProvider>{children}</AppProvider>
         </NextIntlClientProvider>
       </body>
     </html>
-  )
+  );
 }

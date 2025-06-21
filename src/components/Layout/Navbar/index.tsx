@@ -4,6 +4,7 @@ import { StoreIcon } from 'lucide-react'
 import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 const TALLY_ID = process.env.TALLY || ''
 
@@ -50,6 +51,9 @@ export default function Component() {
             <a href="#">{t('VALUES')}</a>
           </li>
         </ul> */}
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+        </div>
       </div>
     </div>
   )

@@ -1,14 +1,16 @@
-import createMiddleware from 'next-intl/middleware'
-import { defaultLocale, localePrefix, locales } from './translations/config'
+// middleware.ts
+
+import createMiddleware from 'next-intl/middleware';
 
 export default createMiddleware({
-  locales,
-  defaultLocale,
-  localePrefix
-})
+  // Una lista de todos los idiomas que soporta la aplicación
+  locales: ['en', 'es'],
+
+  // El idioma por defecto a usar cuando no hay coincidencia
+  defaultLocale: 'es',
+});
 
 export const config = {
-  matcher: [
-    '/((?!_next|api|favicon.ico|robots.txt|manifest.json|sw.js|workbox-*.js|_next/static|emotes/|img/|.well-known/).*)'
-  ]
-}
+  // No ejecutar el middleware en rutas que probablemente no necesiten i18n
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+};
