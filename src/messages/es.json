@@ -32,8 +32,52 @@
   },
   "projects": {
     "title": "Nuestros proyectos",
-    "description": "Nos dedicamos a crear productos y experiencias que facilitan su uso, haciéndolos accesibles para todos.",
-    "cta": "Conoce más"
+    "description": "Nos dedicamos a crear productos y experiencias fáciles de usar, haciéndolos accesibles para todos.",
+    "cta": "Conoce más",
+    "items": {
+      "lawallet": {
+        "title": "LaWallet",
+        "description": "Creamos infraestructura basada en Lightning Network y Nostr para acelerar tu integración.",
+        "features": [
+          {
+            "title": "Infraestructura",
+            "description": "Integrar Bitcoin no debería ser utópico. Construye sobre una infraestructura sólida y flexible, garantizando seguridad y escalabilidad."
+          },
+          {
+            "title": "Característica 2",
+            "description": "Breve descripción de esta segunda característica."
+          }
+        ]
+      },
+      "walias": {
+        "title": "Walias",
+        "description": "Fusiona el poder de Lightning y Nostr para que usar Bitcoin sea tan simple como enviar un email.",
+        "features": [
+          {
+            "title": "Característica 1",
+            "description": "Breve descripción de esta primera característica."
+          },
+          {
+            "title": "Característica 2",
+            "description": "Breve descripción de esta segunda característica."
+          }
+        ]
+      },
+      "halving_massacre": {
+        "title": "Halving Massacre",
+        "description": "¡Zapea sats para aumentar tu poder, sobrevive a rondas de eliminación aleatorias y reclama el pozo siendo el último jugador en pie!",
+        "features": [
+          {
+            "title": "Característica 1",
+            "description": "Breve descripción de esta primera característica."
+          },
+          {
+            "title": "Característica 2",
+            "description": "Breve descripción de esta segunda característica."
+          }
+        ]
+      }
+    }
   },
   "libraries": {
     "title": "Librerías de Código Abierto"
