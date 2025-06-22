@@ -1,32 +1,33 @@
 // src/app/[lang]/layout.tsx
 
-import Script from 'next/script';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import Script from 'next/script'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server'
 
-import { GOOGLE_TAG_ID } from '@/constants/config';
-import AppProvider from '@/context/AppProvider';
+import { GOOGLE_TAG_ID } from '@/constants/config'
+import AppProvider from '@/context/AppProvider'
 import StyledComponentsRegistry from '@/lib/registry'
 
-import '../globals.css';
+import '../globals.css'
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
   params: {
-    lang: string;
-  };
+    lang: string
+  }
 }
 
 export default async function RootLayout({
   children,
-  params: { lang },
+  params
 }: RootLayoutProps) {
-  unstable_setRequestLocale(lang);
+  const { lang } = await params
+  unstable_setRequestLocale(lang)
 
-  const messages = await getMessages();
+  const messages = await getMessages()
 
   return (
-    <html lang={lang} className={fontSecondary.className}>
+    <html lang={lang}>
       <head>
         <title>La Crypta | Learn with us about Bitcoin and Nostr.</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
@@ -55,6 +56,7 @@ export default async function RootLayout({
         <meta name="twitter:image" content="/img/social/twitter-600x330.jpg" />
         <meta name="twitter:url" content="https://lacrypta.ar/" />
         <script async src="https://tally.so/widgets/embed.js"></script>
+        {/* Schema */}
         <script
           id="ldjson-data"
           type="application/ld+json"
@@ -106,5 +108,5 @@ export default async function RootLayout({
         </StyledComponentsRegistry>
       </body>
     </html>
-  );
+  )
 }
