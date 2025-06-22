@@ -6,7 +6,7 @@ import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 
 import { GOOGLE_TAG_ID } from '@/constants/config';
 import AppProvider from '@/context/AppProvider';
-import { fontSecondary } from '@/style/fonts';
+import StyledComponentsRegistry from '@/lib/registry'
 
 import '../globals.css';
 
@@ -68,9 +68,11 @@ export default async function RootLayout({
         </Script>
       </head>
       <body>
-        <NextIntlClientProvider locale={lang} messages={messages}>
-          <AppProvider>{children}</AppProvider>
-        </NextIntlClientProvider>
+        <StyledComponentsRegistry>
+          <NextIntlClientProvider locale={lang} messages={messages}>
+            <AppProvider>{children}</AppProvider>
+          </NextIntlClientProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
