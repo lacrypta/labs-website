@@ -3,10 +3,11 @@
 import { useEffect, useState } from 'react'
 
 export const useScreenDetector = () => {
-  const [width, setWidth] = useState<number | undefined>(undefined)
+  const [width, setWidth] = useState<number>(0)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    // Set initial width after component mounts
+    setIsMounted(true)
     setWidth(window.innerWidth)
 
     const handleWindowSizeChange = () => {
@@ -20,9 +21,9 @@ export const useScreenDetector = () => {
     }
   }, [])
 
-  const isMobile = width ? width <= 768 : false
-  const isTablet = width ? width <= 1024 : false
-  const isDesktop = width ? width > 1024 : false
+  const isMobile = width <= 768
+  const isTablet = width <= 1024
+  const isDesktop = width > 1024
 
-  return { isMobile, isTablet, isDesktop }
+  return { isMobile, isTablet, isDesktop, isMounted }
 }
