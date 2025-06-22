@@ -8,10 +8,10 @@ import { cn } from '@/lib/utils'
 
 const PROJECTS_SKELETON = [
   {
-    id: 'lawallet', 
+    id: 'lawallet',
     image: '/img/projects/lawallet.png',
     url: 'https://lawallet.io',
-    featureCount: 2 
+    featureCount: 2
   },
   {
     id: 'walias',
@@ -48,8 +48,10 @@ export default function Component() {
               description: t(`items.${project.id}.description`),
               features: Array.from({ length: project.featureCount }).map(
                 (_, featureIndex) => ({
-                  icon: '', 
-                  title: t(`items.${project.id}.features.${featureIndex}.title`),
+                  icon: '',
+                  title: t(
+                    `items.${project.id}.features.${featureIndex}.title`
+                  ),
                   description: t(
                     `items.${project.id}.features.${featureIndex}.description`
                   )
@@ -63,7 +65,7 @@ export default function Component() {
                   index % 2 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 )}
                 key={project.id}
-                data={projectData} 
+                data={projectData}
               />
             )
           })}

@@ -1,39 +1,39 @@
 // src/components/LocaleSwitcher.tsx
 
-'use client';
+'use client'
 
-import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
-import { useTransition } from 'react';
+import { useLocale } from 'next-intl'
+import { usePathname, useRouter } from 'next/navigation'
+import { useTransition } from 'react'
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Globe } from 'lucide-react';
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
+import { Globe } from 'lucide-react'
 
 export default function LocaleSwitcher() {
-  const [isPending, startTransition] = useTransition();
-  const router = useRouter();
-  const pathname = usePathname();
-  const locale = useLocale();
+  const [isPending, startTransition] = useTransition()
+  const router = useRouter()
+  const pathname = usePathname()
+  const locale = useLocale()
 
-  if (!pathname) return null;
+  if (!pathname) return null
 
   const onSelectChange = (nextLocale: string) => {
     const newPath = pathname.startsWith(`/${locale}`)
       ? pathname.substring(`/${locale}`.length) || '/'
-      : pathname;
+      : pathname
 
-    const finalUrl = `/${nextLocale}${newPath}`;
+    const finalUrl = `/${nextLocale}${newPath}`
 
     startTransition(() => {
-      router.replace(finalUrl);
-    });
-  };
+      router.replace(finalUrl)
+    })
+  }
 
   return (
     <DropdownMenu>
@@ -59,5 +59,5 @@ export default function LocaleSwitcher() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }
