@@ -10,17 +10,13 @@ import StyledComponentsRegistry from '@/lib/registry'
 
 import '../globals.css'
 
-interface RootLayoutProps {
-  children: React.ReactNode
-  params: {
-    lang: string
-  }
-}
-
 export default async function RootLayout({
   children,
   params
-}: RootLayoutProps) {
+}: {
+  children: React.ReactNode
+  params: Promise<{ lang: string }>
+}) {
   const { lang } = await params
   unstable_setRequestLocale(lang)
 
