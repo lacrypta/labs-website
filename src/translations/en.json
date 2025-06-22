@@ -33,7 +33,51 @@
   "projects": {
     "title": "Our projects",
     "description": "We are dedicated to creating products and experiences that make them easy to use, making them accessible to everyone.",
-    "cta": "Learn more"
+    "cta": "Learn more",
+    "items": {
+      "lawallet": {
+        "title": "LaWallet",
+        "description": "We create infrastructure based on Lightning Network and Nostr to speed up your integration.",
+        "features": [
+          {
+            "title": "Infrastructure",
+            "description": "Integrating Bitcoin should not be utopian. Build on a solid and flexible infrastructure, ensuring security and scalability."
+          },
+          {
+            "title": "Feature 2",
+            "description": "Brief description of this second feature."
+          }
+        ]
+      },
+      "walias": {
+        "title": "Walias",
+        "description": "Merge the power of Lightning and Nostr to make Bitcoin as simple as sending an email.",
+        "features": [
+          {
+            "title": "Feature 1",
+            "description": "Brief description of this first feature."
+          },
+          {
+            "title": "Feature 2",
+            "description": "Brief description of this second feature."
+          }
+        ]
+      },
+      "halving_massacre": {
+        "title": "Halving Massacre",
+        "description": "Zap sats to boost your bolt power, survive random elimination rounds, and claim the prize pool by being the last player standing!",
+        "features": [
+          {
+            "title": "Feature 1",
+            "description": "Brief description of this first feature."
+          },
+          {
+            "title": "Feature 2",
+            "description": "Brief description of this second feature."
+          }
+        ]
+      }
+    }
   },
   "libraries": {
     "title": "Open-Source Libraries"

@@ -1,0 +1,157 @@
+{
+  "HOME": "Inicio",
+  "ABOUT_US": "Nosotros",
+  "PROJECTS": "Proyectos",
+  "VALUES": "Valores",
+  "MEMBERS": "miembros",
+  "SOON": "Próximamente",
+  "COMMUNITY_CALLS": "Llamadas Comunitarias",
+  "SPACE_AND_WORKSHOPS": "Spaces y Talleres Educativos",
+  "navbar": {
+    "cta": "Contáctanos",
+    "bitcoin_price": "Precio de Bitcoin: ",
+    "last_block": "Último Bloque: ",
+    "transaction_fees": "Comisiones de transacción: ",
+    "loading": "Cargando..."
+  },
+  "hero": {
+    "title": "Una revolución disfrazada de inversión",
+    "subtitle": "La Crypta es una organización Argentina dedicada al desarrollo, la educación y la difusión del conocimiento dentro de los ecosistemas de Bitcoin y Nostr.",
+    "cta": "Contáctanos"
+  },
+  "trust": {
+    "title": "Confiaron en nosotros"
+  },
+  "community": {
+    "title": "Imaginamos un mundo donde Bitcoin es la norma",
+    "description": "Permitiendo que cada individuo tenga control total sobre su patrimonio y privacidad, sin depender de gobiernos o corporaciones."
+  },
+  "about": {
+    "title": "Somos animales de la jungla cypherpunk",
+    "subtitle": "Pero más que una manada"
+  },
+  "projects": {
+    "title": "Nuestros proyectos",
+    "description": "Nos dedicamos a crear productos y experiencias fáciles de usar, haciéndolos accesibles para todos.",
+    "cta": "Conoce más",
+    "items": {
+      "lawallet": {
+        "title": "LaWallet",
+        "description": "Creamos infraestructura basada en Lightning Network y Nostr para acelerar tu integración.",
+        "features": [
+          {
+            "title": "Infraestructura",
+            "description": "Integrar Bitcoin no debería ser utópico. Construye sobre una infraestructura sólida y flexible, garantizando seguridad y escalabilidad."
+          },
+          {
+            "title": "Característica 2",
+            "description": "Breve descripción de esta segunda característica."
+          }
+        ]
+      },
+      "walias": {
+        "title": "Walias",
+        "description": "Fusiona el poder de Lightning y Nostr para que usar Bitcoin sea tan simple como enviar un email.",
+        "features": [
+          {
+            "title": "Característica 1",
+            "description": "Breve descripción de esta primera característica."
+          },
+          {
+            "title": "Característica 2",
+            "description": "Breve descripción de esta segunda característica."
+          }
+        ]
+      },
+      "halving_massacre": {
+        "title": "Halving Massacre",
+        "description": "¡Zapea sats para aumentar tu poder, sobrevive a rondas de eliminación aleatorias y reclama el pozo siendo el último jugador en pie!",
+        "features": [
+          {
+            "title": "Característica 1",
+            "description": "Breve descripción de esta primera característica."
+          },
+          {
+            "title": "Característica 2",
+            "description": "Breve descripción de esta segunda característica."
+          }
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "title": "Librerías de Código Abierto"
+  },
+  "pillars": {
+    "title": "¿Qué hacemos?",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "item_1": "Construimos",
+    "item_2": "Educamos",
+    "item_3": "Unimos"
+  },
+  "values": {
+    "title": "Construimos en base a",
+    "subtitle": "en cada proyecto.",
+    "description": "En La Crypta, cada valor impulsa nuestro enfoque en crear soluciones eficientes, seguras y abiertas, basadas en principios que guían todo nuestro trabajo.",
+    "honesty": "Honestidad",
+    "honesty_desc": "Sinceridad y transparencia en todo momento",
+    "synergy": "Sinergia",
+    "synergy_desc": "Colaborar y trabajar de manera efectiva para alcanzar metas comunes",
+    "liberty": "Libertad",
+    "liberty_desc": "Tener la capacidad de tomar decisiones y actuar de forma autónoma y responsable",
+    "rationality": "Racionalidad",
+    "rationality_desc": "Tomar decisiones basadas en la lógica",
+    "modesty": "Humildad",
+    "modesty_desc": "Estar dispuesto a aprender y mejorar constantemente",
+    "merit": "Mérito",
+    "merit_desc": "Reconocer y valorar los logros. Premiar el esfuerzo y la excelencia",
+    "innovation": "Innovación",
+    "innovation_desc": "Ser creativo, estar abierto a nuevas posibilidades y mejorar constantemente"
+  },
+  "shares": {
+    "title": "Participaciones",
+    "description": ""
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "question_1": {
+      "title": "¿Qué es La Crypta?",
+      "desc": "Somos una comunidad dedicada a la educación, desarrollo y difusión del ecosistema Bitcoin en Argentina. Nos enfocamos en proporcionar independencia y autonomía a la comunidad."
+    },
+    "question_2": {
+      "title": "¿Por qué valores?",
+      "desc": "Valoramos mucho estos conceptos porque creemos que son aspectos claves para que nuestra comunidad sea lo que aspiramos y continúe creciendo."
+    },
+    "question_3": {
+      "title": "¿Qué eventos y actividades organizan?",
+      "desc_1": "Nos encanta mantener una comunicación constante y cercana con nuestra comunidad. Es por eso que organizamos estas actividades regularmente:",
+      "desc_2": "Todos los martes a las 18hs en Discord y Twitch, donde nos reunimos para charlar y compartir. Un momento a la semana donde hablamos de nuestros proyectos, eventos, conocemos a los nuevos integrantes, debatimos ideas y demás yerbas.",
+      "desc_3": "Cada miércoles a las 17hs aprendemos algo nuevo, lo transmitimos en vivo por Twitch y Nostr.",
+      "desc_4": "Además, una vez al mes, organizamos un evento presencial, donde finalmente compartimos en persona.",
+      "desc_5": "Te invitamos a unirte a nosotros en estas actividades y ser parte de nuestra comunidad."
+    },
+    "question_4": {
+      "title": "¿Qué beneficios tiene ser parte de la comunidad de La Crypta?",
+      "desc_1": "Aprender sobre Bitcoin, Lightning y Nostr.",
+      "desc_2": "Networking con otros Bitcoiners, desarrolladores y personas del mundo crypto web3.",
+      "desc_3": "Desarrollar productos colaborativos con la comunidad.",
+      "desc_4": "Estar al día sobre las últimas novedades sobre Bitcoin."
+    },
+    "question_5": {
+      "title": "¿Cómo puedo colaborar?",
+      "desc": "Juntos llegamos más lejos. Apreciamos y valoramos muchísimo la colaboración de los integrantes de la comunidad en nuestros proyectos. ¡Para ser voluntario de La Crypta, súmate a nuestro Discord!"
+    },
+    "question_6": {
+      "title": "¿Cómo puedo donar a la comunidad de La Crypta?",
+      "desc": "Puedes hacerlo enviando satoshis a pozo@lacrypta.ar a través de tu billetera de Bitcoin Lightning."
+    },
+    "question_7": {
+      "title": "¿Por qué debería unirme al canal de Discord?",
+      "desc": "La comunidad de La Crypta vive prácticamente en Discord. Es ahí donde organizamos todas nuestras actividades y charlamos a diario. Además, en esa plataforma tenemos una radio colaborativa, un bot para enviar satoshis, zapathons, distintos tipos de méritos, la famosa 💩 y mucho más…"
+    }
+  },
+  "footer": {
+    "FROM_ARG_TO_WORLD": "De Argentina para el mundo",
+    "FOLLOW_IN": "Seguinos en"
+  }
+}

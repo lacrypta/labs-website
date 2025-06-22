@@ -22,6 +22,9 @@ module.exports = {
       '9xl': ['8rem', { lineHeight: '1' }]
     },
     extend: {
+      fontFamily: {
+        sans: ['Standerd', 'sans-serif']
+      },
       animation: {
         grid: 'grid 960s linear infinite',
         drop: 'drop 7s 0s infinite cubic-bezier(0.4, 0.26, 0, 0.97)'

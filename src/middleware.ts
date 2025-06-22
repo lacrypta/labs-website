@@ -1,14 +1,16 @@
+// middleware.ts
+
 import createMiddleware from 'next-intl/middleware'
-import { defaultLocale, localePrefix, locales } from './translations/config'
+import { locales, localePrefix } from './navigation'
+import { defaultLocale } from './translations/config'
 
 export default createMiddleware({
-  locales,
   defaultLocale,
+  locales,
   localePrefix
 })
 
 export const config = {
-  matcher: [
-    '/((?!_next|api|favicon.ico|robots.txt|manifest.json|sw.js|workbox-*.js|_next/static|emotes/|img/|.well-known/).*)'
-  ]
+  // Match only internationalized pathnames
+  matcher: ['/', '/(es|en)/:path*']
 }

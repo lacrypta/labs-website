@@ -34,7 +34,11 @@ export default function Page() {
   //   })
   // }
 
-  const { isMobile } = useScreenDetector()
+  const { isMobile, isMounted } = useScreenDetector()
+
+  if (!isMounted) {
+    return null
+  }
 
   return (
     <div className="pt-[60px] overflow-x-hidden">

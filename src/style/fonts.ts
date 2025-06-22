@@ -18,6 +18,7 @@ const fontPrimary = localFont({
 
 const fontSecondary = localFont({
   variable: '--font-secondary',
+  display: 'swap',
   src: [
     {
       path: './fonts/Standerd.woff2',
