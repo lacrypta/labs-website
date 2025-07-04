@@ -29,12 +29,12 @@ export default function Component() {
               {t('cta')}
             </Button>
           )}
-          <Button variant="secondary" asChild>
+          {/* <Button variant="secondary" asChild>
             <Link href="https://shop.lacrypta.ar/" target="_blank">
               <StoreIcon className="w-4 h-4" />
               <span className="hidden md:flex">Shop</span>
             </Link>
-          </Button>
+          </Button> */}
         </div>
         {/* </Flex> */}
         {/* <ul className="hidden gap-2">
