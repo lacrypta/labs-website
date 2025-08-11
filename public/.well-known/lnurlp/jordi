@@ -1,0 +1,10 @@
+{
+  "callback": "https://zeuspay.com/api/lnurl/pay/kindjaguar27",
+  "metadata": "[[\"text/plain\",\"Self-custodial LN address powered by ZEUS. Hodl invoice will settle when user comes online within 24hrs or you'll be refunded.\"],[\"text/identifier\",\"kindjaguar27@zeuspay.com\"]]",
+  "tag": "payRequest",
+  "minSendable": 1000,
+  "maxSendable": 612000000000,
+  "allowsNostr": true,
+  "nostrPubkey": "abd32a8bc530142cc04a23f9c07239dbbc6664f4f7eeceb8092c0e3530f94e9d",
+  "commentAllowed": 600
+}
