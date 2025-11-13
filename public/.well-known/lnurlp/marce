@@ -1,0 +1,1 @@
+{"status":"OK","tag":"payRequest","callback":"https://lawallet.masize.com/api/lud16/marce/cb","minSendable":1000,"maxSendable":1000000000,"metadata":"[[\"text/plain\",\"Payment to @marce on lawallet.masize.com\"]]","commentAllowed":200,"payerData":{"name":{"mandatory":false},"email":{"mandatory":false}}}
