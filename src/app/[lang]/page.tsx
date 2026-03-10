@@ -21,7 +21,6 @@ import TrustUsSection from '@/components/TrustUsSection'
 import EventsSection from '@/components/EventsSection'
 import HackathonsSection from '@/components/HackathonsSection'
 import { AnimatedGrid } from '@/components/animated-grid'
-import { ScrollAnimatedImage } from '@/components/scroll-animated-image'
 
 export default function Page() {
   const t = useTranslations()
@@ -80,7 +79,7 @@ export default function Page() {
             <p className="text-lg">{t('community.description')}</p>
           </div>
         </Container>
-        <ScrollAnimatedImage src="/img/community.jpg" alt="Community" />
+        <EventsSection />
       </div>
 
       <ProjectsSection />
@@ -129,8 +128,6 @@ export default function Page() {
       <AboutSection />
 
       <ValueProposalSection />
-
-      <EventsSection />
 
       <HackathonsSection />
 
