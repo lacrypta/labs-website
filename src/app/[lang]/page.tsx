@@ -19,6 +19,8 @@ import CommunicateIcon from '@/components/Icons/Communicate'
 import EducateIcon from '@/components/Icons/Educate'
 import IdeaIcon from '@/components/Icons/Idea'
 import TrustUsSection from '@/components/TrustUsSection'
+import EventsSection from '@/components/EventsSection'
+import HackathonsSection from '@/components/HackathonsSection'
 import { AnimatedGrid } from '@/components/animated-grid'
 import { ScrollAnimatedImage } from '@/components/scroll-animated-image'
 
@@ -265,6 +267,12 @@ export default function Page() {
           })}
         </div>
       </div> */}
+
+      {/* Eventos */}
+      <EventsSection />
+
+      {/* Hackathons */}
+      <HackathonsSection />
 
       {/* Footer */}
       <Footer />
