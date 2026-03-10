@@ -47,20 +47,36 @@ export default function Page() {
                 <Image src="/img/animal/crow.png" alt="Crow, Fer" fill />
               </div>
               <div className="relative z-20 w-10 h-10 -ml-4 bg-[#D0A54D] rounded-full border-4 border-border">
-                <Image src="/img/animal/scorpion.png" alt="Scorpion, Cyber" fill />
+                <Image
+                  src="/img/animal/scorpion.png"
+                  alt="Scorpion, Cyber"
+                  fill
+                />
               </div>
               <div className="relative z-10 w-10 h-10 -ml-4 bg-[#540885] rounded-full border-4 border-border">
-                <Image src="/img/animal/ostrich.png" alt="Ostrich, Negr0" fill />
+                <Image
+                  src="/img/animal/ostrich.png"
+                  alt="Ostrich, Negr0"
+                  fill
+                />
               </div>
               <div className="relative z-00 w-10 h-10 -ml-4 bg-[#A86541] rounded-full border-4 border-border">
-                <Image src="/img/animal/capybara.png" alt="Capybara, Carpincho" fill />
+                <Image
+                  src="/img/animal/capybara.png"
+                  alt="Capybara, Carpincho"
+                  fill
+                />
               </div>
             </div>
-            <p className="text-md text-muted-foreground">+2.400 {t('MEMBERS')}</p>
+            <p className="text-md text-muted-foreground">
+              +2.400 {t('MEMBERS')}
+            </p>
           </div>
 
           <div className="flex flex-col gap-4 md:max-w-[500px] mx-auto text-center">
-            <h2 className="text-4xl lg:text-6xl font-bold">{t('community.title')}</h2>
+            <h2 className="text-4xl lg:text-6xl font-bold">
+              {t('community.title')}
+            </h2>
             <p className="text-lg">{t('community.description')}</p>
           </div>
         </Container>
@@ -74,7 +90,9 @@ export default function Page() {
       <div className="w-full py-32">
         <div className="w-full max-w-[900px] mx-auto px-4">
           <div className="flex flex-col gap-8 max-w-[568px] mx-auto mb-16 text-center">
-            <h3 className="text-3xl lg:text-5xl font-bold">{t('pillars.title')}</h3>
+            <h3 className="text-3xl lg:text-5xl font-bold">
+              {t('pillars.title')}
+            </h3>
           </div>
           <div className="flex flex-col md:flex-row justify-center text-xl font-bold">
             <div
