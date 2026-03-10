@@ -1,7 +1,20 @@
 // src/app/[lang]/layout.tsx
 
 import Script from 'next/script'
+import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap'
+})
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap'
+})
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server'
 
 import { GOOGLE_TAG_ID } from '@/constants/config'
@@ -96,7 +109,7 @@ export default async function RootLayout({
           `}
         </Script>
       </head>
-      <body>
+      <body className={`${spaceGrotesk.variable} ${jetBrainsMono.variable}`}>
         <StyledComponentsRegistry>
           <NextIntlClientProvider locale={lang} messages={messages}>
             <AppProvider>{children}</AppProvider>

@@ -23,7 +23,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Standerd', 'sans-serif']
+        sans: ['var(--font-space-grotesk)', 'Standerd', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono)', 'monospace']
       },
       animation: {
         grid: 'grid 960s linear infinite',
