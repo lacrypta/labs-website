@@ -3,14 +3,12 @@
 import React from 'react'
 import { Container } from '@/components/container'
 
-// Genera los próximos N martes desde hoy
 function getUpcomingTuesdays(count: number): Date[] {
   const tuesdays: Date[] = []
   const today = new Date()
   today.setHours(0, 0, 0, 0)
 
   const d = new Date(today)
-  // Avanzar al próximo martes (o hoy si ya es martes)
   while (d.getDay() !== 2) {
     d.setDate(d.getDate() + 1)
   }
@@ -31,8 +29,44 @@ function formatDate(date: Date): string {
   })
 }
 
+const SPECIAL_EVENTS = [
+  {
+    date: new Date('2026-03-27T21:00:00-03:00'),
+    title: 'OpenClaw Meetup 2',
+    tag: '🎉 Presencial',
+    tagColor: 'bg-[#2563eb]/20 text-[#2563eb]',
+    highlight: true,
+    time: '21:00 hs',
+    location: 'Buenos Aires'
+  }
+]
+
 export default function EventsSection() {
   const upcomingTuesdays = getUpcomingTuesdays(6)
+  const now = new Date()
+
+  // Merge y ordenar todos los eventos
+  const regularEvents = upcomingTuesdays.map(date => ({
+    date,
+    title: 'Community Call',
+    tag: '🌐 Online',
+    tagColor: 'bg-muted text-muted-foreground',
+    highlight: false,
+    time: '18:00 hs',
+    location: 'Discord',
+    special: false
+  }))
+
+  const specialEvents = SPECIAL_EVENTS.filter(e => e.date >= now).map(e => ({
+    ...e,
+    special: true
+  }))
+
+  const allEvents = [...regularEvents, ...specialEvents].sort(
+    (a, b) => a.date.getTime() - b.date.getTime()
+  )
+
+  const nextIdx = allEvents.findIndex(e => e.date >= now)
 
   return (
     <section className="w-full py-24 bg-background">
@@ -52,65 +86,74 @@ export default function EventsSection() {
             </p>
           </div>
 
-          {/* Community Call recurrente */}
+          {/* Lista de eventos */}
           <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="h-px flex-1 bg-border" />
-              <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
-                Recurrente
-              </span>
-              <div className="h-px flex-1 bg-border" />
-            </div>
+            {allEvents.map((event, i) => {
+              const isNext = i === nextIdx
+              const isSpecial = event.special
 
-            {upcomingTuesdays.map((date, i) => (
-              <div
-                key={i}
-                className={`group flex items-center justify-between gap-4 px-5 py-4 rounded-xl border transition-colors duration-200
-                  ${
-                    i === 0
-                      ? 'border-[#ff8c00]/60 bg-[#ff8c00]/5'
-                      : 'border-border bg-card hover:border-[#ff8c00]/30 hover:bg-[#ff8c00]/5'
-                  }`}
-              >
-                <div className="flex items-center gap-4">
-                  <div
-                    className={`flex flex-col items-center justify-center w-10 h-10 rounded-lg font-mono font-bold text-sm
-                    ${i === 0 ? 'bg-[#ff8c00] text-black' : 'bg-muted text-muted-foreground group-hover:bg-[#ff8c00]/20 group-hover:text-[#ff8c00]'}`}
-                  >
-                    <span>{date.getDate()}</span>
-                  </div>
-                  <div>
-                    <p
-                      className={`font-semibold capitalize ${i === 0 ? 'text-white' : ''}`}
+              return (
+                <div
+                  key={i}
+                  className={`group flex items-center justify-between gap-4 px-5 py-4 rounded-xl border transition-colors duration-200
+                    ${
+                      isSpecial
+                        ? 'border-[#2563eb]/50 bg-[#2563eb]/5 hover:border-[#2563eb]/70'
+                        : isNext
+                          ? 'border-[#ff8c00]/60 bg-[#ff8c00]/5'
+                          : 'border-border bg-card hover:border-[#ff8c00]/30 hover:bg-[#ff8c00]/5'
+                    }`}
+                >
+                  <div className="flex items-center gap-4">
+                    <div
+                      className={`flex flex-col items-center justify-center w-10 h-10 rounded-lg font-mono font-bold text-sm shrink-0
+                        ${
+                          isSpecial
+                            ? 'bg-[#2563eb] text-white'
+                            : isNext
+                              ? 'bg-[#ff8c00] text-black'
+                              : 'bg-muted text-muted-foreground group-hover:bg-[#ff8c00]/20 group-hover:text-[#ff8c00]'
+                        }`}
                     >
-                      Community Call
-                      {i === 0 && (
-                        <span className="ml-2 text-xs font-mono text-[#ff8c00] uppercase">
-                          próximo
-                        </span>
-                      )}
-                    </p>
-                    <p className="text-sm text-muted-foreground capitalize">
-                      {formatDate(date)}
-                    </p>
+                      <span>{event.date.getDate()}</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold capitalize flex items-center gap-2 flex-wrap">
+                        {event.title}
+                        {isNext && !isSpecial && (
+                          <span className="text-xs font-mono text-[#ff8c00] uppercase">
+                            próximo
+                          </span>
+                        )}
+                        {isSpecial && (
+                          <span className="text-xs font-mono text-[#2563eb] uppercase">
+                            ★ especial
+                          </span>
+                        )}
+                      </p>
+                      <p className="text-sm text-muted-foreground capitalize">
+                        {formatDate(event.date)}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-mono text-muted-foreground">
+                      {event.time}
+                    </span>
+                    <span
+                      className={`hidden sm:inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full ${event.tagColor}`}
+                    >
+                      {event.tag}
+                    </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-sm font-mono text-muted-foreground">
-                    18:00 hs
-                  </span>
-                  <span className="hidden sm:inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
-                    ⚡ Online + Presencial BA
-                  </span>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
 
           {/* Footer */}
           <p className="text-sm text-muted-foreground text-center">
-            Todos los martes · 18:00 hs (GMT-3) · Discord + La Crypta, Buenos
-            Aires
+            Community Call · todos los martes · 18:00 hs (GMT-3) · Online
           </p>
         </div>
       </Container>
