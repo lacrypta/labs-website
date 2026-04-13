@@ -153,5 +153,93 @@
   "footer": {
     "FROM_ARG_TO_WORLD": "De Argentina para el mundo",
     "FOLLOW_IN": "Seguinos en"
+  },
+  "cryptoLabs": {
+    "navCta": "Quiero enterarme",
+    "eyebrow": "La capa técnica de La Crypta",
+    "title": "Crypto Labs forma builders para Bitcoin, Lightning y Nostr.",
+    "subtitle": "Un laboratorio abierto para que nuevos desarrolladores aprendan construyendo, publiquen herramientas reales y usen infraestructura pública desde el día uno.",
+    "primaryCta": "Sumarme al newsletter",
+    "secondaryCta": "Ver infraestructura",
+    "highlight": {
+      "label": "En construcción",
+      "hackathonsTitle": "Hackathons con propósito",
+      "hackathonsDescription": "Las Lightning Hackathons y experiencias prácticas de La Crypta viven acá: aprender haciendo, en equipo y con entregables reales.",
+      "reposTitle": "Repos open source",
+      "reposDescription": "Cada iniciativa deja código, documentación y herramientas que cualquiera puede estudiar, usar y mejorar."
+    },
+    "pillars": {
+      "learn": {
+        "title": "Aprender en serio",
+        "description": "Empezar desde cero no significa quedarse en teoría. Crypto Labs propone experiencias técnicas guiadas, con contexto, retos y feedback real."
+      },
+      "build": {
+        "title": "Construir en abierto",
+        "description": "Los proyectos nacen como repositorios públicos, para que entrar al ecosistema también signifique dejar huella y colaborar con otros builders."
+      },
+      "ship": {
+        "title": "Publicar infraestructura útil",
+        "description": "No queremos demos muertas. Queremos servicios, herramientas y nodos públicos que la comunidad pueda usar hoy."
+      }
+    },
+    "mission": {
+      "eyebrow": "Misión",
+      "title": "Una puerta de entrada técnica para el ecosistema soberano.",
+      "description": "Crypto Labs existe para involucrar técnicamente a Bitcoiners, formar nuevos desarrolladores y bajar a tierra conceptos complejos mediante experiencias concretas. Es comunidad, laboratorio y plataforma de lanzamiento al mismo tiempo.",
+      "boxLabel": "Qué pasa adentro",
+      "points": {
+        "one": "Programas y actividades donde se aprende construyendo herramientas reales.",
+        "two": "Hackathons y desafíos que convierten curiosidad en contribuciones open source.",
+        "three": "Infraestructura pública para experimentar con Bitcoin Core, Lightning, Nostr y más."
+      }
+    },
+    "stack": {
+      "eyebrow": "Infraestructura pública",
+      "title": "Servicios abiertos para tocar el stack con las manos.",
+      "description": "Crypto Labs también va a operar infraestructura pública para que aprender no dependa de imaginar, sino de probar, integrar y romper cosas en un entorno real.",
+      "items": {
+        "bitcoin": {
+          "tag": "Base layer",
+          "title": "Nodo público de Bitcoin Core",
+          "description": "Un punto de acceso para explorar la red, entender cómo se mueve la base de Bitcoin y construir sobre una fuente verificable.",
+          "icon": ""
+        },
+        "lightning": {
+          "tag": "Payments",
+          "title": "Nodo de Lightning con canales",
+          "description": "Infraestructura para abrir canales, experimentar con liquidez y aprender cómo funciona Lightning en escenarios reales.",
+          "icon": ""
+        },
+        "nostr": {
+          "tag": "Social layer",
+          "title": "Relay público de Nostr",
+          "description": "Un relay abierto para publicar, probar clientes y entender la capa social soberana sin depender de plataformas cerradas.",
+          "icon": ""
+        },
+        "blossom": {
+          "tag": "Media layer",
+          "title": "Servidor Blossom",
+          "description": "Almacenamiento de imágenes y archivos para experiencias construidas sobre Nostr y otras herramientas del ecosistema abierto.",
+          "icon": ""
+        }
+      }
+    },
+    "programs": {
+      "eyebrow": "Programas",
+      "title": "Del primer commit al primer producto público.",
+      "description": "La idea no es solo enseñar conceptos. Es formar gente que pueda participar, contribuir y después liderar sus propias iniciativas dentro del ecosistema.",
+      "hackathonsTitle": "Lightning Hackathons",
+      "hackathonsDescription": "Los hackathons de La Crypta forman parte de Crypto Labs: espacios intensivos para aprender, probar ideas y shippear herramientas útiles.",
+      "opensourceTitle": "Repositorios vivos",
+      "opensourceDescription": "Cada cohorte, hackathon o experimento puede transformarse en librerías, boilerplates, integraciones y documentación reutilizable."
+    },
+    "newsletter": {
+      "eyebrow": "Newsletter + updates",
+      "title": "Recibí novedades cuando abramos acceso, publiquemos repos y activemos nuevos servicios.",
+      "description": "La conexión con Nostr va a venir después. Por ahora, esta landing prepara el terreno para captar interés y construir una base de gente lista para entrar cuando Crypto Labs se abra.",
+      "placeholder": "Acá va a vivir el formulario de registro al newsletter. En esta primera versión dejamos el CTA y el espacio listo para conectarlo después con el flujo real de suscripción.",
+      "cta": "Quiero sumarme",
+      "secondaryCta": "Ver GitHub de La Crypta"
+    }
   }
 }

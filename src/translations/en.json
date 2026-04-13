@@ -153,5 +153,93 @@
   "footer": {
     "FROM_ARG_TO_WORLD": "From Argentina to the world",
     "FOLLOW_IN": "Follow us on"
+  },
+  "cryptoLabs": {
+    "navCta": "Get updates",
+    "eyebrow": "La Crypta's technical layer",
+    "title": "Crypto Labs trains builders for Bitcoin, Lightning and Nostr.",
+    "subtitle": "An open lab where new developers can learn by building, publish real tools, and use public infrastructure from day one.",
+    "primaryCta": "Join the newsletter",
+    "secondaryCta": "Explore the infrastructure",
+    "highlight": {
+      "label": "Now taking shape",
+      "hackathonsTitle": "Hackathons with purpose",
+      "hackathonsDescription": "La Crypta's Lightning Hackathons and practical experiences live here: learn by doing, as a team, with real deliverables.",
+      "reposTitle": "Open source repos",
+      "reposDescription": "Every initiative leaves behind code, docs, and tools anyone can study, use, and improve."
+    },
+    "pillars": {
+      "learn": {
+        "title": "Learn for real",
+        "description": "Starting from zero should not mean staying in theory. Crypto Labs is built around guided technical experiences, challenges, and real feedback."
+      },
+      "build": {
+        "title": "Build in the open",
+        "description": "Projects begin as public repositories, so entering the ecosystem also means leaving a trace and collaborating with other builders."
+      },
+      "ship": {
+        "title": "Ship useful infrastructure",
+        "description": "We do not want dead demos. We want services, tools, and public nodes the community can use today."
+      }
+    },
+    "mission": {
+      "eyebrow": "Mission",
+      "title": "A technical on-ramp into the sovereign ecosystem.",
+      "description": "Crypto Labs exists to involve Bitcoiners technically, train new developers, and turn complex concepts into hands-on experiences. It is community, lab, and launch platform at once.",
+      "boxLabel": "What happens inside",
+      "points": {
+        "one": "Programs and activities where people learn by building real tools.",
+        "two": "Hackathons and challenges that turn curiosity into open source contributions.",
+        "three": "Public infrastructure to experiment with Bitcoin Core, Lightning, Nostr, and more."
+      }
+    },
+    "stack": {
+      "eyebrow": "Public infrastructure",
+      "title": "Open services to touch the stack with your own hands.",
+      "description": "Crypto Labs will also run public infrastructure so learning does not depend on imagination, but on testing, integrating, and breaking things in a real environment.",
+      "items": {
+        "bitcoin": {
+          "tag": "Base layer",
+          "title": "Public Bitcoin Core node",
+          "description": "An access point to explore the network, understand how Bitcoin's base layer moves, and build on top of a verifiable source.",
+          "icon": ""
+        },
+        "lightning": {
+          "tag": "Payments",
+          "title": "Lightning node with channels",
+          "description": "Infrastructure to open channels, experiment with liquidity, and learn how Lightning works in real scenarios.",
+          "icon": ""
+        },
+        "nostr": {
+          "tag": "Social layer",
+          "title": "Public Nostr relay",
+          "description": "An open relay to publish, test clients, and understand the sovereign social layer without depending on closed platforms.",
+          "icon": ""
+        },
+        "blossom": {
+          "tag": "Media layer",
+          "title": "Blossom server",
+          "description": "Image and file storage for experiences built on Nostr and other tools in the open ecosystem.",
+          "icon": ""
+        }
+      }
+    },
+    "programs": {
+      "eyebrow": "Programs",
+      "title": "From first commit to first public product.",
+      "description": "The goal is not just to teach concepts. It is to form people who can participate, contribute, and later lead their own initiatives inside the ecosystem.",
+      "hackathonsTitle": "Lightning Hackathons",
+      "hackathonsDescription": "La Crypta's hackathons are part of Crypto Labs: intensive spaces to learn, test ideas, and ship useful tools.",
+      "opensourceTitle": "Living repositories",
+      "opensourceDescription": "Every cohort, hackathon, or experiment can become libraries, boilerplates, integrations, and reusable documentation."
+    },
+    "newsletter": {
+      "eyebrow": "Newsletter + updates",
+      "title": "Get notified when we open access, publish repos, and activate new services.",
+      "description": "Nostr connection will come later. For now, this landing prepares the ground to capture interest and build a base of people ready to join when Crypto Labs opens.",
+      "placeholder": "This is where the newsletter signup form will live. In this first version we leave the CTA and the space ready to connect it later to the real subscription flow.",
+      "cta": "I want in",
+      "secondaryCta": "See La Crypta on GitHub"
+    }
   }
 }
